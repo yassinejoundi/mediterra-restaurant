@@ -1,0 +1,32 @@
+{
+  "theme": {
+    "colors": {
+      "plaster": "#F7F0E4",
+      "linen": "#EFE2CF",
+      "wine": "#5A1F2B",
+      "olive": "#6F7651",
+      "terracotta": "#B86F4B",
+      "espresso": "#2A211D",
+      "taupe": "#8A7A69",
+      "brass": "#C29A5B",
+      "sage": "#D8D7C2"
+    },
+    "typography": {
+      "display": ["Playfair Display", "serif"],
+      "headline": ["Playfair Display", "serif"],
+      "body": ["Manrope", "sans-serif"],
+      "label": ["Manrope", "sans-serif"]
+    },
+    "spacing": {
+      "header-h": "96px",
+      "container-max": "1536px"
+    },
+    "radius": {
+      "default": "0.5rem",
+      "lg": "1rem",
+      "xl": "1.5rem",
+      "2xl": "2rem",
+      "full": "9999px"
+    }
+  }
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reservations | Mediterra</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&amp;family=Public+Sans:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: "#F7F0E4",
+                            container: "#EFE2CF"
+                        },
+                        secondary: {
+                            DEFAULT: "#5A1F2B"
+                        },
+                        tertiary: {
+                            DEFAULT: "#6F7651"
+                        },
+                        accent: {
+                            DEFAULT: "#B86F4B"
+                        },
+                        surface: {
+                            DEFAULT: "#F7F0E4",
+                            variant: "#EFE2CF"
+                        },
+                        on: {
+                            primary: "#2A211D",
+                            secondary: "#8A7A69",
+                            surface: "#2A211D"
+                        },
+                        wine: "#5A1F2B",
+                        plaster: "#F7F0E4",
+                        linen: "#EFE2CF",
+                        espresso: "#2A211D",
+                        taupe: "#8A7A69",
+                        brass: "#C29A5B"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Public Sans", "sans-serif"],
+                        "display": ["Public Sans", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        html { scroll-behavior: smooth; }
+        .bg-plaster { background-color: #F7F0E4; }
+        .text-espresso { color: #2A211D; }
+        .text-taupe { color: #8A7A69; }
+        .bg-linen { background-color: #EFE2CF; }
+        .border-espresso { border-color: #2A211D; }
+        .bg-wine { background-color: #5A1F2B; }
+        .text-plaster { color: #F7F0E4; }
+        .border-taupe { border-color: #8A7A69; }
+    </style>
+</head>
+<body class="bg-plaster text-espresso font-body antialiased">
+<!-- TopNavBar Component -->
+<header class="bg-[#F7F0E4] dark:bg-[#2A211D] border-b border-[#B86F4B]/20 sticky top-0 z-50 transition-transform duration-300">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-7xl mx-auto">
+<a class="font-headline text-2xl font-bold text-[#2A211D] dark:text-[#F7F0E4] tracking-tight" href="#">Mediterra</a>
+<nav class="hidden md:flex space-x-8 items-center">
+<a class="font-headline text-lg uppercase tracking-wide text-[#8A7A69] hover:text-[#2A211D] transition-colors duration-300" href="#">Menu</a>
+<a class="font-headline text-lg uppercase tracking-wide text-[#8A7A69] hover:text-[#2A211D] transition-colors duration-300" href="#">Experience</a>
+<a class="font-headline text-lg uppercase tracking-wide text-[#8A7A69] hover:text-[#2A211D] transition-colors duration-300" href="#">Private Dining</a>
+<a class="font-headline text-lg uppercase tracking-wide text-[#8A7A69] hover:text-[#2A211D] transition-colors duration-300" href="#">About</a>
+</nav>
+<a class="hidden md:inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-wine text-plaster font-headline text-sm font-semibold tracking-wide hover:opacity-90 transition-opacity scale-95 active:opacity-80" href="#reservation-form">
+                Reserve a Table
+            </a>
+<button class="md:hidden text-espresso p-2 focus:outline-none">
+<span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-[60vh] min-h-[500px] flex items-center justify-center">
+<div class="absolute inset-0 w-full h-full">
+<img alt="" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQB1uEsnfBrQ9cT8UG6EUt4J-v20cqVSxUKOu3F_hjpAYRfdrB7hrOXhVwbsdJq640OBHhR9zhP0zdBX8Ccr-Bir4Q6PrQnXsg_WP2rTo0SrGj5Wkn9759QxvtsGK28HO2VpGauJ9I1HERhYd097Rbl_Wb95pGaGbjeePIu2WChj5j04OjmPPHI0JoG5jrN-W3nnxyHWo0JoL-FpLdNNJtUJV6Yri6zJqhHgTCHOs0WEceJH5-NqPOOCnj-YhQl_WdKULNWEBOmdQc"/>
+<div class="absolute inset-0 bg-espresso/40 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-3xl mx-auto">
+<h1 class="font-headline text-5xl md:text-6xl font-bold text-plaster mb-6 drop-shadow-md">Request your table at Mediterra.</h1>
+<p class="font-body text-lg md:text-xl text-plaster/90 mb-10 font-light max-w-2xl mx-auto drop-shadow">
+                    We personally manage all reservations to ensure the highest level of hospitality. Submit your request below, and our concierge will confirm your table via WhatsApp.
+                </p>
+<a class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-linen text-espresso font-headline text-base font-semibold tracking-wide hover:bg-white transition-colors duration-300 shadow-lg" href="#reservation-form">
+                    Start Reservation Request
+                </a>
+</div>
+</section>
+<!-- Reservation Form Section -->
+<section class="py-20 px-6 md:px-12 max-w-4xl mx-auto scroll-mt-24" id="reservation-form">
+<div class="text-center mb-12">
+<h2 class="font-headline text-3xl md:text-4xl font-bold text-espresso mb-4">Your Details</h2>
+<p class="font-body text-taupe text-lg">Please provide your preferences for an unforgettable evening.</p>
+</div>
+<div class="bg-linen rounded-2xl p-8 md:p-12 border border-espresso/10 shadow-sm relative overflow-hidden">
+<!-- Subtle texture overlay -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%232A211D\' fill-opacity=\'1\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');"></div>
+<form class="relative z-10 space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Full Name -->
+<div>
+<label class="block font-label text-sm font-medium text-espresso mb-2" for="fullName">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-taupe/50 focus:border-espresso focus:ring-0 px-0 py-3 font-body text-lg text-espresso placeholder-taupe/50 transition-colors" id="fullName" name="fullName" placeholder="Giovanna Rossi" required="" type="text"/>
+</div>
+<!-- Phone / WhatsApp -->
+<div>
+<label class="block font-label text-sm font-medium text-espresso mb-2" for="phone">Phone / WhatsApp Number</label>
+<div class="flex items-end">
+<span class="text-espresso font-body text-lg border-b border-taupe/50 py-3 pr-3">+</span>
+<input class="w-full bg-transparent border-0 border-b border-taupe/50 focus:border-espresso focus:ring-0 px-0 py-3 font-body text-lg text-espresso placeholder-taupe/50 transition-colors" id="phone" name="phone" placeholder="212 600 000 000" required="" type="tel"/>
+</div>
+</div>
+<!-- Email -->
+<div>
+<label class="block font-label text-sm font-medium text-espresso mb-2" for="email">Email Address (Optional)</label>
+<input class="w-full bg-transparent border-0 border-b border-taupe/50 focus:border-espresso focus:ring-0 px-0 py-3 font-body text-lg text-espresso placeholder-taupe/50 transition-colors" id="email" name="email" placeholder="giovanna@example.com" type="email"/>
+</div>
+<!-- Guests -->
+<div>
+<label class="block font-label text-sm font-medium text-espresso mb-2" for="guests">Number of Guests</label>
+<div class="relative">
+<select class="w-full bg-transparent border-0 border-b border-taupe/50 focus:border-espresso focus:ring-0 px-0 py-3 font-body text-lg text-espresso appearance-none transition-colors" id="guests" name="guests" required="">
+<option disabled="" selected="" value="">Select party size</option>
+<option value="1">1 Guest</option>
+<option value="2">2 Guests</option>
+<option value="3">3 Guests</option>
+<option value="4">4 Guests</option>
+<option value="5">5 Guests</option>
+<option value="6">6 Guests</option>
+<option value="7+">7+ Guests (Requires review)</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-espresso">
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Date -->
+<div>
+<label class="block font-label text-sm font-medium text-espresso mb-2" for="date">Preferred Date</label>
+<input class="w-full bg-transparent border-0 border-b border-taupe/50 focus:border-espresso focus:ring-0 px-0 py-3 font-body text-lg text-espresso transition-colors" id="date" name="date" required="" type="date"/>
+</div>
+<!-- Time -->
+<div>
+<label class="block font-label text-sm font-medium text-espresso mb-2" for="time">Preferred Time</label>
+<div class="relative">
+<select class="w-full bg-transparent border-0 border-b border-taupe/50 focus:border-espresso focus:ring-0 px-0 py-3 font-body text-lg text-espresso appearance-none transition-colors" id="time" name="time" required="">
+<option disabled="" selected="" value="">Select time</option>
+<option value="19:00">19:00</option>
+<option value="19:30">19:30</option>
+<option value="20:00">20:00</option>
+<option value="20:30">20:30</option>
+<option value="21:00">21:00</option>
+<option value="21:30">21:30</option>
+<option value="22:00">22:00</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-espresso">
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Special Requests -->
+<div>
+<label class="block font-label text-sm font-medium text-espresso mb-2" for="requests">Special Requests / Dietary Requirements</label>
+<textarea class="w-full bg-transparent border-0 border-b border-taupe/50 focus:border-espresso focus:ring-0 px-0 py-3 font-body text-lg text-espresso placeholder-taupe/50 transition-colors resize-none" id="requests" name="requests" placeholder="Celebrating an anniversary, vegetarian options needed..." rows="3"></textarea>
+</div>
+<!-- Contact Preference -->
+<div class="pb-4">
+<label class="block font-label text-sm font-medium text-espresso mb-4">Preferred Confirmation Method</label>
+<div class="flex space-x-6">
+<label class="flex items-center space-x-3 cursor-pointer group">
+<input checked="" class="form-radio h-5 w-5 text-wine border-taupe focus:ring-wine bg-transparent" name="contactMethod" type="radio" value="whatsapp"/>
+<span class="font-body text-espresso group-hover:text-wine transition-colors">WhatsApp</span>
+</label>
+<label class="flex items-center space-x-3 cursor-pointer group">
+<input class="form-radio h-5 w-5 text-wine border-taupe focus:ring-wine bg-transparent" name="contactMethod" type="radio" value="email"/>
+<span class="font-body text-espresso group-hover:text-wine transition-colors">Email</span>
+</label>
+</div>
+</div>
+<div class="pt-6 border-t border-espresso/10 text-center">
+<button class="w-full md:w-auto inline-flex items-center justify-center px-10 py-4 rounded-full bg-wine text-plaster font-headline text-lg font-bold tracking-wide hover:opacity-90 transition-all duration-300 shadow-md hover:shadow-lg" type="submit">
+<span class="material-symbols-outlined mr-2" style="font-size: 20px;">send</span>
+                            Send Request via WhatsApp
+                        </button>
+</div>
+</form>
+</div>
+</section>
+<!-- Reassurance & Urgent Section -->
+<section class="py-12 px-6 max-w-3xl mx-auto text-center border-t border-espresso/10">
+<p class="font-body text-taupe text-sm italic mb-8 max-w-lg mx-auto">
+                "Your request is not confirmed until our team replies. Expect a personal message within 2 hours during opening times."
+            </p>
+<div class="bg-plaster p-6 rounded-xl border border-espresso/5 shadow-sm inline-block">
+<h3 class="font-headline text-lg font-semibold text-espresso mb-4">Same-Day Reservations?</h3>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-espresso text-espresso font-headline text-sm font-semibold hover:bg-espresso hover:text-plaster transition-colors duration-300 w-full sm:w-auto" href="#">
+<span class="material-symbols-outlined mr-2 text-sm">chat</span>
+                        WhatsApp Us
+                    </a>
+<a class="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-espresso text-espresso font-headline text-sm font-semibold hover:bg-espresso hover:text-plaster transition-colors duration-300 w-full sm:w-auto" href="#">
+<span class="material-symbols-outlined mr-2 text-sm">call</span>
+                        Call Us
+                    </a>
+</div>
+</div>
+</section>
+<!-- Helpful Links Cards (Bento style) -->
+<section class="py-16 px-6 md:px-12 max-w-7xl mx-auto">
+<h2 class="font-headline text-2xl font-bold text-espresso mb-8 text-center">Prepare for your visit</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<a class="group block relative h-64 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" href="#">
+<img alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIDU3-SyLdeRukUaCY20fga1kqMFqkqqt_xl6hka7hOBUdh2V52ze3kO01FU4TEsl_0_CtW8e4YlrnA6Yt8mfvX41cNR063CfSlQ08TOEmlxvAZoh-Tn-XdKTvt0172BK8OsGLQEO49Kxpw5t1tXvzJZVO9yANQQhYs2AMRrZA6yah0y1bGm6OOScLp7cPmOEfhiBvNZoGX4x3-6Jzb4FoXg7uLaoZxV6qL-v-0ZLkOM1vS-RihA4_BpVnkdOGFRVGOPUAbZmzobGF"/>
+<div class="absolute inset-0 bg-gradient-to-t from-espresso/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<h3 class="font-headline text-xl font-semibold text-plaster mb-1">Explore the Menu</h3>
+<p class="font-body text-sm text-plaster/80 flex items-center">View seasonal offerings <span class="material-symbols-outlined text-sm ml-1 opacity-0 group-hover:opacity-100 transition-opacity transform -translate-x-2 group-hover:translate-x-0 duration-300">arrow_forward</span></p>
+</div>
+</a>
+<!-- Card 2 -->
+<a class="group block relative h-64 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-linen border border-espresso/10 p-6 flex flex-col justify-between" href="#">
+<div class="text-wine">
+<span class="material-symbols-outlined" style="font-size: 32px;">photo_library</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-semibold text-espresso mb-1">Gallery</h3>
+<p class="font-body text-sm text-taupe">Glimpse the atmosphere</p>
+</div>
+</a>
+<!-- Card 3 -->
+<a class="group block relative h-64 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" href="#">
+<img alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbhQX800pr4iQJ5NPwuJFmlFf58DL2mV1eKmUCheGZCISv7Z2U-WZzoIBgszlEcei-9oGXOO3Ejba7eUWwHMqQi6iyaRqEM7es3NK_Iaha2MPDKXnA-Nw-ruD6HhW6SXsDx2uCRHDTEFp-xmRNEbNrwZfENazxMQXftaE3D5-KpxLuXhB-NVuSbDHZuA6MwrKjOUmql9kNHeppbv8j0YYGn70-faOwbGlXcKDESVC92R72lTpCegXssxC-RmLi6Tg9EHODLijUr9t8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-espresso/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<h3 class="font-headline text-xl font-semibold text-plaster mb-1">Location</h3>
+<p class="font-body text-sm text-plaster/80 flex items-center">Find us in Marrakech <span class="material-symbols-outlined text-sm ml-1 opacity-0 group-hover:opacity-100 transition-opacity transform -translate-x-2 group-hover:translate-x-0 duration-300">arrow_forward</span></p>
+</div>
+</a>
+<!-- Card 4 -->
+<a class="group block relative h-64 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-linen border border-espresso/10 p-6 flex flex-col justify-between" href="#">
+<div class="text-wine">
+<span class="material-symbols-outlined" style="font-size: 32px;">help_outline</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-semibold text-espresso mb-1">FAQ</h3>
+<p class="font-body text-sm text-taupe">Dress code &amp; details</p>
+</div>
+</a>
+</div>
+</section>
+<!-- Privacy Text -->
+<section class="py-8 text-center">
+<p class="font-body text-xs text-taupe">
+                Your details are only used to coordinate your visit. <a class="underline hover:text-espresso transition-colors" href="#">Privacy Policy</a>
+</p>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-[#EFE2CF] dark:bg-[#2A211D] border-t border-[#B86F4B]/30">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-12 py-16 w-full max-w-7xl mx-auto">
+<div>
+<span class="font-headline text-xl text-[#2A211D] font-bold block mb-4">Mediterra</span>
+<p class="font-body text-sm text-[#8A7A69]">© 2024 Mediterra Marrakech. Romantic editorial hospitality.</p>
+</div>
+<div class="flex flex-col space-y-3">
+<a class="font-body text-sm text-[#8A7A69] hover:text-[#2A211D] hover:opacity-70 transition-opacity" href="#">Contact Us</a>
+<a class="font-body text-sm text-[#8A7A69] hover:text-[#2A211D] hover:opacity-70 transition-opacity" href="#">Opening Hours</a>
+<a class="font-body text-sm text-[#8A7A69] hover:text-[#2A211D] hover:opacity-70 transition-opacity" href="#">Directions</a>
+</div>
+<div class="flex flex-col space-y-3">
+<a class="font-body text-sm text-[#8A7A69] hover:text-[#2A211D] hover:opacity-70 transition-opacity" href="#">WhatsApp</a>
+<a class="font-body text-sm text-[#8A7A69] hover:text-[#2A211D] hover:opacity-70 transition-opacity" href="#">Instagram</a>
+<a class="font-body text-sm text-[#8A7A69] hover:text-[#2A211D] hover:opacity-70 transition-opacity" href="#">Google Maps</a>
+</div>
+</div>
+</footer>
+</body></html>
