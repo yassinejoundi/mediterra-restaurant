@@ -1,12 +1,14 @@
 /* eslint-disable */
 import Link from "next/link";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
+import { StaggerReveal } from "@/components/motion/StaggerReveal";
 import { FontAwesomeMaterialIcon } from "../FontAwesomeMaterialIcon";
 export function Main() {
   return (
     <>
       <main className="pt-32 pb-24">
       {/* Hero Section */}
-      <section className="max-w-screen-xl mx-auto px-8 mb-20 text-center">
+      <ScrollReveal as="section" className="max-w-screen-xl mx-auto px-8 mb-20 text-center">
       <span className="text-olive font-label text-sm uppercase tracking-[0.2em] mb-4 block">Legal &amp; Reservation Policies</span>
       <h1 className="font-headline text-5xl md:text-7xl font-bold text-espresso mb-8 leading-tight">
                       Website and reservation <br/><span className="text-wine">terms.</span>
@@ -22,10 +24,10 @@ export function Main() {
                           Contact Us
                       </Link>
       </div>
-      </section>
+      </ScrollReveal>
       {/* Reservation Terms Panel */}
       <section className="max-w-4xl mx-auto px-6 mb-24" id="reservation-terms">
-      <div className="bg-linen rounded-xl p-10 md:p-16 shadow-sm border border-terracotta/10">
+      <ScrollReveal className="bg-linen rounded-xl p-10 md:p-16 shadow-sm border border-terracotta/10">
       <div className="flex items-center gap-3 mb-8">
       <FontAwesomeMaterialIcon name="calendar_today" className="text-wine text-lg" />
       <h2 className="font-headline text-3xl font-bold text-espresso">Reservation Policies</h2>
@@ -63,13 +65,13 @@ export function Main() {
       <div className="pt-4 text-center">
       <Link className="inline-block bg-wine text-plaster px-12 py-5 rounded-full font-headline text-lg font-bold shadow-lg hover:scale-105 transition-transform" href="/reservations">
                                   Reserve a Table
-                              </Link>
+      </Link>
       </div>
       </div>
-      </div>
+      </ScrollReveal>
       </section>
       {/* Website Terms Section */}
-      <section className="max-w-4xl mx-auto px-8 mb-24">
+      <ScrollReveal as="section" className="max-w-4xl mx-auto px-8 mb-24">
       <h2 className="font-headline text-3xl font-bold text-espresso mb-12">Website Usage &amp; Legalities</h2>
       <div className="space-y-12">
       <div className="group">
@@ -100,10 +102,10 @@ export function Main() {
       </div>
       </div>
       </div>
-      </section>
+      </ScrollReveal>
       {/* Related Links */}
       <section className="max-w-screen-xl mx-auto px-8">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <StaggerReveal className="grid grid-cols-1 md:grid-cols-3 gap-6">
       <Link className="bg-linen p-8 rounded-lg border border-terracotta/10 hover:border-terracotta/40 transition-all group" href="/reservations">
       <FontAwesomeMaterialIcon name="restaurant" className="text-wine text-xl mb-4" />
       <h4 className="font-headline text-xl font-bold mb-2">Reservations</h4>
@@ -128,7 +130,7 @@ export function Main() {
                               Get Directions <FontAwesomeMaterialIcon name="arrow_forward" className="text-sm" />
       </span>
       </Link>
-      </div>
+      </StaggerReveal>
       </section>
       </main>
     </>

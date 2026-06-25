@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
+import { StaggerReveal } from "@/components/motion/StaggerReveal";
 import { FontAwesomeMaterialIcon } from "../FontAwesomeMaterialIcon";
 import privacyInteriorImage from "../../src/assets/images/remote-image-51773cef7d47.png";
 
@@ -9,7 +11,7 @@ export function Main() {
       <main className="pt-32 pb-24 px-6 max-w-7xl mx-auto">
       {/* Hero Section */}
       <section className="mb-24 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-      <div className="md:col-span-7">
+      <ScrollReveal className="md:col-span-7" direction="right">
       <span className="text-olive font-label text-xs uppercase tracking-[0.2em] mb-4 block">Commitment to Care</span>
       <h1 className="text-wine font-headline text-5xl md:text-7xl font-semibold mb-8 leading-[1.1]">
                           Privacy at <span className="italic font-serif-editorial">Mediterra.</span>
@@ -25,11 +27,11 @@ export function Main() {
                               View Terms
                           </Link>
       </div>
-      </div>
-      <div className="md:col-span-5 relative aspect-[4/5] rounded-twelve overflow-hidden">
+      </ScrollReveal>
+      <ScrollReveal className="md:col-span-5 relative aspect-[4/5] rounded-twelve overflow-hidden" direction="left" delay={0.08}>
       <Image className="object-cover" alt="Candlelit Mediterranean restaurant interior" data-alt="A soft, candlelit interior of a high-end Mediterranean restaurant in Marrakech. The image shows a corner of a textured warm ivory plaster wall with a simple linen curtain and a glimpse of a wooden table set with artisan ceramics and a single glass of wine. The lighting is warm and golden, evoking an intimate and private atmosphere consistent with the brand's premium hospitality aesthetic." src={privacyInteriorImage} fill priority sizes="(min-width: 768px) 42vw, 100vw" />
       <div className="absolute inset-0 bg-gradient-to-t from-wine/20 to-transparent"></div>
-      </div>
+      </ScrollReveal>
       </section>
       {/* Main Content Area */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
@@ -45,7 +47,7 @@ export function Main() {
       {/* Privacy Sections */}
       <div className="lg:col-span-9 space-y-24">
       {/* Data Collected */}
-      <section className="scroll-mt-40" id="data-collected">
+      <ScrollReveal as="section" className="scroll-mt-40" id="data-collected">
       <div className="bg-linen p-8 md:p-12 rounded-twelve border border-terracotta/10 shadow-sm">
       <div className="flex items-center gap-3 mb-6">
       <FontAwesomeMaterialIcon name="inventory_2" className="text-olive" />
@@ -94,11 +96,11 @@ export function Main() {
       </div>
       </div>
       </div>
-      </section>
+      </ScrollReveal>
       {/* How Data Is Used */}
-      <section className="scroll-mt-40" id="how-used">
+      <ScrollReveal as="section" className="scroll-mt-40" id="how-used">
       <h2 className="text-wine font-headline text-3xl font-semibold mb-8">How Your Information Is Used</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <StaggerReveal className="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div className="p-6 border border-terracotta/20 rounded-lg bg-ivory hover:shadow-md transition-shadow">
       <FontAwesomeMaterialIcon name="event_available" className="text-olive mb-4 block" />
       <h3 className="text-espresso font-bold mb-3">Reservation Logic</h3>
@@ -114,7 +116,7 @@ export function Main() {
       <h3 className="text-espresso font-bold mb-3">Dining Status</h3>
       <p className="text-taupe text-sm leading-relaxed">Automated and manual confirmation messages so you always know your table status.</p>
       </div>
-      </div>
+      </StaggerReveal>
       {/* WhatsApp Special Note */}
       <div className="mt-12 bg-wine/5 p-8 rounded-twelve border border-wine/10" id="whatsapp">
       <div className="flex items-center gap-4 mb-4">
@@ -125,9 +127,9 @@ export function Main() {
                                   Mediterra Marrakech uses WhatsApp exclusively for transactional communication regarding your reservation. We do not use your phone number for mass marketing, unsolicited promotions, or third-party advertising. This channel is strictly reserved for the logistics of your visit.
                               </p>
       </div>
-      </section>
+      </ScrollReveal>
       {/* Contact & Rights */}
-      <section className="scroll-mt-40" id="rights">
+      <ScrollReveal as="section" className="scroll-mt-40" id="rights">
       <div className="bg-linen p-10 rounded-twelve border border-terracotta/10">
       <h2 className="text-wine font-headline text-3xl font-semibold mb-6">Contact and Your Rights</h2>
       <p className="text-taupe mb-10 max-w-xl">
@@ -140,11 +142,11 @@ export function Main() {
       <span className="text-taupe text-sm italic">Typical response time: Under 2 hours</span>
       </div>
       </div>
-      </section>
+      </ScrollReveal>
       {/* Related Links */}
-      <section className="border-t border-terracotta/20 pt-20">
+      <ScrollReveal as="section" className="border-t border-terracotta/20 pt-20">
       <h3 className="text-wine font-headline text-xl mb-8 uppercase tracking-widest text-center">Explore Further</h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <StaggerReveal className="grid grid-cols-1 md:grid-cols-3 gap-6">
       <Link className="group block p-8 bg-ivory border border-terracotta/20 rounded-twelve hover:bg-linen transition-colors" href="/reservations">
       <span className="text-olive text-xs font-label uppercase tracking-widest mb-4 block">Planning</span>
       <h4 className="text-espresso font-headline text-lg group-hover:text-wine transition-colors mb-2">Book a Table</h4>
@@ -160,8 +162,8 @@ export function Main() {
       <h4 className="text-espresso font-headline text-lg group-hover:text-wine transition-colors mb-2">Direct Contact</h4>
       <p className="text-taupe text-sm">Speak with our team about your upcoming experience.</p>
       </Link>
-      </div>
-      </section>
+      </StaggerReveal>
+      </ScrollReveal>
       </div>
       </div>
       </main>

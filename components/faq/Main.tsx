@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
+import { StaggerReveal } from "@/components/motion/StaggerReveal";
 import { FontAwesomeMaterialIcon } from "../FontAwesomeMaterialIcon";
 import finalCtaBackgroundImage from "../../src/assets/images/remote-image-3b630977b48d.png";
 
@@ -24,7 +26,7 @@ export function Main() {
     <>
       <main className="flex-grow">
       {/* Hero Section */}
-      <section className="px-6 pb-24 pt-32 md:px-12 max-w-4xl mx-auto text-center">
+      <ScrollReveal as="section" className="px-6 pb-24 pt-32 md:px-12 max-w-4xl mx-auto text-center">
       <h1 className="font-headline text-4xl md:text-6xl text-accent-wine mb-6 leading-tight italic">Everything you may want to know before reserving.</h1>
       <p className="font-body text-lg md:text-xl text-primary-variant mb-10 max-w-2xl mx-auto leading-relaxed">
                       At Mediterra, we handle reservations manually to ensure a deeply personalized experience. Explore our frequently asked questions below, or reach out directly to begin curating your evening.
@@ -32,13 +34,13 @@ export function Main() {
       <Link className="inline-block bg-accent-wine text-primary px-8 py-3.5 rounded-full font-body font-medium text-lg hover:bg-opacity-90 transition-all duration-300 shadow-sm" href="/reservations">
                       Request a Table
                   </Link>
-      </section>
+      </ScrollReveal>
       {/* FAQ Sections */}
       <section className="max-w-3xl mx-auto px-6 pb-24 space-y-16">
       {/* Category 1: Reservations */}
-      <div>
+      <ScrollReveal>
       <h2 className="font-headline text-2xl text-accent-wine mb-8 border-b border-accent-terracotta/20 pb-4">Reservations</h2>
-      <div className="space-y-4">
+      <StaggerReveal className="space-y-4">
       <div className="accordion-item bg-primary-container rounded-twelve overflow-hidden border border-accent-terracotta/10">
       <button className="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onClick={(event) => toggleAccordion(event.currentTarget)}>
       <span className="font-headline text-lg text-primary-on font-semibold">How does the WhatsApp booking system work?</span>
@@ -66,12 +68,12 @@ export function Main() {
                                   Online requests are limited to parties of up to 8 guests to maintain the intimate atmosphere of the restaurant. For larger parties or private dining inquiries, please email us directly.
                               </div>
       </div>
-      </div>
-      </div>
+      </StaggerReveal>
+      </ScrollReveal>
       {/* Category 2: The Menu */}
-      <div>
+      <ScrollReveal>
       <h2 className="font-headline text-2xl text-accent-wine mb-8 border-b border-accent-terracotta/20 pb-4">The Menu</h2>
-      <div className="space-y-4">
+      <StaggerReveal className="space-y-4">
       <div className="accordion-item bg-primary-container rounded-twelve overflow-hidden border border-accent-terracotta/10">
       <button className="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onClick={(event) => toggleAccordion(event.currentTarget)}>
       <span className="font-headline text-lg text-primary-on font-semibold">Is the pasta made in-house?</span>
@@ -90,12 +92,12 @@ export function Main() {
                                   We offer considered vegetarian and vegan options woven seamlessly into our menu. Please inform us of any severe allergies during your reservation process so our kitchen can prepare accordingly.
                               </div>
       </div>
-      </div>
-      </div>
+      </StaggerReveal>
+      </ScrollReveal>
       {/* Category 3: Your Visit */}
-      <div>
+      <ScrollReveal>
       <h2 className="font-headline text-2xl text-accent-wine mb-8 border-b border-accent-terracotta/20 pb-4">Your Visit</h2>
-      <div className="space-y-4">
+      <StaggerReveal className="space-y-4">
       <div className="accordion-item bg-primary-container rounded-twelve overflow-hidden border border-accent-terracotta/10">
       <button className="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onClick={(event) => toggleAccordion(event.currentTarget)}>
       <span className="font-headline text-lg text-primary-on font-semibold">What is the dress code?</span>
@@ -114,12 +116,12 @@ export function Main() {
                                   Mediterra is nestled in the heart of the Riad district in Marrakech. Detailed arrival instructions will be provided upon confirmation of your reservation.
                               </div>
       </div>
-      </div>
-      </div>
+      </StaggerReveal>
+      </ScrollReveal>
       </section>
       {/* Support Card */}
       <section className="max-w-3xl mx-auto px-6 pb-24">
-      <div className="bg-primary-container rounded-xl p-10 md:p-14 text-center border border-accent-terracotta/10 shadow-sm relative overflow-hidden">
+      <ScrollReveal className="bg-primary-container rounded-xl p-10 md:p-14 text-center border border-accent-terracotta/10 shadow-sm relative overflow-hidden">
       {/* Subtle texture overlay simulation */}
       <div className="absolute inset-0 opacity-5 mix-blend-multiply pointer-events-none" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')" }}></div>
       <h3 className="font-headline text-3xl text-accent-wine mb-4 relative z-10">Still have questions?</h3>
@@ -134,18 +136,18 @@ export function Main() {
                               Call the Team
                           </a>
       </div>
-      </div>
+      </ScrollReveal>
       </section>
       {/* Final CTA */}
       <section className="bg-accent-wine text-primary py-24 text-center relative overflow-hidden">
       <div className="absolute inset-0 opacity-10" data-alt="Abstract soft focus ambient light flares in warm candlelight tones, deep rich wine reds and soft golden highlights, creating a romantic atmospheric background suitable for a luxury Mediterranean restaurant evening setting." style={{ backgroundImage: `url(${finalCtaBackgroundImage.src})` }}></div>
-      <div className="relative z-10 max-w-2xl mx-auto px-6">
+      <ScrollReveal className="relative z-10 max-w-2xl mx-auto px-6">
       <h2 className="font-headline text-4xl mb-6 italic">Ready to join us?</h2>
       <p className="font-body text-primary/80 mb-10 text-lg">Secure your table and let us curate a memorable evening of Mediterranean warmth and coastal flavors.</p>
       <Link className="inline-block bg-primary text-accent-wine px-10 py-4 rounded-full font-headline font-semibold text-lg hover:bg-primary-container transition-colors shadow-lg" href="/reservations">
                           Reserve a Table
                       </Link>
-      </div>
+      </ScrollReveal>
       </section>
       </main>
     </>

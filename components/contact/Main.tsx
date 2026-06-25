@@ -1,6 +1,8 @@
 /* eslint-disable */
 import Image from "next/image";
 import Link from "next/link";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
+import { StaggerReveal } from "@/components/motion/StaggerReveal";
 import { FontAwesomeMaterialIcon } from "../FontAwesomeMaterialIcon";
 import ambienceImage from "../../src/assets/images/remote-image-30fd0718db85.jpg";
 import courtyardTableImage from "../../src/assets/images/remote-image-1fb9b0c953df.png";
@@ -16,7 +18,7 @@ export function Main() {
       <div className="absolute inset-0 bg-gradient-to-r from-plaster via-plaster/60 to-transparent"></div>
       </div>
       <div className="container mx-auto px-6 md:px-12 relative z-10 py-20">
-      <div className="max-w-2xl">
+      <ScrollReveal className="max-w-2xl">
       <h1 className="font-headline text-5xl md:text-7xl text-espresso mb-6 leading-[1.1]">
                               Find Mediterra in Marrakech and plan your evening with confidence.
                           </h1>
@@ -29,13 +31,13 @@ export function Main() {
                                   Get Directions
                               </Link>
       </div>
-      </div>
+      </ScrollReveal>
       </div>
       </section>
       {/* Contact Cards */}
       <section className="py-24 bg-background">
       <div className="container mx-auto px-6 md:px-12">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <StaggerReveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {/* WhatsApp Card */}
       <div className="bg-surface p-8 rounded-xl editorial-shadow border border-accent/10 flex flex-col items-start h-full">
       <FontAwesomeMaterialIcon name="chat" className="text-wine text-2xl mb-6" />
@@ -69,13 +71,13 @@ export function Main() {
                                   <FontAwesomeMaterialIcon name="open_in_new" className="text-sm" />
       </a>
       </div>
-      </div>
+      </StaggerReveal>
       </div>
       </section>
       {/* Opening Hours & Table Reservations */}
       <section className="py-24 border-y border-accent/10 bg-[#FAF7F2]">
       <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-      <div className="space-y-8">
+      <ScrollReveal className="space-y-8" direction="right">
       <h2 className="font-headline text-4xl text-espresso leading-tight">Opening Hours</h2>
       <div className="space-y-4 max-w-md">
       <div className="flex justify-between items-center py-3 border-b border-accent/10">
@@ -92,20 +94,20 @@ export function Main() {
                                   Reserve a Table
                               </Link>
       </div>
-      </div>
-      <div className="relative group">
+      </ScrollReveal>
+      <ScrollReveal className="relative group" direction="left" delay={0.08}>
       <div className="absolute -inset-4 bg-accent/5 rounded-2xl -rotate-1 group-hover:rotate-0 transition-transform duration-500"></div>
       <div className="relative overflow-hidden rounded-xl h-[400px]">
       <Image className="object-cover" alt="Candlelit table in a Marrakech riad courtyard" data-alt="A warm, atmospheric photo of a candlelit table in a Marrakech Riad courtyard at night. Soft terracotta walls, olive trees in large ceramic pots, and delicate linen tablecloths. The lighting is intimate and romantic with glowing lanterns." src={courtyardTableImage} fill sizes="(min-width: 1024px) 50vw, 100vw" />
       </div>
-      </div>
+      </ScrollReveal>
       </div>
       </section>
       {/* Arrival & Directions */}
       <section className="py-24">
       <div className="container mx-auto px-6 md:px-12">
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
-      <div className="lg:col-span-3 h-[500px] rounded-2xl overflow-hidden shadow-sm border border-accent/20">
+      <ScrollReveal className="lg:col-span-3 h-[500px] rounded-2xl overflow-hidden shadow-sm border border-accent/20" direction="right">
       <div className="w-full h-full bg-[#E5E2D9] relative flex items-center justify-center">
       {/* Map Placeholder */}
       <div className="text-center p-8">
@@ -119,8 +121,8 @@ export function Main() {
       <button className="w-10 h-10 bg-white shadow-md rounded-full flex items-center justify-center text-espresso"><FontAwesomeMaterialIcon name="remove" /></button>
       </div>
       </div>
-      </div>
-      <div className="lg:col-span-2 space-y-10">
+      </ScrollReveal>
+      <ScrollReveal className="lg:col-span-2 space-y-10" direction="left" delay={0.08}>
       <div>
       <h2 className="font-headline text-3xl text-espresso mb-6">Arrival &amp; Directions</h2>
       <div className="space-y-8">
@@ -148,13 +150,13 @@ export function Main() {
       <FontAwesomeMaterialIcon name="map" />
                                   Open Google Maps
                               </Link>
-      </div>
+      </ScrollReveal>
       </div>
       </div>
       </section>
       {/* Personalized Service Section */}
       <section className="container mx-auto px-6 md:px-12 py-12">
-      <div className="bg-espresso text-background rounded-[2rem] p-12 md:p-20 relative overflow-hidden">
+      <ScrollReveal className="bg-espresso text-background rounded-[2rem] p-12 md:p-20 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
       
       </div>
@@ -167,12 +169,12 @@ export function Main() {
                               Reserve a Table
                           </Link>
       </div>
-      </div>
+      </ScrollReveal>
       </section>
       {/* Quick Links */}
       <section className="py-24">
       <div className="container mx-auto px-6 md:px-12">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-accent/10 border border-accent/10 rounded-2xl overflow-hidden">
+      <StaggerReveal className="grid grid-cols-2 md:grid-cols-4 gap-px bg-accent/10 border border-accent/10 rounded-2xl overflow-hidden">
       <Link className="bg-surface p-10 text-center group flex flex-col items-center transition-colors hover:bg-background" href="/faq">
       <FontAwesomeMaterialIcon name="help_outline" className="text-accent text-2xl mb-4 transition-transform group-hover:-translate-y-1" />
       <p className="font-headline text-espresso">FAQ</p>
@@ -189,7 +191,7 @@ export function Main() {
       <FontAwesomeMaterialIcon name="event_seat" className="text-accent text-2xl mb-4 transition-transform group-hover:-translate-y-1" />
       <p className="font-headline text-espresso">Reservations</p>
       </Link>
-      </div>
+      </StaggerReveal>
       </div>
       </section>
       </main>

@@ -1,6 +1,8 @@
 /* eslint-disable */
 import Image from "next/image";
 import Link from "next/link";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
+import { StaggerReveal } from "@/components/motion/StaggerReveal";
 import { FontAwesomeMaterialIcon } from "../FontAwesomeMaterialIcon";
 import reservationHeroImage from "../../src/assets/images/remote-image-b47fef865fef.jpg";
 import diningExperienceImage from "../../src/assets/images/remote-image-1179bc261785.png";
@@ -16,7 +18,7 @@ export function Main() {
       <Image alt="" className="object-cover" src={reservationHeroImage} fill priority sizes="100vw" />
       <div className="absolute inset-0 bg-espresso/40 mix-blend-multiply"></div>
       </div>
-      <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
+      <ScrollReveal className="relative z-10 text-center px-6 max-w-3xl mx-auto">
       <h1 className="font-headline text-5xl md:text-6xl font-bold text-plaster mb-6 drop-shadow-md">Request your table at Mediterra.</h1>
       <p className="font-body text-lg md:text-xl text-plaster/90 mb-10 font-light max-w-2xl mx-auto drop-shadow">
                           We personally manage all reservations to ensure the highest level of hospitality. Submit your request below, and our concierge will confirm your table via WhatsApp.
@@ -24,15 +26,15 @@ export function Main() {
       <Link className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-linen text-espresso font-headline text-base font-semibold tracking-wide hover:bg-white transition-colors duration-300 shadow-lg" href="#reservation-form">
                           Start Reservation Request
                       </Link>
-      </div>
+      </ScrollReveal>
       </section>
       {/* Reservation Form Section */}
       <section className="py-20 px-6 md:px-12 max-w-4xl mx-auto scroll-mt-24" id="reservation-form">
-      <div className="text-center mb-12">
+      <ScrollReveal className="text-center mb-12">
       <h2 className="font-headline text-3xl md:text-4xl font-bold text-espresso mb-4">Your Details</h2>
       <p className="font-body text-taupe text-lg">Please provide your preferences for an unforgettable evening.</p>
-      </div>
-      <div className="bg-linen rounded-2xl p-8 md:p-12 border border-espresso/10 shadow-sm relative overflow-hidden">
+      </ScrollReveal>
+      <ScrollReveal className="bg-linen rounded-2xl p-8 md:p-12 border border-espresso/10 shadow-sm relative overflow-hidden" delay={0.08}>
       {/* Subtle texture overlay */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg width=\\'20\\' height=\\'20\\' viewBox=\\'0 0 20 20\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cg fill=\\'%232A211D\\' fill-opacity=\\'1\\' fill-rule=\\'evenodd\\'%3E%3Ccircle cx=\\'3\\' cy=\\'3\\' r=\\'3\\'/%3E%3Ccircle cx=\\'13\\' cy=\\'13\\' r=\\'3\\'/%3E%3C/g%3E%3C/svg%3E')" }}></div>
       <form className="relative z-10 space-y-8">
@@ -125,10 +127,10 @@ export function Main() {
                               </button>
       </div>
       </form>
-      </div>
+      </ScrollReveal>
       </section>
       {/* Reassurance & Urgent Section */}
-      <section className="py-12 px-6 max-w-3xl mx-auto text-center border-t border-espresso/10">
+      <ScrollReveal as="section" className="py-12 px-6 max-w-3xl mx-auto text-center border-t border-espresso/10">
       <p className="font-body text-taupe text-sm italic mb-8 max-w-lg mx-auto">
                       "Your request is not confirmed until our team replies. Expect a personal message within 2 hours during opening times."
                   </p>
@@ -145,11 +147,11 @@ export function Main() {
                           </a>
       </div>
       </div>
-      </section>
+      </ScrollReveal>
       {/* Helpful Links Cards (Bento style) */}
       <section className="py-16 px-6 md:px-12 max-w-7xl mx-auto">
-      <h2 className="font-headline text-2xl font-bold text-espresso mb-8 text-center">Prepare for your visit</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <ScrollReveal as="h2" className="font-headline text-2xl font-bold text-espresso mb-8 text-center">Prepare for your visit</ScrollReveal>
+      <StaggerReveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {/* Card 1 */}
       <Link className="group block relative h-64 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" href="/menu">
       <Image alt="" className="object-cover transition-transform duration-700 group-hover:scale-105" src={diningExperienceImage} fill sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" />
@@ -188,7 +190,7 @@ export function Main() {
       <p className="font-body text-sm text-taupe">Dress code &amp; details</p>
       </div>
       </Link>
-      </div>
+      </StaggerReveal>
       </section>
       {/* Privacy Text */}
       <section className="py-8 text-center">

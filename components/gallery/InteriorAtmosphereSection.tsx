@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
+import { StaggerReveal } from "@/components/motion/StaggerReveal";
 import { FontAwesomeMaterialIcon } from "../FontAwesomeMaterialIcon";
 import riadCourtyardImage from "../../src/assets/images/remote-image-44e6ac15d212.png";
 import candlelitCornerImage from "../../src/assets/images/remote-image-d20c98e51f28.png";
@@ -9,7 +11,7 @@ export function InteriorAtmosphereSection() {
   return (
     <>
       <section className="max-w-screen-xl mx-auto px-8 mb-32 reveal-on-scroll">
-      <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+      <ScrollReveal className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
       <div className="max-w-2xl">
       <span className="text-accent font-label text-sm uppercase tracking-widest mb-4 block">Section 01</span>
       <h2 className="text-4xl font-serif text-espresso">Interior Atmosphere</h2>
@@ -18,8 +20,8 @@ export function InteriorAtmosphereSection() {
       <Link className="flex items-center gap-2 text-wine border-b border-wine pb-1 font-label text-sm uppercase tracking-widest hover:opacity-70 transition-all" href="/reservations">
                       Reserve a Table <FontAwesomeMaterialIcon name="arrow_forward" className="text-sm" />
       </Link>
-      </div>
-      <div className="gallery-masonry">
+      </ScrollReveal>
+      <StaggerReveal className="gallery-masonry">
       {/* Large Image 1 */}
       <div className="break-inside-avoid mb-8 group">
       <div className="rounded-xl overflow-hidden bg-linen relative aspect-[4/5]">
@@ -41,7 +43,7 @@ export function InteriorAtmosphereSection() {
       </div>
       <p className="mt-4 text-accent font-label text-xs uppercase tracking-widest">The Alcove</p>
       </div>
-      </div>
+      </StaggerReveal>
       </section>
     </>
   );

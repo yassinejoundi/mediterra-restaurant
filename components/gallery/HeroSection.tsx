@@ -1,19 +1,20 @@
  
 import Link from "next/link";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
 export function HeroSection() {
   return (
     <>
       <header className="relative pt-32 pb-24 md:pt-48 md:pb-36 overflow-hidden">
       <div className="max-w-screen-xl mx-auto px-8 relative z-10">
       <div className="max-w-3xl">
-      <h1 className="text-5xl md:text-7xl font-serif text-espresso leading-tight mb-8 reveal-on-scroll">
+      <ScrollReveal as="h1" className="text-5xl md:text-7xl font-serif text-espresso leading-tight mb-8 reveal-on-scroll">
                           A warm Mediterranean room, handmade food, and quiet Marrakech evenings.
-                      </h1>
-      <div className="flex flex-wrap items-center gap-6 reveal-on-scroll" style={{ transitionDelay: "200ms" }}>
+                      </ScrollReveal>
+      <ScrollReveal className="flex flex-wrap items-center gap-6 reveal-on-scroll" style={{ transitionDelay: "200ms" }} delay={0.12}>
       <Link className="bg-wine text-ivory px-8 py-4 rounded-full font-label text-base uppercase tracking-widest hover:shadow-xl transition-all" href="/reservations">
                               Reserve a Table
                           </Link>
-      </div>
+      </ScrollReveal>
       </div>
       </div>
       {/* Decorative Sun-drenched Riad Gradient */}

@@ -1,6 +1,8 @@
 /* eslint-disable */
 import Image from "next/image";
 import Link from "next/link";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
+import { StaggerReveal } from "@/components/motion/StaggerReveal";
 import { FontAwesomeMaterialIcon } from "../FontAwesomeMaterialIcon";
 import placeholderImage from "../../src/assets/images/remote-image-769d78f4805e.svg";
 
@@ -15,7 +17,7 @@ export function Main() {
       <div className="absolute inset-0 bg-text-primary/40 mix-blend-multiply"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
       </div>
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto mt-12">
+      <ScrollReveal className="relative z-10 text-center px-6 max-w-4xl mx-auto mt-12">
       <h1 className="font-headline italic text-4xl md:text-6xl lg:text-7xl text-primary mb-6 text-balance drop-shadow-md">
                           Handmade with Restraint,<br/>
       <span className="font-normal text-3xl md:text-5xl">Served with Marrakech Warmth.</span>
@@ -27,7 +29,7 @@ export function Main() {
                           Reserve a Table
                           <FontAwesomeMaterialIcon name="arrow_forward" className="text-sm" />
       </Link>
-      </div>
+      </ScrollReveal>
       </section>
       {/* Menu Content Layout */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 flex flex-col md:flex-row gap-12 relative">
@@ -74,13 +76,13 @@ export function Main() {
       {/* Main Menu Content */}
       <div className="flex-grow space-y-24 pb-16">
       {/* Antipasti Section */}
-      <section className="scroll-mt-32" id="antipasti">
+      <ScrollReveal as="section" className="scroll-mt-32" id="antipasti">
       <div className="mb-10 text-center md:text-left">
       <h2 className="font-headline italic text-3xl md:text-4xl text-primary-action mb-3">Antipasti</h2>
       <p className="font-body text-text-secondary max-w-xl">To begin. Served with house-made focaccia and local olive oil.</p>
       <div className="w-12 h-px bg-secondary-divider/40 mt-6 mx-auto md:mx-0"></div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
+      <StaggerReveal className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
       {/* Menu Item */}
       <div className="bg-primary-container p-6 rounded-xl border border-secondary-divider/10 shadow-sm hover:shadow-md transition-shadow">
       <div className="flex justify-between items-baseline mb-2">
@@ -122,10 +124,10 @@ export function Main() {
                                       Lightly dusted and fried calamari rings served with a preserved lemon aioli.
                                   </p>
       </div>
-      </div>
-      </section>
+      </StaggerReveal>
+      </ScrollReveal>
       {/* Handmade Pasta Section (Highlighted) */}
-      <section className="scroll-mt-32" id="pasta">
+      <ScrollReveal as="section" className="scroll-mt-32" id="pasta">
       <div className="mb-10 text-center md:text-left flex flex-col md:flex-row justify-between items-end gap-6">
       <div>
       <h2 className="font-headline italic text-3xl md:text-4xl text-primary-action mb-3">Handmade Pasta</h2>
@@ -176,15 +178,15 @@ export function Main() {
       </div>
       </div>
       </div>
-      </section>
+      </ScrollReveal>
       {/* Pizza Section */}
-      <section className="scroll-mt-32" id="pizza">
+      <ScrollReveal as="section" className="scroll-mt-32" id="pizza">
       <div className="mb-10 text-center md:text-left">
       <h2 className="font-headline italic text-3xl md:text-4xl text-primary-action mb-3">Pizza</h2>
       <p className="font-body text-text-secondary max-w-xl">Wood-fired, blistered crust, simple honest ingredients.</p>
       <div className="w-12 h-px bg-secondary-divider/40 mt-6 mx-auto md:mx-0"></div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-10">
+      <StaggerReveal className="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-10">
       <div className="relative pl-6 border-l border-secondary-divider/20">
       <h4 className="font-headline text-lg text-text-primary mb-1">Margherita Extra</h4>
       <p className="font-body text-text-secondary text-sm leading-relaxed mb-2">San Marzano tomato base, fresh buffalo mozzarella, basil, EVOO.</p>
@@ -205,16 +207,16 @@ export function Main() {
       <p className="font-body text-text-secondary text-sm leading-relaxed mb-2">Tomato, mozzarella, finished with fresh rocket and Prosciutto di Parma.</p>
       <span className="font-body text-secondary-divider text-sm font-medium">210 MAD</span>
       </div>
-      </div>
-      </section>
+      </StaggerReveal>
+      </ScrollReveal>
       {/* Italian Classics Section */}
-      <section className="scroll-mt-32" id="classics">
+      <ScrollReveal as="section" className="scroll-mt-32" id="classics">
       <div className="mb-10 text-center md:text-left">
       <h2 className="font-headline italic text-3xl md:text-4xl text-primary-action mb-3">Italian Classics</h2>
       <p className="font-body text-text-secondary max-w-xl">Hearty mains celebrating land and sea.</p>
       <div className="w-12 h-px bg-secondary-divider/40 mt-6 mx-auto md:mx-0"></div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <StaggerReveal className="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div className="bg-transparent border border-secondary-divider/20 p-8 rounded-xl relative overflow-hidden group hover:border-primary-action/30 transition-colors">
       <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
       <FontAwesomeMaterialIcon name="set_meal" className="text-4xl text-primary-action" />
@@ -243,10 +245,10 @@ export function Main() {
                                       </p>
       </div>
       </div>
-      </div>
-      </section>
+      </StaggerReveal>
+      </ScrollReveal>
       {/* Reservation CTA Banner */}
-      <section className="bg-espresso text-primary rounded-2xl p-8 md:p-12 text-center my-16 relative overflow-hidden shadow-lg" id="reservations">
+      <ScrollReveal as="section" className="bg-espresso text-primary rounded-2xl p-8 md:p-12 text-center my-16 relative overflow-hidden shadow-lg" id="reservations">
       {/* Subtle background pattern or noise could go here */}
       <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center">
       <FontAwesomeMaterialIcon name="local_florist" className="text-text-highlight text-2xl mb-4" />
@@ -259,7 +261,7 @@ export function Main() {
                                   Reserve via WhatsApp
                               </a>
       </div>
-      </section>
+      </ScrollReveal>
       </div>
       </div>
       </main>

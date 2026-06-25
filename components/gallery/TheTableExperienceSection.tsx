@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
+import { StaggerReveal } from "@/components/motion/StaggerReveal";
 import winePourImage from "../../src/assets/images/remote-image-021fb559677c.png";
 import dinnerTableImage from "../../src/assets/images/remote-image-c67397882450.png";
 import breadOlivesImage from "../../src/assets/images/remote-image-1805379d3150.png";
@@ -8,12 +10,12 @@ export function TheTableExperienceSection() {
   return (
     <>
       <section className="max-w-screen-xl mx-auto px-8 mb-32 reveal-on-scroll">
-      <div className="text-center max-w-2xl mx-auto mb-16">
+      <ScrollReveal className="text-center max-w-2xl mx-auto mb-16">
       <span className="text-accent font-label text-sm uppercase tracking-widest mb-4 block">Section 03</span>
       <h2 className="text-4xl font-serif text-espresso">The Table Experience</h2>
       <p className="text-taupe mt-4">Cinematic moments shared over candlelight. The clinking of crystal, the soft murmur of conversation, and the effortless grace of hospitality.</p>
-      </div>
-      <div className="grid md:grid-cols-3 gap-8 mb-16">
+      </ScrollReveal>
+      <StaggerReveal className="grid md:grid-cols-3 gap-8 mb-16">
       {/* Experience Item 1 */}
       <div className="group">
       <div className="aspect-square rounded-xl overflow-hidden bg-linen mb-6 relative">
@@ -35,11 +37,13 @@ export function TheTableExperienceSection() {
       </div>
       <p className="text-accent font-label text-xs uppercase tracking-widest">The Shared Bread</p>
       </div>
-      </div>
+      </StaggerReveal>
       <div className="flex justify-center">
+      <ScrollReveal delay={0.1}>
       <Link className="bg-wine text-ivory px-10 py-4 rounded-full font-label text-base uppercase tracking-widest hover:shadow-xl transition-all" href="/reservations">
                       Reserve a Table
                   </Link>
+      </ScrollReveal>
       </div>
       </section>
     </>

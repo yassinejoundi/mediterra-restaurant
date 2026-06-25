@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
 import pastaPreparationImage from "../../src/assets/images/remote-image-d6e35fba3bc7.jpg";
 import saladImage from "../../src/assets/images/remote-image-0d1c43243736.png";
 
@@ -9,15 +10,15 @@ export function FoodCraftSection() {
       <section className="bg-linen py-32 mb-32 reveal-on-scroll">
       <div className="max-w-screen-xl mx-auto px-8">
       <div className="grid md:grid-cols-2 gap-16 items-center">
-      <div className="relative">
+      <ScrollReveal className="relative" direction="right">
       <div className="aspect-[3/4] rounded-xl overflow-hidden shadow-2xl relative">
       <Image className="object-cover" alt="Handmade pasta preparation" src={pastaPreparationImage} fill sizes="(min-width: 768px) 50vw, 100vw" />
       </div>
       <div className="absolute -bottom-8 -right-8 w-64 h-80 rounded-xl overflow-hidden border-8 border-linen shadow-xl hidden lg:block">
       <Image className="object-cover" alt="Mediterranean salad in a ceramic bowl" data-alt="Close-up photograph of a hand-thrown ceramic bowl filled with bright, zesty Mediterranean salad. Vibrant green herbs, deep red cherry tomatoes, and crumbles of white feta cheese are drizzled with glistening golden olive oil. The lighting is natural and bright, emphasizing fresh textures and an artisanal, high-end culinary aesthetic." src={saladImage} fill sizes="256px" />
       </div>
-      </div>
-      <div>
+      </ScrollReveal>
+      <ScrollReveal direction="left" delay={0.08}>
       <span className="text-accent font-label text-sm uppercase tracking-widest mb-4 block">Section 02</span>
       <h2 className="text-4xl md:text-5xl font-serif text-espresso leading-tight">Food &amp; Craft</h2>
       <p className="text-taupe mt-6 text-lg leading-relaxed">
@@ -28,7 +29,7 @@ export function FoodCraftSection() {
                                   View the Menu
                               </Link>
       </div>
-      </div>
+      </ScrollReveal>
       </div>
       </div>
       </section>

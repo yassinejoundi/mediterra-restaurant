@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
 import { FontAwesomeMaterialIcon } from "../FontAwesomeMaterialIcon";
 import plasterWallImage from "../../src/assets/images/remote-image-4c65ca53255a.png";
 import marrakechMapImage from "../../src/assets/images/remote-image-414f8a072520.png";
@@ -8,7 +9,7 @@ export function LocationContact() {
   return (
     <>
       <section className="py-24 px-6 md:px-12 max-w-screen-xl mx-auto">
-      <div className="bg-linen rounded-3xl overflow-hidden shadow-soft flex flex-col md:flex-row">
+      <ScrollReveal className="bg-linen rounded-3xl overflow-hidden shadow-soft flex flex-col md:flex-row">
       <div className="md:w-1/2 p-12 md:p-16 flex flex-col justify-center bg-[url('/placeholder')] bg-cover bg-center relative" data-alt="A subtle, textured plaster wall in warm ivory, typical of Marrakech riads, catching soft dappled sunlight through foliage, creating a calm, minimalist backdrop for text." style={{ backgroundImage: `url(${plasterWallImage.src})` }}>
       <div className="absolute inset-0 bg-linen/90 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -45,7 +46,7 @@ export function LocationContact() {
       <Image className="w-full h-full object-cover opacity-80 mix-blend-multiply" alt="Stylized map of Marrakech Medina showing the Mediterra restaurant location" data-alt="A stylized, minimal map of Marrakech Medina showing the location of Mediterra restaurant. The map uses warm earthy tones, soft terracotta paths, and olive green markers, fitting the premium Mediterranean design system." data-location="Marrakech" src={marrakechMapImage} />
       </div>
       </div>
-      </div>
+      </ScrollReveal>
       </section>
     </>
   );

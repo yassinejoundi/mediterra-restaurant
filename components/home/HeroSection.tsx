@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
 import heroTableImage from "../../src/assets/images/remote-image-bed4f7bee88c.jpg";
 
 export function HeroSection() {
@@ -11,13 +12,13 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-t from-espresso/60 via-espresso/20 to-transparent mix-blend-multiply"></div>
       </div>
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center flex flex-col items-center mt-20">
-      <span className="font-label text-sm md:text-base tracking-[0.2em] text-plaster/90 uppercase mb-4">Mediterra Marrakech</span>
-      <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-lg">A romantic Mediterranean<br/><span className="italic font-light">table in Marrakech.</span></h1>
-      <p className="font-body text-lg md:text-xl text-plaster max-w-2xl mb-10 font-light drop-shadow-md">Handmade Italian discipline served with the generous spirit of a Marrakech riad. Candlelit, intimate, and beautiful with substance.</p>
-      <div className="flex flex-col sm:flex-row gap-4 items-center">
+      <ScrollReveal as="span" className="font-label text-sm md:text-base tracking-[0.2em] text-plaster/90 uppercase mb-4" delay={0.05}>Mediterra Marrakech</ScrollReveal>
+      <ScrollReveal as="h1" className="font-headline text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-lg" delay={0.12}>A romantic Mediterranean<br/><span className="italic font-light">table in Marrakech.</span></ScrollReveal>
+      <ScrollReveal as="p" className="font-body text-lg md:text-xl text-plaster max-w-2xl mb-10 font-light drop-shadow-md" delay={0.2}>Handmade Italian discipline served with the generous spirit of a Marrakech riad. Candlelit, intimate, and beautiful with substance.</ScrollReveal>
+      <ScrollReveal className="flex flex-col sm:flex-row gap-4 items-center" delay={0.28}>
       <Link className="bg-wine text-plaster px-8 py-4 rounded-full font-label font-medium text-lg hover:bg-[#722736] transition-all shadow-float hover:-translate-y-1 w-full sm:w-auto" href="/reservations">Reserve a Table</Link>
       <Link className="bg-transparent border border-plaster/50 text-plaster px-8 py-4 rounded-full font-label font-medium text-lg hover:bg-plaster/10 transition-all backdrop-blur-sm w-full sm:w-auto" href="/menu">View Menu</Link>
-      </div>
+      </ScrollReveal>
       </div>
       </section>
     </>
