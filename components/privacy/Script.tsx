@@ -30,17 +30,6 @@ export function Script() {
                   });
               });
       
-              // Header transparency on scroll
-              const header = document.getElementById('main-nav');
-              window.addEventListener('scroll', () => {
-                  if (window.scrollY > 50) {
-                      header.classList.add('py-4', 'shadow-sm');
-                      header.classList.remove('py-6');
-                  } else {
-                      header.classList.add('py-6');
-                      header.classList.remove('py-4', 'shadow-sm');
-                  }
-              });
           `);
     run();
   }, []);

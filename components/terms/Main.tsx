@@ -1,7 +1,6 @@
 /* eslint-disable */
 import Link from "next/link";
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
-import { StaggerReveal } from "@/components/motion/StaggerReveal";
 import { FontAwesomeMaterialIcon } from "../FontAwesomeMaterialIcon";
 export function Main() {
   return (
@@ -105,7 +104,7 @@ export function Main() {
       </ScrollReveal>
       {/* Related Links */}
       <section className="max-w-screen-xl mx-auto px-8">
-      <StaggerReveal className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       <Link className="bg-linen p-8 rounded-lg border border-terracotta/10 hover:border-terracotta/40 transition-all group" href="/reservations">
       <FontAwesomeMaterialIcon name="restaurant" className="text-wine text-xl mb-4" />
       <h4 className="font-headline text-xl font-bold mb-2">Reservations</h4>
@@ -130,7 +129,7 @@ export function Main() {
                               Get Directions <FontAwesomeMaterialIcon name="arrow_forward" className="text-sm" />
       </span>
       </Link>
-      </StaggerReveal>
+      </div>
       </section>
       </main>
     </>
