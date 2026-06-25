@@ -39,61 +39,61 @@ export function Main() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {/* Full Name */}
       <div>
-      <label className="block font-label text-sm font-medium text-espresso mb-2" htmlFor="fullName">Full Name</label>
-      <input className="w-full bg-transparent border-0 border-b border-taupe/50 focus:border-espresso focus:ring-0 px-0 py-3 font-body text-lg text-espresso placeholder-taupe/50 transition-colors" id="fullName" name="fullName" placeholder="Giovanna Rossi" required type="text"/>
+      <label className="block font-label text-xs font-bold uppercase tracking-wider text-espresso mb-2" htmlFor="fullName">Full Name</label>
+      <input className="w-full rounded-xl border border-accent/15 bg-plaster/70 px-4 py-3.5 font-body text-base text-espresso placeholder-taupe/60 shadow-sm transition-all duration-300 focus:border-brass focus:bg-plaster focus:ring-2 focus:ring-brass/20" id="fullName" name="fullName" placeholder="Giovanna Rossi" required type="text"/>
       </div>
       {/* Phone / WhatsApp */}
       <div>
-      <label className="block font-label text-sm font-medium text-espresso mb-2" htmlFor="phone">Phone / WhatsApp Number</label>
-      <div className="flex items-end">
-      <span className="text-espresso font-body text-lg border-b border-taupe/50 py-3 pr-3">+</span>
-      <input className="w-full bg-transparent border-0 border-b border-taupe/50 focus:border-espresso focus:ring-0 px-0 py-3 font-body text-lg text-espresso placeholder-taupe/50 transition-colors" id="phone" name="phone" placeholder="212 600 000 000" required type="tel"/>
+      <label className="block font-label text-xs font-bold uppercase tracking-wider text-espresso mb-2" htmlFor="phone">Phone / WhatsApp Number</label>
+      <div className="flex items-center rounded-xl border border-accent/15 bg-plaster/70 px-4 shadow-sm transition-all duration-300 focus-within:border-brass focus-within:bg-plaster focus-within:ring-2 focus-within:ring-brass/20">
+      <span className="text-taupe font-body text-base pr-3">+</span>
+      <input className="w-full border-0 bg-transparent px-0 py-3.5 font-body text-base text-espresso placeholder-taupe/60 outline-none focus:outline-none focus:ring-0" id="phone" name="phone" placeholder="212 600 000 000" required type="tel"/>
       </div>
       </div>
       {/* Email */}
       <div>
-      <label className="block font-label text-sm font-medium text-espresso mb-2" htmlFor="email">Email Address (Optional)</label>
-      <input className="w-full bg-transparent border-0 border-b border-taupe/50 focus:border-espresso focus:ring-0 px-0 py-3 font-body text-lg text-espresso placeholder-taupe/50 transition-colors" id="email" name="email" placeholder="giovanna@example.com" type="email"/>
+      <label className="block font-label text-xs font-bold uppercase tracking-wider text-espresso mb-2" htmlFor="email">Email Address (Optional)</label>
+      <input className="w-full rounded-xl border border-accent/15 bg-plaster/70 px-4 py-3.5 font-body text-base text-espresso placeholder-taupe/60 shadow-sm transition-all duration-300 focus:border-brass focus:bg-plaster focus:ring-2 focus:ring-brass/20" id="email" name="email" placeholder="giovanna@example.com" type="email"/>
       </div>
       {/* Guests */}
       <div>
-      <label className="block font-label text-sm font-medium text-espresso mb-2" htmlFor="guests">Number of Guests</label>
+      <label className="block font-label text-xs font-bold uppercase tracking-wider text-espresso mb-2" htmlFor="guests">Number of Guests</label>
       <div className="relative">
-      <select className="w-full bg-transparent border-0 border-b border-taupe/50 focus:border-espresso focus:ring-0 px-0 py-3 font-body text-lg text-espresso appearance-none transition-colors" id="guests" name="guests" required>
-      <option disabled selected value="">Select party size</option>
-      <option value="1">1 Guest</option>
-      <option value="2">2 Guests</option>
-      <option value="3">3 Guests</option>
-      <option value="4">4 Guests</option>
-      <option value="5">5 Guests</option>
-      <option value="6">6 Guests</option>
-      <option value="7+">7+ Guests (Requires review)</option>
+      <select className="w-full appearance-none rounded-xl border border-accent/15 bg-plaster/70 px-4 py-3.5 pr-10 font-body text-base text-espresso shadow-sm transition-all duration-300 focus:border-brass focus:bg-plaster focus:ring-2 focus:ring-brass/20" id="guests" name="guests" required defaultValue="">
+      <option className="bg-plaster text-taupe" disabled value="">Select party size</option>
+      <option className="bg-plaster text-espresso" value="1">1 Guest</option>
+      <option className="bg-plaster text-espresso" value="2">2 Guests</option>
+      <option className="bg-plaster text-espresso" value="3">3 Guests</option>
+      <option className="bg-plaster text-espresso" value="4">4 Guests</option>
+      <option className="bg-plaster text-espresso" value="5">5 Guests</option>
+      <option className="bg-plaster text-espresso" value="6">6 Guests</option>
+      <option className="bg-plaster text-espresso" value="7+">7+ Guests (Requires review)</option>
       </select>
-      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-espresso">
+      <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-taupe">
       <FontAwesomeMaterialIcon name="expand_more" className="text-lg" />
       </div>
       </div>
       </div>
       {/* Date */}
       <div>
-      <label className="block font-label text-sm font-medium text-espresso mb-2" htmlFor="date">Preferred Date</label>
-      <input className="w-full bg-transparent border-0 border-b border-taupe/50 focus:border-espresso focus:ring-0 px-0 py-3 font-body text-lg text-espresso transition-colors" id="date" name="date" required type="date"/>
+      <label className="block font-label text-xs font-bold uppercase tracking-wider text-espresso mb-2" htmlFor="date">Preferred Date</label>
+      <input className="w-full rounded-xl border border-accent/15 bg-plaster/70 px-4 py-3.5 font-body text-base text-espresso shadow-sm transition-all duration-300 [color-scheme:light] accent-wine focus:border-brass focus:bg-plaster focus:ring-2 focus:ring-brass/20" id="date" name="date" required type="date"/>
       </div>
       {/* Time */}
       <div>
-      <label className="block font-label text-sm font-medium text-espresso mb-2" htmlFor="time">Preferred Time</label>
+      <label className="block font-label text-xs font-bold uppercase tracking-wider text-espresso mb-2" htmlFor="time">Preferred Time</label>
       <div className="relative">
-      <select className="w-full bg-transparent border-0 border-b border-taupe/50 focus:border-espresso focus:ring-0 px-0 py-3 font-body text-lg text-espresso appearance-none transition-colors" id="time" name="time" required>
-      <option disabled selected value="">Select time</option>
-      <option value="19:00">19:00</option>
-      <option value="19:30">19:30</option>
-      <option value="20:00">20:00</option>
-      <option value="20:30">20:30</option>
-      <option value="21:00">21:00</option>
-      <option value="21:30">21:30</option>
-      <option value="22:00">22:00</option>
+      <select className="w-full appearance-none rounded-xl border border-accent/15 bg-plaster/70 px-4 py-3.5 pr-10 font-body text-base text-espresso shadow-sm transition-all duration-300 focus:border-brass focus:bg-plaster focus:ring-2 focus:ring-brass/20" id="time" name="time" required defaultValue="">
+      <option className="bg-plaster text-taupe" disabled value="">Select time</option>
+      <option className="bg-plaster text-espresso" value="19:00">19:00</option>
+      <option className="bg-plaster text-espresso" value="19:30">19:30</option>
+      <option className="bg-plaster text-espresso" value="20:00">20:00</option>
+      <option className="bg-plaster text-espresso" value="20:30">20:30</option>
+      <option className="bg-plaster text-espresso" value="21:00">21:00</option>
+      <option className="bg-plaster text-espresso" value="21:30">21:30</option>
+      <option className="bg-plaster text-espresso" value="22:00">22:00</option>
       </select>
-      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-espresso">
+      <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-taupe">
       <FontAwesomeMaterialIcon name="expand_more" className="text-lg" />
       </div>
       </div>
@@ -101,19 +101,19 @@ export function Main() {
       </div>
       {/* Special Requests */}
       <div>
-      <label className="block font-label text-sm font-medium text-espresso mb-2" htmlFor="requests">Special Requests / Dietary Requirements</label>
-      <textarea className="w-full bg-transparent border-0 border-b border-taupe/50 focus:border-espresso focus:ring-0 px-0 py-3 font-body text-lg text-espresso placeholder-taupe/50 transition-colors resize-none" id="requests" name="requests" placeholder="Celebrating an anniversary, vegetarian options needed..." rows={3}></textarea>
+      <label className="block font-label text-xs font-bold uppercase tracking-wider text-espresso mb-2" htmlFor="requests">Special Requests / Dietary Requirements</label>
+      <textarea className="w-full resize-none rounded-xl border border-accent/15 bg-plaster/70 px-4 py-3.5 font-body text-base text-espresso placeholder-taupe/60 shadow-sm transition-all duration-300 focus:border-brass focus:bg-plaster focus:ring-2 focus:ring-brass/20" id="requests" name="requests" placeholder="Celebrating an anniversary, vegetarian options needed..." rows={3}></textarea>
       </div>
       {/* Contact Preference */}
       <div className="pb-4">
       <label className="block font-label text-sm font-medium text-espresso mb-4">Preferred Confirmation Method</label>
       <div className="flex space-x-6">
       <label className="flex items-center space-x-3 cursor-pointer group">
-      <input defaultChecked className="form-radio h-5 w-5 text-wine border-taupe focus:ring-wine bg-transparent" name="contactMethod" type="radio" value="whatsapp"/>
+      <input defaultChecked className="h-5 w-5 accent-wine text-wine border-taupe bg-transparent focus:ring-2 focus:ring-brass/30 focus:ring-offset-0" name="contactMethod" type="radio" value="whatsapp"/>
       <span className="font-body text-espresso group-hover:text-wine transition-colors">WhatsApp</span>
       </label>
       <label className="flex items-center space-x-3 cursor-pointer group">
-      <input className="form-radio h-5 w-5 text-wine border-taupe focus:ring-wine bg-transparent" name="contactMethod" type="radio" value="email"/>
+      <input className="h-5 w-5 accent-wine text-wine border-taupe bg-transparent focus:ring-2 focus:ring-brass/30 focus:ring-offset-0" name="contactMethod" type="radio" value="email"/>
       <span className="font-body text-espresso group-hover:text-wine transition-colors">Email</span>
       </label>
       </div>

@@ -1,4 +1,5 @@
 /* eslint-disable */
+import Link from "next/link";
 import { FontAwesomeMaterialIcon } from "../FontAwesomeMaterialIcon";
 export function GuestWords() {
   return (
@@ -41,7 +42,7 @@ export function GuestWords() {
       <span className="font-label text-sm text-taupe uppercase tracking-wider block">— Elena R., Milan</span>
       </div>
       </div>
-      <button className="bg-wine text-white px-8 py-4 rounded-full font-label font-medium text-lg hover:bg-[#722736] transition-colors shadow-float">Reserve a Table</button>
+      <Link className="bg-wine text-white px-8 py-4 rounded-full font-label font-medium text-lg hover:bg-[#722736] transition-colors shadow-float" href="/reservations">Reserve a Table</Link>
       </div>
       </section>
     </>
