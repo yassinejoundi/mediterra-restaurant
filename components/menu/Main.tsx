@@ -399,6 +399,30 @@ export function Main() {
           </Link>
         </ScrollReveal>
       </section>
+
+      <section className="px-5 pb-20 pt-4 sm:px-8 sm:pb-24 lg:px-12 lg:pb-28">
+        <ScrollReveal className="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-wine px-6 py-16 text-center text-plaster shadow-[0_24px_80px_rgba(90,31,43,0.2)] sm:px-10 sm:py-20 lg:py-24">
+          <div className="pointer-events-none absolute -top-32 left-1/2 size-80 -translate-x-1/2 rounded-full border border-brass/20" aria-hidden="true" />
+          <div className="pointer-events-none absolute -top-20 left-1/2 size-56 -translate-x-1/2 rounded-full border border-brass/25" aria-hidden="true" />
+          <div className="relative mx-auto max-w-3xl">
+            <p className="font-label text-xs font-semibold uppercase tracking-[0.26em] text-brass">Your table awaits</p>
+            <h2 className="mt-5 text-balance font-heading text-4xl leading-tight tracking-[-0.03em] text-plaster sm:text-5xl lg:text-6xl">
+              Come for the pasta. Stay for the evening.
+            </h2>
+            <p className="mx-auto mt-6 max-w-xl text-pretty text-base leading-7 text-linen/80 sm:text-lg sm:leading-8">
+              Request a table for dinner in Marrakech. Our team will reply personally by WhatsApp to confirm every detail.
+            </p>
+            <Link
+              href="/reservations"
+              className="mt-9 inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-plaster px-7 py-3 font-label text-xs font-bold uppercase tracking-[0.18em] text-wine transition-colors hover:bg-linen focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plaster"
+            >
+              Request a Table
+              <ArrowRight className="size-4" aria-hidden="true" />
+            </Link>
+            <p className="mt-5 text-xs leading-5 text-linen/65">Your table is confirmed only after our team replies.</p>
+          </div>
+        </ScrollReveal>
+      </section>
     </main>
   );
 }
