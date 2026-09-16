@@ -1,17 +1,20 @@
 type MenuItemProps = {
   description: string;
+  headingLevel?: "h3" | "h4";
   name: string;
   price: string;
   tag?: string;
 };
 
-export function MenuItem({ description, name, price, tag }: MenuItemProps) {
+export function MenuItem({ description, headingLevel = "h3", name, price, tag }: MenuItemProps) {
+  const Heading = headingLevel;
+
   return (
     <article className="group py-6 first:pt-0 last:pb-0">
       <div className="flex items-baseline gap-4">
-        <h3 className="min-w-0 font-heading text-xl leading-snug text-espresso transition-colors group-hover:text-wine sm:text-2xl">
+        <Heading className="min-w-0 font-heading text-xl leading-snug text-espresso transition-colors group-hover:text-wine sm:text-2xl">
           {name}
-        </h3>
+        </Heading>
         <span className="min-w-6 flex-1 border-b border-dotted border-terracotta/35" aria-hidden="true" />
         <p className="shrink-0 font-body text-sm font-semibold text-wine tabular-nums sm:text-base">{price}</p>
       </div>

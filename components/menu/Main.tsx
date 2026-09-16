@@ -313,6 +313,74 @@ export function Main() {
           </ScrollReveal>
         </div>
       </section>
+
+      <section className="bg-linen px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
+        <div className="mx-auto max-w-6xl">
+          <ScrollReveal className="mx-auto max-w-3xl text-center">
+            <p className="font-label text-xs font-semibold uppercase tracking-[0.24em] text-olive">Stay a little longer</p>
+            <h2 className="mt-3 text-balance font-heading text-4xl tracking-[-0.025em] text-wine sm:text-5xl">
+              Something sweet, something poured.
+            </h2>
+            <p className="mx-auto mt-5 max-w-2xl text-pretty text-base leading-7 text-espresso/70">
+              Desserts made for sharing, then a final glass or a bright alcohol-free spritz as the evening settles.
+            </p>
+          </ScrollReveal>
+
+          <div className="mt-14 grid overflow-hidden rounded-[2rem] border border-terracotta/15 bg-plaster shadow-[0_20px_70px_rgba(42,33,29,0.06)] lg:grid-cols-2">
+            <ScrollReveal as="section" id="desserts" className="scroll-mt-40 px-6 py-10 sm:px-10 sm:py-12 lg:px-12" direction="left">
+              <div className="border-b border-terracotta/20 pb-6">
+                <p className="font-label text-xs font-semibold uppercase tracking-[0.2em] text-olive">Dolci</p>
+                <h3 className="mt-2 font-heading text-3xl italic text-wine">Desserts</h3>
+              </div>
+              <div className="divide-y divide-terracotta/15">
+                <MenuItem
+                  name="Tiramisù al Tavolo"
+                  description="Mascarpone, espresso-soaked savoiardi, and cocoa, finished at your table."
+                  headingLevel="h4"
+                  price="110 MAD"
+                  tag="For two"
+                />
+                <MenuItem
+                  name="Panna Cotta agli Agrumi"
+                  description="Vanilla panna cotta, orange blossom, citrus, and pistachio."
+                  headingLevel="h4"
+                  price="95 MAD"
+                />
+                <MenuItem
+                  name="Torta al Cioccolato"
+                  description="Warm dark chocolate cake, olive oil, sea salt, and fior di latte gelato."
+                  headingLevel="h4"
+                  price="115 MAD"
+                />
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal as="section" id="drinks" className="scroll-mt-40 border-t border-terracotta/15 bg-wine px-6 py-10 text-plaster sm:px-10 sm:py-12 lg:border-t-0 lg:border-l lg:px-12" direction="right">
+              <div className="border-b border-plaster/20 pb-6">
+                <p className="font-label text-xs font-semibold uppercase tracking-[0.2em] text-brass">Aperitivo &amp; after</p>
+                <h3 className="mt-2 font-heading text-3xl italic text-plaster">Drinks</h3>
+              </div>
+              <div className="divide-y divide-plaster/15">
+                {[
+                  ["Mediterra Spritz", "Bitter orange, sparkling wine, rosemary, and soda.", "125 MAD"],
+                  ["Amalfi Zero", "Lemon, basil, white grape, tonic, and sea salt. Alcohol-free.", "80 MAD"],
+                  ["Marrakech Negroni", "Gin, bitter aperitivo, vermouth, and preserved orange.", "135 MAD"],
+                  ["Espresso & Petit Four", "Italian espresso with a small handmade sweet.", "65 MAD"],
+                ].map(([name, description, price]) => (
+                  <article key={name} className="py-6 first:pt-0 last:pb-0">
+                    <div className="flex items-baseline gap-4">
+                      <h4 className="font-heading text-xl text-plaster sm:text-2xl">{name}</h4>
+                      <span className="min-w-4 flex-1 border-b border-dotted border-brass/35" aria-hidden="true" />
+                      <p className="shrink-0 text-sm font-semibold text-brass tabular-nums">{price}</p>
+                    </div>
+                    <p className="mt-2 text-sm leading-6 text-linen/75 sm:text-base sm:leading-7">{description}</p>
+                  </article>
+                ))}
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
