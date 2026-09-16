@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
 import { StaggerReveal } from "@/components/motion/StaggerReveal";
+import eveningService from "@/public/images/menu-evening-service.png";
 import menuHero from "@/public/images/menu-hero.png";
 import pastaCraft from "@/public/images/menu-pasta-craft.png";
 
@@ -260,6 +261,56 @@ export function Main() {
               />
             </div>
           </StaggerReveal>
+        </div>
+      </section>
+
+      <section id="classics" className="scroll-mt-40 bg-sage/45 px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16">
+          <ScrollReveal className="order-2 lg:order-1" direction="left">
+            <p className="font-label text-xs font-semibold uppercase tracking-[0.24em] text-olive">Land, sea, and season</p>
+            <h2 className="mt-3 text-balance font-heading text-4xl italic tracking-[-0.025em] text-wine sm:text-5xl">
+              Italian Classics
+            </h2>
+            <p className="mt-5 max-w-xl text-pretty text-base leading-7 text-espresso/70">
+              Recognisable dishes treated with care, finished with local produce and a light Mediterranean hand.
+            </p>
+
+            <div className="mt-8 divide-y divide-olive/20 border-y border-olive/20">
+              <MenuItem
+                name="Branzino alla Mediterranea"
+                description="Pan-roasted local sea bass, caponata, lemon-caper butter, and garden herbs."
+                price="320 MAD"
+              />
+              <MenuItem
+                name="Osso Buco alla Milanese"
+                description="Slow-braised veal shank, saffron risotto, gremolata, and its roasting jus."
+                price="360 MAD"
+              />
+              <MenuItem
+                name="Pollo al Limone"
+                description="Herb-roasted chicken, soft polenta, green olives, preserved lemon, and rosemary."
+                price="265 MAD"
+              />
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal className="order-1 lg:order-2" direction="right">
+            <figure>
+              <div className="relative aspect-[5/4] overflow-hidden rounded-[1.75rem] shadow-[0_24px_70px_rgba(42,33,29,0.14)]">
+                <Image
+                  src={eveningService}
+                  alt="Server finishing a Mediterranean sea bass dish with lemon olive oil at the table"
+                  fill
+                  placeholder="blur"
+                  sizes="(min-width: 1024px) 42vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="mt-4 border-l border-terracotta/50 pl-4 text-sm leading-6 text-taupe">
+                Thoughtful finishing, quiet service, and time for conversation.
+              </figcaption>
+            </figure>
+          </ScrollReveal>
         </div>
       </section>
     </main>
