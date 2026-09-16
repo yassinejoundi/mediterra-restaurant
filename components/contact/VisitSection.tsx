@@ -33,7 +33,7 @@ export function VisitSection() {
         </ScrollReveal>
 
         <ScrollReveal className="lg:col-span-5" direction="left" delay={0.08}>
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-terracotta">Arrival</p>
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-wine">Arrival</p>
           <h2
             id="visit-heading"
             className="max-w-[12ch] text-balance font-heading text-[clamp(2.6rem,4.7vw,4.8rem)] font-normal leading-[1.02] tracking-[-0.035em]"

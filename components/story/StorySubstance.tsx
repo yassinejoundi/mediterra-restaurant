@@ -27,7 +27,7 @@ export function StorySubstance() {
       className="bg-plaster px-5 py-20 text-center text-espresso sm:px-8 sm:py-24 lg:px-12 lg:py-32"
     >
       <ScrollReveal className="mx-auto max-w-3xl">
-        <p className="flex items-center justify-center gap-3 font-label text-xs font-semibold uppercase tracking-[0.22em] text-terracotta">
+        <p className="flex items-center justify-center gap-3 font-label text-xs font-semibold uppercase tracking-[0.22em] text-wine">
           <span className="h-px w-8 bg-terracotta" aria-hidden="true" />
           Beauty with substance
           <span className="h-px w-8 bg-terracotta" aria-hidden="true" />

@@ -33,7 +33,7 @@ export function ContactDetails() {
       <div className="mx-auto max-w-screen-2xl">
         <ScrollReveal className="mb-12 grid gap-6 md:grid-cols-12 md:items-end lg:mb-16">
           <div className="md:col-span-7">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-terracotta">Plan your evening</p>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-wine">Plan your evening</p>
             <h2
               id="contact-details-heading"
               className="max-w-[12ch] text-balance font-heading text-[clamp(2.6rem,5vw,5.2rem)] font-normal leading-[1.02] tracking-[-0.035em]"

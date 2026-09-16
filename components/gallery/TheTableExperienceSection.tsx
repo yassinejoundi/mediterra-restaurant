@@ -8,7 +8,7 @@ export function TheTableExperienceSection() {
     <section aria-labelledby="gallery-table-heading" className="bg-plaster px-5 py-24 sm:px-8 sm:py-32 lg:px-12">
       <div className="mx-auto max-w-screen-2xl">
         <ScrollReveal className="mx-auto mb-14 max-w-3xl text-center lg:mb-20">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-terracotta">03 · The table</p>
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-wine">03 · The table</p>
           <h2
             id="gallery-table-heading"
             className="text-balance font-heading text-[clamp(2.6rem,5vw,5.2rem)] font-normal leading-[1.02] tracking-[-0.035em]"
@@ -31,7 +31,7 @@ export function TheTableExperienceSection() {
                 className="object-cover transition-transform duration-700 motion-safe:hover:scale-[1.02]"
               />
             </div>
-            <figcaption className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-taupe">
+            <figcaption className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-espresso/65">
               Attentive, never hovering
             </figcaption>
           </figure>
@@ -46,7 +46,7 @@ export function TheTableExperienceSection() {
                 className="object-cover transition-transform duration-700 motion-safe:hover:scale-[1.02]"
               />
             </div>
-            <figcaption className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-taupe">
+            <figcaption className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-espresso/65">
               A table made for sharing
             </figcaption>
           </figure>
@@ -61,7 +61,7 @@ export function TheTableExperienceSection() {
                 className="object-cover transition-transform duration-700 motion-safe:hover:scale-[1.02]"
               />
             </div>
-            <figcaption className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-taupe">
+            <figcaption className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-espresso/65">
               The welcome begins with bread
             </figcaption>
           </figure>

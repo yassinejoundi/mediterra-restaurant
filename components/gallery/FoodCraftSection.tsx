@@ -29,7 +29,7 @@ export function FoodCraftSection() {
         </ScrollReveal>
 
         <ScrollReveal className="lg:col-span-4 lg:col-start-9" direction="left" delay={0.08}>
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-terracotta">02 · The craft</p>
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-wine">02 · The craft</p>
           <h2
             id="gallery-craft-heading"
             className="max-w-[11ch] text-balance font-heading text-[clamp(2.6rem,4.7vw,4.8rem)] font-normal leading-[1.02] tracking-[-0.035em]"

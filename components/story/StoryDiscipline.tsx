@@ -30,7 +30,7 @@ export function StoryDiscipline() {
     >
       <div className="mx-auto grid max-w-screen-2xl items-center gap-12 lg:grid-cols-12 lg:gap-8">
         <div className="lg:col-span-5">
-          <ScrollReveal as="p" className="flex items-center gap-3 font-label text-xs font-semibold uppercase tracking-[0.22em] text-terracotta">
+          <ScrollReveal as="p" className="flex items-center gap-3 font-label text-xs font-semibold uppercase tracking-[0.22em] text-wine">
             <span className="h-px w-8 bg-terracotta" aria-hidden="true" />
             Italian discipline
           </ScrollReveal>

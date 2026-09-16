@@ -9,7 +9,7 @@ export function InteriorAtmosphereSection() {
       <div className="mx-auto max-w-screen-2xl">
         <ScrollReveal className="mb-12 grid gap-6 md:grid-cols-12 md:items-end lg:mb-16">
           <div className="md:col-span-7">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-terracotta">01 · The room</p>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-wine">01 · The room</p>
             <h2
               id="gallery-room-heading"
               className="max-w-[12ch] text-balance font-heading text-[clamp(2.6rem,5vw,5.2rem)] font-normal leading-[1.02] tracking-[-0.035em]"
@@ -34,7 +34,7 @@ export function InteriorAtmosphereSection() {
                 className="object-cover transition-transform duration-700 motion-safe:hover:scale-[1.02]"
               />
             </div>
-            <figcaption className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-taupe">
+            <figcaption className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-espresso/65">
               The courtyard · blue hour
             </figcaption>
           </figure>
@@ -49,7 +49,7 @@ export function InteriorAtmosphereSection() {
                 className="object-cover transition-transform duration-700 motion-safe:hover:scale-[1.02]"
               />
             </div>
-            <figcaption className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-taupe">
+            <figcaption className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-espresso/65">
               A table set quietly
             </figcaption>
           </figure>
@@ -64,7 +64,7 @@ export function InteriorAtmosphereSection() {
                 className="object-cover transition-transform duration-700 motion-safe:hover:scale-[1.02]"
               />
             </div>
-            <figcaption className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-taupe">
+            <figcaption className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-espresso/65">
               Afternoon in the alcove
             </figcaption>
           </figure>
