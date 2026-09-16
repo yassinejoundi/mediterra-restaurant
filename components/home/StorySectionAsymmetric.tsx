@@ -1,30 +1,46 @@
-import Image from "next/image";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
-import pastaPreparationImage from "../../src/assets/images/remote-image-d6e35fba3bc7.jpg";
 
 export function StorySectionAsymmetric() {
   return (
-    <>
-      <section className="py-24 bg-plaster">
-      <div className="max-w-screen-xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-16 md:gap-24">
-      <ScrollReveal className="md:w-5/12 order-2 md:order-1 relative" direction="right">
-      <div className="absolute -inset-4 bg-linen rounded-2xl -z-10 translate-y-6 translate-x-6"></div>
-      <div className="editorial-image-container rounded-2xl overflow-hidden shadow-float aspect-square relative">
-      <Image alt="Handmade pasta preparation" className="editorial-image object-cover" src={pastaPreparationImage} fill sizes="(min-width: 768px) 42vw, 100vw" />
+    <section className="relative overflow-hidden bg-espresso px-5 py-20 text-plaster sm:px-8 sm:py-24 lg:px-12 lg:py-32">
+      <div className="pointer-events-none absolute -right-24 top-1/2 size-80 -translate-y-1/2 rounded-full border border-terracotta/20 sm:size-[32rem]" aria-hidden="true" />
+      <div className="pointer-events-none absolute -right-8 top-1/2 size-52 -translate-y-1/2 rounded-full border border-brass/15 sm:size-96" aria-hidden="true" />
+
+      <div className="relative mx-auto grid max-w-screen-2xl gap-12 lg:grid-cols-12 lg:gap-8">
+        <ScrollReveal className="lg:col-span-3">
+          <p className="font-label text-xs font-semibold uppercase tracking-[0.22em] text-brass">Our beginning</p>
+        </ScrollReveal>
+
+        <div className="lg:col-span-8 lg:col-start-5">
+          <ScrollReveal>
+            <h2 className="max-w-[14ch] text-balance font-heading text-4xl font-normal leading-[1.03] tracking-[-0.025em] text-plaster sm:text-5xl lg:text-7xl">
+              Two friends. Two traditions. <span className="italic text-linen">One generous table.</span>
+            </h2>
+          </ScrollReveal>
+
+          <div className="mt-10 grid gap-8 border-t border-plaster/20 pt-9 md:grid-cols-2 md:gap-12">
+            <ScrollReveal as="p" className="text-pretty font-body text-base leading-7 text-plaster/75" delay={0.06}>
+              Mediterra began with an Italian living in Marrakech and a Moroccan chef devoted to the quiet discipline behind Italian cooking.
+            </ScrollReveal>
+            <ScrollReveal as="p" className="text-pretty font-body text-base leading-7 text-plaster/75" delay={0.12}>
+              Their common ground was never spectacle. It was the ritual of a table: food made with patience, hospitality offered naturally, and time shared well.
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal className="mt-10" delay={0.16}>
+            <Link
+              href="/story"
+              className="inline-flex min-h-12 items-center gap-3 rounded-full border border-plaster/40 px-7 py-3 font-label text-sm font-semibold text-plaster transition-colors hover:bg-plaster hover:text-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plaster"
+            >
+              Read Our Story
+              <ArrowUpRight className="size-4" aria-hidden="true" />
+            </Link>
+          </ScrollReveal>
+        </div>
       </div>
-      </ScrollReveal>
-      <ScrollReveal className="md:w-7/12 order-1 md:order-2" direction="left" delay={0.08}>
-      <span className="font-label text-xs tracking-[0.15em] text-olive uppercase mb-4 block">Our Roots</span>
-      <h2 className="font-headline text-4xl md:text-6xl text-espresso mb-8 leading-tight">Born from friendship, <br/><span className="italic font-light">Italian discipline,</span> <br/>and Marrakech generosity.</h2>
-      <div className="space-y-6 text-taupe font-body text-lg max-w-xl mb-10">
-      <p>Mediterra is the culmination of a shared dream: to bring the exacting standards of Italian culinary tradition to the warm, enveloping atmosphere of a Marrakech riad.</p>
-      <p>We believe in the beauty of simplicity—a perfectly dressed tomato, pasta rolled until translucent, and the soft glow of candlelight reflecting off terracotta walls.</p>
-      </div>
-      <Link className="inline-block border border-espresso text-espresso px-8 py-3 rounded-full font-label font-medium hover:bg-espresso hover:text-plaster transition-colors" href="/story">Read Our Story</Link>
-      </ScrollReveal>
-      </div>
-      </section>
-    </>
+    </section>
   );
 }
