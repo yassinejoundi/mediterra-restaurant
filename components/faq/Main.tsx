@@ -1,155 +1,79 @@
-"use client";
-
+import Image from "next/image";
 import Link from "next/link";
-import { ScrollReveal } from "@/components/motion/ScrollReveal";
-import { StaggerReveal } from "@/components/motion/StaggerReveal";
-import { FontAwesomeMaterialIcon } from "../FontAwesomeMaterialIcon";
-import finalCtaBackgroundImage from "../../src/assets/images/remote-image-3b630977b48d.png";
+import { ArrowUpRight, Plus } from "lucide-react";
 
-function toggleAccordion(button: HTMLButtonElement) {
-  const item = button.parentElement;
-  if (!item) return;
-
-  const wasActive = item.classList.contains("active");
-  const parentGroup = item.parentElement;
-  parentGroup?.querySelectorAll(".accordion-item").forEach((element) => {
-    element.classList.remove("active");
-  });
-
-  if (!wasActive) {
-    item.classList.add("active");
-  }
-}
+const groups = [
+  {
+    id: "reservations", number: "01", title: "Your reservation", intro: "A personal reply before your evening begins.",
+    questions: [
+      ["How do I reserve a table?", "Share your preferred date, time, party size and contact details through our reservation page. It opens a prepared WhatsApp message for you to send to our host team."],
+      ["Is my table confirmed when I send a request?", "Your table is confirmed only when our team replies with a confirmation. Please wait for that reply before making plans around your table."],
+      ["Can I request a table for tonight?", "Yes. Same-day requests are welcome, subject to availability. Please wait for confirmation before travelling to us."],
+      ["What about a larger group or a special occasion?", "The form accepts parties of nine or more. Add your group size, occasion or seating preferences in the notes so our host can discuss what is possible."],
+      ["Can you reply by email?", "You may select email as your preferred reply and include your address. The request still opens in WhatsApp, where you need to send it to our team."],
+    ],
+  },
+  {
+    id: "menu", number: "02", title: "At the table", intro: "Simple ingredients, treated with care.",
+    questions: [
+      ["Is the pasta made by hand?", "Handmade pasta is at the heart of our kitchen, alongside Italian recipes and tableside finishing. Explore the current menu for the dishes we are sharing."],
+      ["Do you offer vegetarian dishes?", "Our menu includes vegetarian choices. Dishes can change, so please check the current menu and tell our team about your needs when requesting a table."],
+      ["Can you accommodate allergies or dietary needs?", "Tell us about allergies and dietary needs in your reservation note. Our team can discuss ingredients and preparation with you before your visit; please do not assume any dish is free from cross-contact."],
+      ["Are menu prices final?", "The online menu is a guide. Dishes, ingredients and prices may change with the season; our team can confirm current details before you order."],
+    ],
+  },
+  {
+    id: "visit", number: "03", title: "Your visit", intro: "The practical details, so you can settle in.",
+    questions: [
+      ["Where can I find you?", "Mediterra is at 12 Derb El Ferraine, Medina, Marrakech 40000. Visit our contact page for directions and ways to reach us."],
+      ["When are you open?", "Tuesday to Thursday: 18:00–23:30. Friday to Sunday: 13:00–00:00. Monday: closed. Hours may change; contact us for a particular date."],
+      ["Is there a dress code?", "Dress for an evening you will enjoy. If you have a particular question about your visit, our team will be happy to help."],
+      ["Which payment methods do you accept?", "Please ask our team about current payment options before your visit if you need to plan ahead."],
+    ],
+  },
+] as const;
 
 export function Main() {
-  return (
-    <>
-      <main id="main-content" tabIndex={-1} className="flex-grow">
-      {/* Hero Section */}
-      <ScrollReveal as="section" className="px-6 pb-24 pt-32 md:px-12 max-w-4xl mx-auto text-center">
-      <h1 className="font-headline text-4xl md:text-6xl text-accent-wine mb-6 leading-tight italic">Everything you may want to know before reserving.</h1>
-      <p className="font-body text-lg md:text-xl text-primary-variant mb-10 max-w-2xl mx-auto leading-relaxed">
-                      At Mediterra, we handle reservations manually to ensure a deeply personalized experience. Explore our frequently asked questions below, or reach out directly to begin curating your evening.
-                  </p>
-      <Link className="inline-block bg-accent-wine text-primary px-8 py-3.5 rounded-full font-body font-medium text-lg hover:bg-opacity-90 transition-all duration-300 shadow-sm" href="/reservations">
-                      Request a Table
-                  </Link>
-      </ScrollReveal>
-      {/* FAQ Sections */}
-      <section className="max-w-3xl mx-auto px-6 pb-24 space-y-16">
-      {/* Category 1: Reservations */}
-      <ScrollReveal>
-      <h2 className="font-headline text-2xl text-accent-wine mb-8 border-b border-accent-terracotta/20 pb-4">Reservations</h2>
-      <StaggerReveal className="space-y-4">
-      <div className="accordion-item bg-primary-container rounded-twelve overflow-hidden border border-accent-terracotta/10">
-      <button className="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onClick={(event) => toggleAccordion(event.currentTarget)}>
-      <span className="font-headline text-lg text-primary-on font-semibold">How does the WhatsApp booking system work?</span>
-      <FontAwesomeMaterialIcon name="expand_more" className="accordion-icon text-accent-wine" />
-      </button>
-      <div className="accordion-content px-6 text-primary-variant font-body">
-                                  Our booking process is personal. When you request a table, it initiates a WhatsApp conversation with our host. We manually confirm availability and details to ensure we can perfectly accommodate your evening.
-                              </div>
+  return <main id="main-content" tabIndex={-1} className="flex-grow bg-plaster">
+    <section className="mx-auto grid max-w-screen-2xl gap-10 px-5 pb-16 pt-14 sm:px-8 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:gap-20 lg:px-12 lg:pb-24 lg:pt-20">
+      <div>
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-wine">Good to know / Mediterra Marrakech</p>
+        <h1 className="mt-6 max-w-[12ch] font-heading text-[clamp(3.2rem,6vw,6.8rem)] leading-[1.02] tracking-[-0.045em] text-espresso">A little clarity <span className="italic text-wine">before dinner.</span></h1>
+        <p className="mt-7 max-w-xl text-base leading-8 text-espresso/75 sm:text-lg">From your first message to your last course, we want the evening to feel easy. Here are the details guests ask us most often.</p>
+        <Link href="/reservations" className="mt-9 inline-flex min-h-12 items-center gap-3 rounded-full bg-wine px-7 py-3 text-sm font-semibold text-plaster transition-colors hover:bg-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine">Request a table <ArrowUpRight className="size-4" aria-hidden="true" /></Link>
       </div>
-      <div className="accordion-item bg-primary-container rounded-twelve overflow-hidden border border-accent-terracotta/10">
-      <button className="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onClick={(event) => toggleAccordion(event.currentTarget)}>
-      <span className="font-headline text-lg text-primary-on font-semibold">How long does it take to receive confirmation?</span>
-      <FontAwesomeMaterialIcon name="expand_more" className="accordion-icon text-accent-wine" />
-      </button>
-      <div className="accordion-content px-6 text-primary-variant font-body">
-                                  We aim to respond to all WhatsApp requests within two hours during our operational hours. Your reservation is only finalized once you receive a definitive confirmation message from our team.
-                              </div>
+      <figure className="relative aspect-[5/4] overflow-hidden rounded-[1.75rem] lg:aspect-[4/5]">
+        <Image src="/images/editorial/faq-table.png" alt="An intimate table set with handmade pasta, linen, olive oil and candlelight" fill priority sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
+        <figcaption className="absolute bottom-5 left-5 rounded-full bg-plaster/90 px-4 py-2 text-xs font-medium text-espresso backdrop-blur-sm">A table worth slowing down for</figcaption>
+      </figure>
+    </section>
+    <div className="border-y border-terracotta/25 bg-linen/60 px-5 py-5 sm:px-8 lg:px-12">
+      <nav aria-label="FAQ topics" className="mx-auto flex max-w-screen-2xl flex-wrap gap-x-8 gap-y-2 text-sm font-semibold text-wine">
+        {groups.map(group => <a key={group.id} href={`#${group.id}`} className="inline-flex min-h-11 items-center underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-wine">{group.title}</a>)}
+      </nav>
+    </div>
+    <div className="mx-auto max-w-screen-xl px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
+      {groups.map(group => <section key={group.id} id={group.id} aria-labelledby={`${group.id}-title`} className="grid scroll-mt-24 gap-8 border-b border-terracotta/25 py-12 first:pt-0 last:border-0 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] lg:gap-20">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-olive">{group.number} / Questions</p>
+          <h2 id={`${group.id}-title`} className="mt-4 font-heading text-4xl leading-tight tracking-tight text-espresso sm:text-5xl">{group.title}</h2>
+          <p className="mt-4 max-w-xs leading-7 text-espresso/70">{group.intro}</p>
+          {group.id === "menu" && <Link href="/menu" className="mt-6 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-wine underline underline-offset-4 hover:text-espresso">View the menu <ArrowUpRight className="size-4" aria-hidden="true" /></Link>}
+          {group.id === "visit" && <Link href="/contact" className="mt-6 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-wine underline underline-offset-4 hover:text-espresso">Contact &amp; directions <ArrowUpRight className="size-4" aria-hidden="true" /></Link>}
+        </div>
+        <div className="divide-y divide-terracotta/25 border-t border-terracotta/25">
+          {group.questions.map(([question, answer]) => <details key={question} className="group py-1">
+            <summary className="flex min-h-16 cursor-pointer list-none items-center justify-between gap-5 py-4 text-left font-heading text-xl leading-snug text-espresso marker:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wine [&::-webkit-details-marker]:hidden">{question}<Plus className="size-5 shrink-0 text-wine transition-transform group-open:rotate-45" aria-hidden="true" /></summary>
+            <p className="max-w-2xl pb-6 pr-8 text-sm leading-7 text-espresso/75 sm:text-base">{answer}</p>
+          </details>)}
+        </div>
+      </section>)}
+    </div>
+    <section className="bg-wine px-5 py-16 text-plaster sm:px-8 lg:px-12 lg:py-20">
+      <div className="mx-auto flex max-w-screen-xl flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
+        <div><p className="text-xs font-semibold uppercase tracking-[0.22em] text-plaster/75">Still wondering?</p><h2 className="mt-4 font-heading text-4xl leading-tight sm:text-5xl">We are here to help.</h2><p className="mt-4 max-w-lg leading-7 text-plaster/80">Ask us about your visit, or share the details of an evening you have in mind.</p></div>
+        <Link href="/contact" className="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 rounded-full bg-plaster px-7 py-3 text-sm font-semibold text-wine transition-colors hover:bg-linen focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plaster">Contact our team <ArrowUpRight className="size-4" aria-hidden="true" /></Link>
       </div>
-      <div className="accordion-item bg-primary-container rounded-twelve overflow-hidden border border-accent-terracotta/10">
-      <button className="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onClick={(event) => toggleAccordion(event.currentTarget)}>
-      <span className="font-headline text-lg text-primary-on font-semibold">Can I book for a large group?</span>
-      <FontAwesomeMaterialIcon name="expand_more" className="accordion-icon text-accent-wine" />
-      </button>
-      <div className="accordion-content px-6 text-primary-variant font-body">
-                                  Online requests are limited to parties of up to 8 guests to maintain the intimate atmosphere of the restaurant. For larger parties or private dining inquiries, please email us directly.
-                              </div>
-      </div>
-      </StaggerReveal>
-      </ScrollReveal>
-      {/* Category 2: The Menu */}
-      <ScrollReveal>
-      <h2 className="font-headline text-2xl text-accent-wine mb-8 border-b border-accent-terracotta/20 pb-4">The Menu</h2>
-      <StaggerReveal className="space-y-4">
-      <div className="accordion-item bg-primary-container rounded-twelve overflow-hidden border border-accent-terracotta/10">
-      <button className="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onClick={(event) => toggleAccordion(event.currentTarget)}>
-      <span className="font-headline text-lg text-primary-on font-semibold">Is the pasta made in-house?</span>
-      <FontAwesomeMaterialIcon name="expand_more" className="accordion-icon text-accent-wine" />
-      </button>
-      <div className="accordion-content px-6 text-primary-variant font-body">
-                                  Yes, absolutely. Our pasta is hand-rolled daily using authentic Italian techniques and premium flour, ensuring the perfect texture and flavor for every dish.
-                              </div>
-      </div>
-      <div className="accordion-item bg-primary-container rounded-twelve overflow-hidden border border-accent-terracotta/10">
-      <button className="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onClick={(event) => toggleAccordion(event.currentTarget)}>
-      <span className="font-headline text-lg text-primary-on font-semibold">Do you cater to dietary requirements?</span>
-      <FontAwesomeMaterialIcon name="expand_more" className="accordion-icon text-accent-wine" />
-      </button>
-      <div className="accordion-content px-6 text-primary-variant font-body">
-                                  We offer considered vegetarian and vegan options woven seamlessly into our menu. Please inform us of any severe allergies during your reservation process so our kitchen can prepare accordingly.
-                              </div>
-      </div>
-      </StaggerReveal>
-      </ScrollReveal>
-      {/* Category 3: Your Visit */}
-      <ScrollReveal>
-      <h2 className="font-headline text-2xl text-accent-wine mb-8 border-b border-accent-terracotta/20 pb-4">Your Visit</h2>
-      <StaggerReveal className="space-y-4">
-      <div className="accordion-item bg-primary-container rounded-twelve overflow-hidden border border-accent-terracotta/10">
-      <button className="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onClick={(event) => toggleAccordion(event.currentTarget)}>
-      <span className="font-headline text-lg text-primary-on font-semibold">What is the dress code?</span>
-      <FontAwesomeMaterialIcon name="expand_more" className="accordion-icon text-accent-wine" />
-      </button>
-      <div className="accordion-content px-6 text-primary-variant font-body">
-                                  Our dress code is Smart Casual. We encourage guests to dress for a special occasion while remaining comfortable—come as you are, but with a touch of evening elegance.
-                              </div>
-      </div>
-      <div className="accordion-item bg-primary-container rounded-twelve overflow-hidden border border-accent-terracotta/10">
-      <button className="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onClick={(event) => toggleAccordion(event.currentTarget)}>
-      <span className="font-headline text-lg text-primary-on font-semibold">Where are you located?</span>
-      <FontAwesomeMaterialIcon name="expand_more" className="accordion-icon text-accent-wine" />
-      </button>
-      <div className="accordion-content px-6 text-primary-variant font-body">
-                                  Mediterra is nestled in the heart of the Riad district in Marrakech. Detailed arrival instructions will be provided upon confirmation of your reservation.
-                              </div>
-      </div>
-      </StaggerReveal>
-      </ScrollReveal>
-      </section>
-      {/* Support Card */}
-      <section className="max-w-3xl mx-auto px-6 pb-24">
-      <ScrollReveal className="bg-primary-container rounded-xl p-10 md:p-14 text-center border border-accent-terracotta/10 shadow-sm relative overflow-hidden">
-      {/* Subtle texture overlay simulation */}
-      <div className="absolute inset-0 opacity-5 mix-blend-multiply pointer-events-none" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')" }}></div>
-      <h3 className="font-headline text-3xl text-accent-wine mb-4 relative z-10">Still have questions?</h3>
-      <p className="font-body text-primary-variant mb-8 max-w-md mx-auto relative z-10">Our host is available to assist you directly. We look forward to speaking with you.</p>
-      <div className="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
-      <a className="flex items-center justify-center gap-2 bg-accent-wine text-primary px-6 py-3 rounded-full font-body font-medium hover:bg-opacity-90 transition-colors" href="https://wa.me/2125XXXXXXX" target="_blank" rel="noreferrer">
-      <FontAwesomeMaterialIcon name="chat" className="text-base" />
-                              Chat via WhatsApp
-                          </a>
-      <a className="flex items-center justify-center gap-2 border border-accent-wine text-accent-wine bg-transparent px-6 py-3 rounded-full font-body font-medium hover:bg-accent-wine/5 transition-colors" href="tel:+2125XXXXXXX">
-      <FontAwesomeMaterialIcon name="call" className="text-base" />
-                              Call the Team
-                          </a>
-      </div>
-      </ScrollReveal>
-      </section>
-      {/* Final CTA */}
-      <section className="bg-accent-wine text-primary py-24 text-center relative overflow-hidden">
-      <div className="absolute inset-0 opacity-10" data-alt="Abstract soft focus ambient light flares in warm candlelight tones, deep rich wine reds and soft golden highlights, creating a romantic atmospheric background suitable for a luxury Mediterranean restaurant evening setting." style={{ backgroundImage: `url(${finalCtaBackgroundImage.src})` }}></div>
-      <ScrollReveal className="relative z-10 max-w-2xl mx-auto px-6">
-      <h2 className="font-headline text-4xl mb-6 italic">Ready to join us?</h2>
-      <p className="font-body text-primary/80 mb-10 text-lg">Secure your table and let us curate a memorable evening of Mediterranean warmth and coastal flavors.</p>
-      <Link className="inline-block bg-primary text-accent-wine px-10 py-4 rounded-full font-headline font-semibold text-lg hover:bg-primary-container transition-colors shadow-lg" href="/reservations">
-                          Reserve a Table
-                      </Link>
-      </ScrollReveal>
-      </section>
-      </main>
-    </>
-  );
+    </section>
+  </main>;
 }
