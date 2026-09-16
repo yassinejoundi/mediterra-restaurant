@@ -50,7 +50,49 @@ export function Main() {
         </div>
       </section>
 
-      <div id="menu-categories" />
+      <section id="menu-categories" className="scroll-mt-28 bg-plaster px-5 py-16 sm:px-8 sm:py-20 lg:px-12">
+        <ScrollReveal className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+          <div>
+            <p className="font-label text-xs font-semibold uppercase tracking-[0.26em] text-olive">The menu</p>
+            <h2 className="mt-4 text-balance font-heading text-4xl leading-tight tracking-[-0.025em] text-wine sm:text-5xl">
+              An evening, served in chapters.
+            </h2>
+          </div>
+          <div className="max-w-2xl lg:justify-self-end">
+            <p className="text-pretty text-base leading-7 text-espresso/75 sm:text-lg sm:leading-8">
+              Begin with plates for sharing, stay for pasta rolled each day, then let dessert stretch the table a little longer.
+              Our cooking follows Italian discipline and the generous rhythm of Marrakech.
+            </p>
+            <p className="mt-4 text-sm leading-6 text-taupe">
+              Draft menu and prices shown in Moroccan dirhams. Please ask our team about allergies and dietary needs.
+            </p>
+          </div>
+        </ScrollReveal>
+      </section>
+
+      <nav
+        aria-label="Menu categories"
+        className="sticky top-20 z-30 border-y border-terracotta/15 bg-linen/95 shadow-[0_8px_24px_rgba(42,33,29,0.05)] backdrop-blur-md"
+      >
+        <div className="mx-auto flex max-w-screen-2xl gap-2 overflow-x-auto px-5 py-3 sm:px-8 lg:justify-center lg:px-12">
+          {[
+            ["Antipasti", "antipasti"],
+            ["Handmade Pasta", "pasta"],
+            ["Pizza", "pizza"],
+            ["Italian Classics", "classics"],
+            ["Desserts", "desserts"],
+            ["Drinks", "drinks"],
+          ].map(([label, id]) => (
+            <a
+              key={id}
+              href={`#${id}`}
+              className="inline-flex min-h-11 shrink-0 items-center rounded-full px-4 font-label text-[0.7rem] font-bold uppercase tracking-[0.16em] text-espresso transition-colors hover:bg-plaster hover:text-wine focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wine"
+            >
+              {label}
+            </a>
+          ))}
+        </div>
+      </nav>
     </main>
   );
 }
