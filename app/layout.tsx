@@ -22,7 +22,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full scroll-smooth antialiased", manrope.variable, playfairDisplay.variable, publicSans.variable)}
+      className={cn(
+        "h-full scroll-smooth antialiased motion-reduce:scroll-auto",
+        manrope.variable,
+        playfairDisplay.variable,
+        publicSans.variable
+      )}
     >
       <body className="flex min-h-full flex-col bg-plaster text-espresso">
         <Navbar />

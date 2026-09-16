@@ -3,7 +3,7 @@ import { Car, ExternalLink, MapPin, PersonStanding } from "lucide-react";
 
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
 
-const mapsUrl = "https://www.google.com/maps/search/?api=1&query=12+Derb+El+Ferraine+Medina+Marrakech";
+const mapsUrl = "https://www.google.com/maps/dir/?api=1&destination=12+Derb+El+Ferraine+Medina+Marrakech";
 
 export function VisitSection() {
   return (

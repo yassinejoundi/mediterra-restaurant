@@ -8,7 +8,7 @@ import { StorySubstance } from "./StorySubstance";
 export function PageContent() {
   return (
     <div className="bg-plaster font-body text-espresso antialiased">
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <StoryHero />
         <StoryBeginning />
         <StoryDiscipline />

@@ -5,7 +5,7 @@ import { FontAwesomeMaterialIcon } from "../FontAwesomeMaterialIcon";
 export function Main() {
   return (
     <>
-      <main className="pt-32 pb-24">
+      <main id="main-content" tabIndex={-1} className="pt-32 pb-24">
       {/* Hero Section */}
       <ScrollReveal as="section" className="max-w-screen-xl mx-auto px-8 mb-20 text-center">
       <span className="text-olive font-label text-sm uppercase tracking-[0.2em] mb-4 block">Legal &amp; Reservation Policies</span>

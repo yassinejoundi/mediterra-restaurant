@@ -24,7 +24,7 @@ function toggleAccordion(button: HTMLButtonElement) {
 export function Main() {
   return (
     <>
-      <main className="flex-grow">
+      <main id="main-content" tabIndex={-1} className="flex-grow">
       {/* Hero Section */}
       <ScrollReveal as="section" className="px-6 pb-24 pt-32 md:px-12 max-w-4xl mx-auto text-center">
       <h1 className="font-headline text-4xl md:text-6xl text-accent-wine mb-6 leading-tight italic">Everything you may want to know before reserving.</h1>

@@ -21,6 +21,12 @@ export function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-terracotta/15 bg-plaster/90 shadow-[0_10px_30px_rgba(42,33,29,0.06)] backdrop-blur-xl">
+      <a
+        href="#main-content"
+        className="absolute start-5 top-2 z-10 -translate-y-20 rounded-full bg-espresso px-5 py-3 text-sm font-semibold text-plaster transition-transform focus:translate-y-0 motion-reduce:transition-none"
+      >
+        Skip to content
+      </a>
       <div className="mx-auto flex h-20 max-w-screen-2xl items-center justify-between px-5 sm:px-8 lg:px-12">
         <Link
           href="/"
@@ -53,7 +59,7 @@ export function Navbar() {
         <div className="hidden items-center md:flex">
           <Link
             href="/reservations"
-            className="rounded-full bg-wine px-6 py-3 font-label text-xs font-bold uppercase tracking-[0.2em] text-plaster shadow-lg shadow-wine/15 transition-all hover:bg-espresso active:scale-95"
+            className="rounded-full bg-wine px-6 py-3 font-label text-xs font-bold uppercase tracking-[0.2em] text-plaster shadow-lg shadow-wine/15 transition-colors hover:bg-espresso motion-safe:active:scale-[0.96]"
           >
             Reserve a Table
           </Link>
@@ -73,8 +79,10 @@ export function Navbar() {
 
       <div
         id="mobile-navigation"
+        aria-hidden={!isOpen}
+        inert={!isOpen ? true : undefined}
         className={cn(
-          "grid overflow-hidden border-t border-terracotta/15 bg-plaster/95 transition-[grid-template-rows] duration-300 md:hidden",
+          "grid overflow-hidden border-t border-terracotta/15 bg-plaster/95 transition-[grid-template-rows] duration-300 motion-reduce:transition-none md:hidden",
           isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
         )}
       >

@@ -82,7 +82,7 @@ export function StoryDiscipline() {
               alt="Chef's hands dusting flour over fresh handmade pappardelle beside golden olive oil"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover transition-transform duration-1000 group-hover:scale-105"
+              className="object-cover transition-transform duration-1000 motion-safe:group-hover:scale-[1.02]"
             />
             <div
               className="absolute inset-0 bg-gradient-to-t from-espresso/30 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"

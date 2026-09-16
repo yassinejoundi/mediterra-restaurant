@@ -11,7 +11,7 @@ import privateEventImage from "../../src/assets/images/remote-image-f7b98416dd0e
 export function Main() {
   return (
     <>
-      <main>
+      <main id="main-content" tabIndex={-1}>
       {/* Hero Section */}
       <section className="relative w-full h-[60vh] min-h-[500px] flex items-center justify-center pt-20">
       <div className="absolute inset-0 w-full h-full">

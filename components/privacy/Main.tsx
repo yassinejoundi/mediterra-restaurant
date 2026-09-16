@@ -8,7 +8,7 @@ import privacyInteriorImage from "../../src/assets/images/remote-image-51773cef7
 export function Main() {
   return (
     <>
-      <main className="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+      <main id="main-content" tabIndex={-1} className="pt-32 pb-24 px-6 max-w-7xl mx-auto">
       {/* Hero Section */}
       <section className="mb-24 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
       <ScrollReveal className="md:col-span-7" direction="right">
