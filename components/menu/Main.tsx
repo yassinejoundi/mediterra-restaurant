@@ -58,7 +58,7 @@ export function Main() {
       <section id="menu-categories" className="scroll-mt-28 bg-plaster px-5 py-16 sm:px-8 sm:py-20 lg:px-12">
         <ScrollReveal className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <div>
-            <p className="font-label text-xs font-semibold uppercase tracking-[0.26em] text-olive">The menu</p>
+            <p className="font-label text-xs font-semibold uppercase tracking-[0.26em] text-wine">The menu</p>
             <h2 className="mt-4 text-balance font-heading text-4xl leading-tight tracking-[-0.025em] text-wine sm:text-5xl">
               An evening, served in chapters.
             </h2>
@@ -68,7 +68,7 @@ export function Main() {
               Begin with plates for sharing, stay for pasta rolled each day, then let dessert stretch the table a little longer.
               Our cooking follows Italian discipline and the generous rhythm of Marrakech.
             </p>
-            <p className="mt-4 text-sm leading-6 text-taupe">
+            <p className="mt-4 text-sm leading-6 text-espresso/70">
               Draft menu and prices shown in Moroccan dirhams. Please ask our team about allergies and dietary needs.
             </p>
           </div>
@@ -103,7 +103,7 @@ export function Main() {
         <div className="mx-auto max-w-6xl rounded-[2rem] bg-linen px-6 py-10 shadow-[0_20px_70px_rgba(42,33,29,0.06)] sm:px-10 sm:py-14 lg:px-16">
           <ScrollReveal className="grid gap-8 border-b border-terracotta/20 pb-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
-              <p className="font-label text-xs font-semibold uppercase tracking-[0.24em] text-olive">To begin</p>
+              <p className="font-label text-xs font-semibold uppercase tracking-[0.24em] text-wine">To begin</p>
               <h2 className="mt-3 font-heading text-4xl italic tracking-[-0.025em] text-wine sm:text-5xl">Antipasti</h2>
             </div>
             <p className="max-w-xl text-pretty text-base leading-7 text-espresso/70 lg:justify-self-end">
@@ -140,7 +140,7 @@ export function Main() {
           </StaggerReveal>
 
           <div className="mt-10 flex flex-wrap items-center justify-between gap-5 border-t border-terracotta/20 pt-8">
-            <p className="max-w-lg text-sm leading-6 text-taupe">Planning a slower dinner? We will pace the table around your evening.</p>
+            <p className="max-w-lg text-sm leading-6 text-espresso/70">Planning a slower dinner? We will pace the table around your evening.</p>
             <Link href="/reservations" className="font-label text-xs font-bold uppercase tracking-[0.16em] text-wine underline decoration-terracotta/50 underline-offset-4 transition-colors hover:text-espresso">
               Reserve your table
             </Link>
@@ -225,7 +225,7 @@ export function Main() {
         <div className="mx-auto max-w-6xl">
           <ScrollReveal className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
             <div>
-              <p className="font-label text-xs font-semibold uppercase tracking-[0.24em] text-olive">From the oven</p>
+              <p className="font-label text-xs font-semibold uppercase tracking-[0.24em] text-wine">From the oven</p>
               <h2 className="mt-3 font-heading text-4xl italic tracking-[-0.025em] text-wine sm:text-5xl">Pizza</h2>
             </div>
             <p className="max-w-2xl text-pretty text-base leading-7 text-espresso/70 lg:justify-self-end">
@@ -267,7 +267,7 @@ export function Main() {
       <section id="classics" className="scroll-mt-40 bg-sage/45 px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16">
           <ScrollReveal className="order-2 lg:order-1" direction="left">
-            <p className="font-label text-xs font-semibold uppercase tracking-[0.24em] text-olive">Land, sea, and season</p>
+            <p className="font-label text-xs font-semibold uppercase tracking-[0.24em] text-wine">Land, sea, and season</p>
             <h2 className="mt-3 text-balance font-heading text-4xl italic tracking-[-0.025em] text-wine sm:text-5xl">
               Italian Classics
             </h2>
@@ -306,7 +306,7 @@ export function Main() {
                   className="object-cover"
                 />
               </div>
-              <figcaption className="mt-4 border-l border-terracotta/50 pl-4 text-sm leading-6 text-taupe">
+              <figcaption className="mt-4 border-l border-terracotta/50 pl-4 text-sm leading-6 text-espresso/70">
                 Thoughtful finishing, quiet service, and time for conversation.
               </figcaption>
             </figure>
@@ -317,7 +317,7 @@ export function Main() {
       <section className="bg-linen px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-6xl">
           <ScrollReveal className="mx-auto max-w-3xl text-center">
-            <p className="font-label text-xs font-semibold uppercase tracking-[0.24em] text-olive">Stay a little longer</p>
+            <p className="font-label text-xs font-semibold uppercase tracking-[0.24em] text-wine">Stay a little longer</p>
             <h2 className="mt-3 text-balance font-heading text-4xl tracking-[-0.025em] text-wine sm:text-5xl">
               Something sweet, something poured.
             </h2>
@@ -329,7 +329,7 @@ export function Main() {
           <div className="mt-14 grid overflow-hidden rounded-[2rem] border border-terracotta/15 bg-plaster shadow-[0_20px_70px_rgba(42,33,29,0.06)] lg:grid-cols-2">
             <ScrollReveal as="section" id="desserts" className="scroll-mt-40 px-6 py-10 sm:px-10 sm:py-12 lg:px-12" direction="left">
               <div className="border-b border-terracotta/20 pb-6">
-                <p className="font-label text-xs font-semibold uppercase tracking-[0.2em] text-olive">Dolci</p>
+                <p className="font-label text-xs font-semibold uppercase tracking-[0.2em] text-wine">Dolci</p>
                 <h3 className="mt-2 font-heading text-3xl italic text-wine">Desserts</h3>
               </div>
               <div className="divide-y divide-terracotta/15">
@@ -385,7 +385,7 @@ export function Main() {
       <section className="px-5 py-16 sm:px-8 lg:px-12">
         <ScrollReveal className="mx-auto flex max-w-5xl flex-col gap-6 rounded-[1.5rem] border border-olive/20 bg-sage/35 px-6 py-8 sm:px-10 sm:py-10 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-2xl">
-            <p className="font-label text-xs font-semibold uppercase tracking-[0.22em] text-olive">A note from our kitchen</p>
+            <p className="font-label text-xs font-semibold uppercase tracking-[0.22em] text-wine">A note from our kitchen</p>
             <h2 className="mt-3 font-heading text-2xl text-wine sm:text-3xl">The menu moves with the market.</h2>
             <p className="mt-3 text-sm leading-6 text-espresso/70 sm:text-base sm:leading-7">
               Dishes and prices may change with the season. Tell us about allergies or dietary needs when you reserve, and our team will guide the table with care.
