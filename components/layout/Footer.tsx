@@ -41,8 +41,8 @@ export function Footer() {
               <br />
               Medina, Marrakech 40000
             </p>
-            <a href="tel:+2125XXXXXXX" className="block transition-colors hover:text-wine">
-              +212 5XX-XXXXXX
+            <a href="tel:+212524384217" className="block transition-colors hover:text-wine">
+              +212 524 38 42 17
             </a>
             <a href="mailto:ciao@mediterra.ma" className="block transition-colors hover:text-wine">
               ciao@mediterra.ma
