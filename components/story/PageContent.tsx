@@ -1,12 +1,21 @@
- 
-import { Main } from "./Main";
-import { Script } from "./Script";
+import { StoryBeginning } from "./StoryBeginning";
+import { StoryDiscipline } from "./StoryDiscipline";
+import { StoryFinalCta } from "./StoryFinalCta";
+import { StoryGenerosity } from "./StoryGenerosity";
+import { StoryHero } from "./StoryHero";
+import { StorySubstance } from "./StorySubstance";
 
 export function PageContent() {
   return (
-    <div className="bg-primary text-charcoal font-body antialiased selection:bg-wine selection:text-primary">
-      <Main />
-      <Script />
+    <div className="bg-plaster font-body text-espresso antialiased">
+      <main>
+        <StoryHero />
+        <StoryBeginning />
+        <StoryDiscipline />
+        <StoryGenerosity />
+        <StorySubstance />
+        <StoryFinalCta />
+      </main>
     </div>
   );
 }
