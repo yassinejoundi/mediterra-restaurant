@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
 import { StaggerReveal } from "@/components/motion/StaggerReveal";
 import menuHero from "@/public/images/menu-hero.png";
+import pastaCraft from "@/public/images/menu-pasta-craft.png";
 
 import { MenuItem } from "./MenuItem";
 
@@ -143,6 +144,79 @@ export function Main() {
               Reserve your table
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section id="pasta" className="scroll-mt-40 overflow-hidden bg-espresso text-plaster">
+        <div className="mx-auto grid max-w-screen-2xl lg:grid-cols-[0.92fr_1.08fr]">
+          <div className="relative min-h-[32rem] overflow-hidden lg:min-h-[58rem]">
+            <Image
+              src={pastaCraft}
+              alt="Chef shaping fresh tagliatelle by hand on a floured wooden table"
+              fill
+              placeholder="blur"
+              sizes="(min-width: 1024px) 46vw, 100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-espresso/65 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-espresso/25" />
+            <p className="absolute inset-x-6 bottom-6 max-w-sm border-l border-brass/70 pl-4 text-sm leading-6 text-plaster/85 sm:inset-x-10 sm:bottom-10">
+              Rolled each day with Italian “00” flour, farm eggs, and the patience good pasta asks for.
+            </p>
+          </div>
+
+          <ScrollReveal className="px-6 py-16 sm:px-10 sm:py-20 lg:px-16 lg:py-24 xl:px-24" direction="right">
+            <p className="font-label text-xs font-semibold uppercase tracking-[0.24em] text-brass">Made in house</p>
+            <h2 className="mt-3 text-balance font-heading text-4xl italic tracking-[-0.025em] text-plaster sm:text-5xl lg:text-6xl">
+              Handmade Pasta
+            </h2>
+            <p className="mt-5 max-w-xl text-pretty text-base leading-7 text-linen/80">
+              Familiar shapes, precise sauces, and enough restraint for every ingredient to speak clearly.
+            </p>
+
+            <div className="mt-10 divide-y divide-plaster/15">
+              <article className="py-7 first:pt-0">
+                <div className="flex items-baseline gap-4">
+                  <h3 className="font-heading text-2xl text-plaster">Tagliatelle al Tartufo</h3>
+                  <span className="min-w-4 flex-1 border-b border-dotted border-brass/35" aria-hidden="true" />
+                  <p className="shrink-0 text-sm font-semibold text-brass tabular-nums">280 MAD</p>
+                </div>
+                <p className="mt-2 text-sm leading-6 text-linen/70 sm:text-base sm:leading-7">Silky tagliatelle, Parmigiano cream, and black truffle shaved at the table.</p>
+                <p className="mt-3 inline-flex rounded-full border border-brass/30 px-3 py-1 font-label text-[0.65rem] font-bold uppercase tracking-[0.14em] text-brass">Signature</p>
+              </article>
+              <article className="py-7">
+                <div className="flex items-baseline gap-4">
+                  <h3 className="font-heading text-2xl text-plaster">Pappardelle al Ragù</h3>
+                  <span className="min-w-4 flex-1 border-b border-dotted border-brass/35" aria-hidden="true" />
+                  <p className="shrink-0 text-sm font-semibold text-brass tabular-nums">240 MAD</p>
+                </div>
+                <p className="mt-2 text-sm leading-6 text-linen/70 sm:text-base sm:leading-7">Wide ribbons, twelve-hour beef ragù, tomato, root vegetables, and Parmigiano.</p>
+              </article>
+              <article className="py-7">
+                <div className="flex items-baseline gap-4">
+                  <h3 className="font-heading text-2xl text-plaster">Ravioli Ricotta e Spinaci</h3>
+                  <span className="min-w-4 flex-1 border-b border-dotted border-brass/35" aria-hidden="true" />
+                  <p className="shrink-0 text-sm font-semibold text-brass tabular-nums">220 MAD</p>
+                </div>
+                <p className="mt-2 text-sm leading-6 text-linen/70 sm:text-base sm:leading-7">Hand-pinched parcels, fresh ricotta, spinach, brown butter, sage, and lemon.</p>
+              </article>
+              <article className="py-7 last:pb-0">
+                <div className="flex items-baseline gap-4">
+                  <h3 className="font-heading text-2xl text-plaster">Spaghetti alle Vongole</h3>
+                  <span className="min-w-4 flex-1 border-b border-dotted border-brass/35" aria-hidden="true" />
+                  <p className="shrink-0 text-sm font-semibold text-brass tabular-nums">250 MAD</p>
+                </div>
+                <p className="mt-2 text-sm leading-6 text-linen/70 sm:text-base sm:leading-7">Clams, garlic, parsley, white wine, lemon, and a touch of chilli.</p>
+              </article>
+            </div>
+
+            <Link
+              href="/reservations"
+              className="mt-12 inline-flex min-h-12 items-center gap-3 rounded-full bg-plaster px-6 py-3 font-label text-xs font-bold uppercase tracking-[0.16em] text-espresso transition-colors hover:bg-linen focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plaster"
+            >
+              Join us for dinner
+              <ArrowRight className="size-4" aria-hidden="true" />
+            </Link>
+          </ScrollReveal>
         </div>
       </section>
     </main>
