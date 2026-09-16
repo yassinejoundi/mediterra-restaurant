@@ -1,53 +1,61 @@
-import Image from "next/image";
 import Link from "next/link";
+import { ArrowUpRight, Clock3, MapPin, MessageCircle } from "lucide-react";
+
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
-import { FontAwesomeMaterialIcon } from "../FontAwesomeMaterialIcon";
-import plasterWallImage from "../../src/assets/images/remote-image-4c65ca53255a.png";
-import marrakechMapImage from "../../src/assets/images/remote-image-414f8a072520.png";
 
 export function LocationContact() {
   return (
-    <>
-      <section className="py-24 px-6 md:px-12 max-w-screen-xl mx-auto">
-      <ScrollReveal className="bg-linen rounded-3xl overflow-hidden shadow-soft flex flex-col md:flex-row">
-      <div className="md:w-1/2 p-12 md:p-16 flex flex-col justify-center bg-[url('/placeholder')] bg-cover bg-center relative" data-alt="A subtle, textured plaster wall in warm ivory, typical of Marrakech riads, catching soft dappled sunlight through foliage, creating a calm, minimalist backdrop for text." style={{ backgroundImage: `url(${plasterWallImage.src})` }}>
-      <div className="absolute inset-0 bg-linen/90 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-      <h2 className="font-headline text-3xl md:text-4xl text-espresso mb-8">Find Us</h2>
-      <div className="space-y-6 mb-10">
-      <div className="flex items-start gap-4">
-      <FontAwesomeMaterialIcon name="location_on" className="text-wine text-lg mt-1" />
-      <div>
-      <h4 className="font-label font-semibold text-espresso mb-1">Mediterra Restaurant</h4>
-      <p className="font-body text-taupe">123 Rue de la Kasbah, Medina<br/>Marrakech 40000, Morocco</p>
+    <section className="bg-plaster px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-32">
+      <div className="mx-auto grid max-w-screen-2xl overflow-hidden rounded-[2rem] bg-linen lg:grid-cols-2">
+        <ScrollReveal className="flex flex-col justify-between p-7 sm:p-10 lg:p-14" direction="right">
+          <div>
+            <p className="mb-4 font-label text-xs font-semibold uppercase tracking-[0.22em] text-olive">Find your way to the table</p>
+            <h2 className="max-w-[11ch] text-balance font-heading text-4xl font-normal leading-[1.02] tracking-[-0.025em] text-espresso sm:text-5xl lg:text-6xl">
+              Your evening in <span className="italic text-wine">Marrakech.</span>
+            </h2>
+            <p className="mt-6 max-w-lg text-pretty font-body text-base leading-7 text-taupe">
+              Plan ahead or speak with our team. We will help with directions, timing, and any details that make your visit feel effortless.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-4 sm:grid-cols-2">
+            <div className="rounded-2xl bg-plaster p-5">
+              <Clock3 className="size-5 text-wine" strokeWidth={1.6} aria-hidden="true" />
+              <h3 className="mt-5 font-label text-xs font-semibold uppercase tracking-[0.18em] text-espresso">Dinner service</h3>
+              <p className="mt-2 font-body text-sm leading-6 text-taupe">Evening tables by reservation</p>
+            </div>
+            <div className="rounded-2xl bg-plaster p-5">
+              <MessageCircle className="size-5 text-wine" strokeWidth={1.6} aria-hidden="true" />
+              <h3 className="mt-5 font-label text-xs font-semibold uppercase tracking-[0.18em] text-espresso">Personal reply</h3>
+              <p className="mt-2 font-body text-sm leading-6 text-taupe">Requests confirmed by our team</p>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal className="relative min-h-[28rem] overflow-hidden bg-olive p-7 text-plaster sm:p-10 lg:p-14" direction="left" delay={0.08}>
+          <div className="pointer-events-none absolute -right-28 -top-28 size-80 rounded-full border border-plaster/15" aria-hidden="true" />
+          <div className="pointer-events-none absolute -right-12 -top-12 size-56 rounded-full border border-plaster/15" aria-hidden="true" />
+          <div className="pointer-events-none absolute bottom-16 left-12 right-12 h-px -rotate-12 bg-plaster/15" aria-hidden="true" />
+          <div className="pointer-events-none absolute bottom-36 -left-10 right-10 h-px rotate-6 bg-plaster/10" aria-hidden="true" />
+
+          <div className="relative flex h-full min-h-[24rem] flex-col justify-between">
+            <MapPin className="size-8 text-linen" strokeWidth={1.4} aria-hidden="true" />
+            <div>
+              <p className="font-heading text-[clamp(3.5rem,8vw,7rem)] font-normal italic leading-none tracking-[-0.04em] text-plaster/95">Marrakech</p>
+              <p className="mt-5 max-w-sm font-body text-sm leading-6 text-plaster/75">
+                Contact our host team for location guidance and help planning your arrival.
+              </p>
+              <Link
+                href="/contact"
+                className="mt-8 inline-flex min-h-12 items-center gap-3 rounded-full bg-plaster px-7 py-3 font-label text-sm font-semibold text-olive transition-colors hover:bg-espresso hover:text-plaster focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plaster"
+              >
+                Contact &amp; Directions
+                <ArrowUpRight className="size-4" aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
-      </div>
-      <div className="flex items-start gap-4">
-      <FontAwesomeMaterialIcon name="schedule" className="text-wine text-lg mt-1" />
-      <div>
-      <h4 className="font-label font-semibold text-espresso mb-1">Opening Hours</h4>
-      <p className="font-body text-taupe">Tuesday - Sunday<br/>Dinner: 19:00 - 23:30<br/>Closed Mondays</p>
-      </div>
-      </div>
-      </div>
-      <div className="flex flex-col sm:flex-row gap-4">
-      <a className="bg-[#25D366] text-white px-6 py-3 rounded-full font-label font-medium flex items-center justify-center gap-2 hover:bg-[#128C7E] transition-colors" href="https://wa.me/2125XXXXXXX" target="_blank" rel="noreferrer">
-      <FontAwesomeMaterialIcon name="chat" style={{ fontSize: "20px" }} /> WhatsApp
-                              </a>
-      <Link className="border border-espresso text-espresso px-6 py-3 rounded-full font-label font-medium flex items-center justify-center gap-2 hover:bg-espresso hover:text-plaster transition-colors" href="/contact">
-      <FontAwesomeMaterialIcon name="directions" style={{ fontSize: "20px" }} /> Get Directions
-                              </Link>
-      </div>
-      </div>
-      </div>
-      <div className="md:w-1/2 h-80 md:h-auto bg-sage relative">
-      {/* Map Placeholder */}
-      <div className="w-full h-full flex items-center justify-center bg-linen relative">
-      <Image className="w-full h-full object-cover opacity-80 mix-blend-multiply" alt="Stylized map of Marrakech Medina showing the Mediterra restaurant location" data-alt="A stylized, minimal map of Marrakech Medina showing the location of Mediterra restaurant. The map uses warm earthy tones, soft terracotta paths, and olive green markers, fitting the premium Mediterranean design system." data-location="Marrakech" src={marrakechMapImage} />
-      </div>
-      </div>
-      </ScrollReveal>
-      </section>
-    </>
+    </section>
   );
 }
