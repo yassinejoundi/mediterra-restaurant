@@ -1,18 +1,28 @@
- 
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
-import { FontAwesomeMaterialIcon } from "../FontAwesomeMaterialIcon";
+
 export function FinalCTA() {
   return (
-    <>
-      <section className="py-24 bg-wine text-center px-6">
-      <ScrollReveal className="max-w-2xl mx-auto">
-      <FontAwesomeMaterialIcon name="local_dining" className="mx-auto block text-brass mb-6" style={{ fontSize: "42px" }} />
-      <h2 className="font-headline text-4xl md:text-5xl text-plaster mb-6">Join us for dinner.</h2>
-      <p className="font-body text-linen/80 text-lg mb-10">To ensure an intimate experience, all reservations are personally confirmed by our team via WhatsApp.</p>
-      <Link className="inline-block bg-plaster text-wine px-10 py-4 rounded-full font-label font-semibold text-lg hover:bg-white transition-all shadow-lg hover:shadow-xl hover:-translate-y-1" href="/reservations">Reserve a Table</Link>
+    <section className="bg-wine px-5 py-20 text-plaster sm:px-8 sm:py-24 lg:px-12 lg:py-32">
+      <ScrollReveal className="mx-auto max-w-4xl text-center">
+        <p className="font-label text-xs font-semibold uppercase tracking-[0.24em] text-brass">Your table is waiting</p>
+        <h2 className="mx-auto mt-5 max-w-[13ch] text-balance font-heading text-5xl font-normal leading-[0.98] tracking-[-0.035em] sm:text-6xl lg:text-7xl">
+          Come for dinner. <span className="italic text-linen">Stay for the evening.</span>
+        </h2>
+        <p className="mx-auto mt-7 max-w-xl text-pretty font-body text-base leading-7 text-plaster/75 sm:text-lg sm:leading-8">
+          Send your preferred date and time. Our team will reply personally to confirm every reservation.
+        </p>
+        <Link
+          href="/reservations"
+          className="mt-10 inline-flex min-h-14 items-center gap-3 rounded-full bg-plaster px-9 py-4 font-label text-sm font-semibold text-wine transition-colors hover:bg-espresso hover:text-plaster focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plaster"
+        >
+          Request a Table
+          <ArrowRight className="size-4" aria-hidden="true" />
+        </Link>
+        <p className="mt-5 font-body text-xs leading-5 text-plaster/55">Your request is confirmed once our team replies.</p>
       </ScrollReveal>
-      </section>
-    </>
+    </section>
   );
 }
