@@ -381,6 +381,24 @@ export function Main() {
           </div>
         </div>
       </section>
+
+      <section className="px-5 py-16 sm:px-8 lg:px-12">
+        <ScrollReveal className="mx-auto flex max-w-5xl flex-col gap-6 rounded-[1.5rem] border border-olive/20 bg-sage/35 px-6 py-8 sm:px-10 sm:py-10 lg:flex-row lg:items-center lg:justify-between">
+          <div className="max-w-2xl">
+            <p className="font-label text-xs font-semibold uppercase tracking-[0.22em] text-olive">A note from our kitchen</p>
+            <h2 className="mt-3 font-heading text-2xl text-wine sm:text-3xl">The menu moves with the market.</h2>
+            <p className="mt-3 text-sm leading-6 text-espresso/70 sm:text-base sm:leading-7">
+              Dishes and prices may change with the season. Tell us about allergies or dietary needs when you reserve, and our team will guide the table with care.
+            </p>
+          </div>
+          <Link
+            href="/contact"
+            className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full border border-wine/30 px-6 py-3 font-label text-xs font-bold uppercase tracking-[0.16em] text-wine transition-colors hover:bg-wine hover:text-plaster focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine"
+          >
+            Contact our team
+          </Link>
+        </ScrollReveal>
+      </section>
     </main>
   );
 }
