@@ -28,13 +28,13 @@ export function GuestWords() {
       <div className="mx-auto max-w-screen-2xl">
         <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
           <ScrollReveal className="lg:col-span-7">
-            <p className="mb-4 font-label text-xs font-semibold uppercase tracking-[0.22em] text-olive">Your evening, your way</p>
+            <p className="mb-4 font-label text-xs font-semibold uppercase tracking-[0.22em] text-wine">Your evening, your way</p>
             <h2 className="max-w-[13ch] text-balance font-heading text-4xl font-normal leading-[1.02] tracking-[-0.025em] text-espresso sm:text-5xl lg:text-6xl">
               A table for moments worth <span className="italic text-wine">staying for.</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal className="lg:col-span-3 lg:col-start-10" delay={0.08}>
-            <p className="text-pretty font-body text-base leading-7 text-taupe">
+            <p className="text-pretty font-body text-base leading-7 text-espresso/70">
               Romantic by nature, generous by instinct, and never too formal to feel like your own evening.
             </p>
           </ScrollReveal>
@@ -45,7 +45,7 @@ export function GuestWords() {
             <article key={title} className="flex h-full flex-col rounded-[1.5rem] border border-olive/15 bg-plaster/80 p-7 sm:p-8">
               <Icon className="size-6 text-wine" strokeWidth={1.5} aria-hidden="true" />
               <h3 className="mt-10 font-heading text-2xl font-normal text-espresso">{title}</h3>
-              <p className="mt-4 text-pretty font-body text-sm leading-6 text-taupe sm:text-base sm:leading-7">{copy}</p>
+              <p className="mt-4 text-pretty font-body text-sm leading-6 text-espresso/70 sm:text-base sm:leading-7">{copy}</p>
             </article>
           ))}
         </StaggerReveal>

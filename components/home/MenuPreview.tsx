@@ -43,11 +43,11 @@ export function MenuPreview() {
 
         <div className="lg:col-span-6 lg:col-start-7">
           <ScrollReveal direction="left">
-            <p className="mb-4 font-label text-xs font-semibold uppercase tracking-[0.22em] text-olive">From our kitchen</p>
+            <p className="mb-4 font-label text-xs font-semibold uppercase tracking-[0.22em] text-wine">From our kitchen</p>
             <h2 className="max-w-[12ch] text-balance font-heading text-4xl font-normal leading-[1.02] tracking-[-0.025em] text-espresso sm:text-5xl lg:text-6xl">
               Pasta made here. <span className="italic text-wine">Patience included.</span>
             </h2>
-            <p className="mt-6 max-w-xl text-pretty font-body text-base leading-7 text-taupe sm:text-lg sm:leading-8">
+            <p className="mt-6 max-w-xl text-pretty font-body text-base leading-7 text-espresso/70 sm:text-lg sm:leading-8">
               Recipes are respected, not reinvented for effect. Fresh pasta, familiar Italian classics, and Mediterranean ingredients arrive with clarity and warmth.
             </p>
           </ScrollReveal>
@@ -57,7 +57,7 @@ export function MenuPreview() {
               <ScrollReveal key={dish.name} className="grid grid-cols-[1fr_auto] gap-5 py-6" delay={index * 0.06}>
                 <div>
                   <h3 className="font-heading text-xl font-normal text-espresso sm:text-2xl">{dish.name}</h3>
-                  <p className="mt-2 max-w-lg text-pretty font-body text-sm leading-6 text-taupe">{dish.description}</p>
+                  <p className="mt-2 max-w-lg text-pretty font-body text-sm leading-6 text-espresso/70">{dish.description}</p>
                 </div>
                 <p className="pt-1 font-label text-sm font-semibold tabular-nums text-wine">
                   {dish.price} <span className="text-[0.65rem] uppercase tracking-wider">MAD</span>

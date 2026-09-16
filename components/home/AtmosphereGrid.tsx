@@ -10,11 +10,11 @@ export function AtmosphereGrid() {
       <div className="mx-auto max-w-screen-2xl">
         <div className="grid gap-8 lg:grid-cols-12 lg:gap-6">
           <ScrollReveal className="lg:col-span-4 lg:pt-12">
-            <p className="mb-4 font-label text-xs font-semibold uppercase tracking-[0.22em] text-olive">The room, after sunset</p>
+            <p className="mb-4 font-label text-xs font-semibold uppercase tracking-[0.22em] text-wine">The room, after sunset</p>
             <h2 className="max-w-[10ch] text-balance font-heading text-4xl font-normal leading-[1.02] tracking-[-0.025em] text-espresso sm:text-5xl lg:text-6xl">
               Romance without <span className="italic text-wine">the performance.</span>
             </h2>
-            <p className="mt-6 max-w-md text-pretty font-body text-base leading-7 text-taupe sm:text-lg sm:leading-8">
+            <p className="mt-6 max-w-md text-pretty font-body text-base leading-7 text-espresso/70 sm:text-lg sm:leading-8">
               Warm plaster, low candlelight, and tables close enough for connection, never commotion. This is a room designed around the people in it.
             </p>
             <Link
@@ -37,7 +37,7 @@ export function AtmosphereGrid() {
                   className="object-cover"
                 />
               </div>
-              <figcaption className="mt-4 flex items-center justify-between gap-4 font-label text-[0.7rem] uppercase tracking-[0.18em] text-taupe">
+              <figcaption className="mt-4 flex items-center justify-between gap-4 font-label text-xs uppercase tracking-[0.18em] text-espresso/70">
                 <span>Evenings at Mediterra</span>
                 <span>Marrakech</span>
               </figcaption>
@@ -57,7 +57,7 @@ export function AtmosphereGrid() {
                   className="object-cover"
                 />
               </div>
-              <figcaption className="mt-4 font-label text-[0.7rem] uppercase tracking-[0.18em] text-taupe">The welcome, before the first course</figcaption>
+              <figcaption className="mt-4 font-label text-xs uppercase tracking-[0.18em] text-espresso/70">The welcome, before the first course</figcaption>
             </figure>
           </ScrollReveal>
 
@@ -65,7 +65,7 @@ export function AtmosphereGrid() {
             <blockquote className="text-balance font-heading text-2xl italic leading-snug text-espresso sm:text-3xl">
               “A good evening begins before the menu opens.”
             </blockquote>
-            <p className="mt-4 max-w-sm text-pretty font-body text-sm leading-6 text-taupe">
+            <p className="mt-4 max-w-sm text-pretty font-body text-sm leading-6 text-espresso/70">
               Focaccia still warm, olive oil catching the light, and a quiet welcome that says your table has been expected.
             </p>
           </ScrollReveal>

@@ -31,13 +31,13 @@ export function TrustSnapshot() {
       <div className="mx-auto max-w-screen-2xl">
         <div className="grid gap-10 border-b border-terracotta/25 pb-14 lg:grid-cols-12 lg:items-end lg:gap-12 lg:pb-20">
           <ScrollReveal className="lg:col-span-7">
-            <p className="mb-4 font-label text-xs font-semibold uppercase tracking-[0.22em] text-olive">Beauty with substance</p>
+            <p className="mb-4 font-label text-xs font-semibold uppercase tracking-[0.22em] text-wine">Beauty with substance</p>
             <h2 className="max-w-[15ch] text-balance font-heading text-4xl font-normal leading-[1.02] tracking-[-0.025em] text-espresso sm:text-5xl lg:text-6xl">
               A beautiful room is only the <span className="italic text-wine">beginning.</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal className="lg:col-span-4 lg:col-start-9" delay={0.08}>
-            <p className="max-w-xl text-pretty font-body text-base leading-7 text-taupe sm:text-lg sm:leading-8">
+            <p className="max-w-xl text-pretty font-body text-base leading-7 text-espresso/70 sm:text-lg sm:leading-8">
               What stays with you is the craft, the welcome, and the feeling that your table was prepared with you in mind.
             </p>
           </ScrollReveal>
@@ -53,10 +53,10 @@ export function TrustSnapshot() {
                 <span className="flex size-12 items-center justify-center rounded-full bg-linen text-wine">
                   <Icon className="size-5" strokeWidth={1.6} aria-hidden="true" />
                 </span>
-                <span className="font-heading text-sm italic text-terracotta">{number}</span>
+                <span className="font-heading text-sm italic text-wine">{number}</span>
               </div>
               <h3 className="font-heading text-2xl font-normal text-espresso sm:text-3xl">{title}</h3>
-              <p className="mt-4 max-w-sm text-pretty font-body text-sm leading-6 text-taupe sm:text-base sm:leading-7">{copy}</p>
+              <p className="mt-4 max-w-sm text-pretty font-body text-sm leading-6 text-espresso/70 sm:text-base sm:leading-7">{copy}</p>
             </article>
           ))}
         </StaggerReveal>

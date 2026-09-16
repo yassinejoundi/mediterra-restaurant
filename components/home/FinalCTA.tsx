@@ -21,7 +21,7 @@ export function FinalCTA() {
           Request a Table
           <ArrowRight className="size-4" aria-hidden="true" />
         </Link>
-        <p className="mt-5 font-body text-xs leading-5 text-plaster/55">Your request is confirmed once our team replies.</p>
+        <p className="mt-5 font-body text-xs leading-5 text-plaster/75">Your request is confirmed once our team replies.</p>
       </ScrollReveal>
     </section>
   );
