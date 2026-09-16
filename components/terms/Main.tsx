@@ -1,137 +1,65 @@
-/* eslint-disable */
+import Image from "next/image";
 import Link from "next/link";
-import { ScrollReveal } from "@/components/motion/ScrollReveal";
-import { FontAwesomeMaterialIcon } from "../FontAwesomeMaterialIcon";
+import { ArrowUpRight } from "lucide-react";
+
+const sections = [
+  { id: "requests", number: "01", title: "Reservation requests", paragraphs: [
+    "The reservation form prepares a WhatsApp message with the details you enter. You must send that message in WhatsApp for our team to receive your request. Sending a request does not hold a table.",
+    "A reservation is confirmed only when our host team replies with a confirmation. Availability and seating depend on the date, time and party size you request.",
+  ] },
+  { id: "changes", number: "02", title: "Changes and arrival", paragraphs: [
+    "If your plans change, please contact us as soon as you can. The team will discuss cancellations, changes in party size or a different arrival time with you directly.",
+    "If you are running late, let us know using the contact details in your confirmation. We will tell you what we can accommodate at that time. Any specific conditions agreed for your booking will be shared with you by our team.",
+  ] },
+  { id: "menu", number: "03", title: "Menu and information", paragraphs: [
+    "We try to keep the website useful and current. Dishes, ingredients, prices, opening hours and availability can change. Please confirm any detail that matters to your visit with our team.",
+    "Tell us about allergies and dietary needs before dining. Our team can discuss ingredients and preparation, but the website alone cannot confirm whether a dish is suitable for you.",
+  ] },
+  { id: "website", number: "04", title: "Using this website", paragraphs: [
+    "The words, photographs and design on this site are presented for your personal use while exploring Mediterra. Please ask us before reusing site content for a commercial purpose.",
+    "Links to WhatsApp, maps and other external services open websites or apps run by others. Their terms and privacy practices apply when you use them.",
+  ] },
+  { id: "contact", number: "05", title: "Questions about these terms", paragraphs: [
+    "If anything is unclear before you reserve, contact our team at ciao@mediterra.ma or through the contact page. We will be glad to explain the arrangements for your visit.",
+    "We may update these terms as the site and our reservation process change. The date above shows when this page was last revised.",
+  ] },
+] as const;
+
 export function Main() {
-  return (
-    <>
-      <main id="main-content" tabIndex={-1} className="pt-32 pb-24">
-      {/* Hero Section */}
-      <ScrollReveal as="section" className="max-w-screen-xl mx-auto px-8 mb-20 text-center">
-      <span className="text-olive font-label text-sm uppercase tracking-[0.2em] mb-4 block">Legal &amp; Reservation Policies</span>
-      <h1 className="font-headline text-5xl md:text-7xl font-bold text-espresso mb-8 leading-tight">
-                      Website and reservation <br/><span className="text-wine">terms.</span>
-      </h1>
-      <p className="max-w-2xl mx-auto text-taupe text-lg md:text-xl leading-relaxed mb-10">
-                      Welcome to Mediterra. To ensure the highest level of service and maintain our intimate atmosphere, we kindly ask you to review our guidelines regarding reservations and website usage.
-                  </p>
-      <div className="flex flex-col md:flex-row justify-center gap-4">
-      <Link className="inline-flex items-center justify-center bg-espresso text-ivory px-8 py-4 rounded-full font-medium transition-all hover:bg-wine" href="#reservation-terms">
-                          View Reservation Policies
-                      </Link>
-      <Link className="inline-flex items-center justify-center border border-terracotta/40 text-espresso px-8 py-4 rounded-full font-medium transition-all hover:border-terracotta" href="/contact">
-                          Contact Us
-                      </Link>
-      </div>
-      </ScrollReveal>
-      {/* Reservation Terms Panel */}
-      <section className="max-w-4xl mx-auto px-6 mb-24" id="reservation-terms">
-      <ScrollReveal className="bg-linen rounded-xl p-10 md:p-16 shadow-sm border border-terracotta/10">
-      <div className="flex items-center gap-3 mb-8">
-      <FontAwesomeMaterialIcon name="calendar_today" className="text-wine text-lg" />
-      <h2 className="font-headline text-3xl font-bold text-espresso">Reservation Policies</h2>
-      </div>
-      <div className="space-y-12">
-      <div className="border-b border-terracotta/20 pb-8">
-      <h3 className="text-olive font-bold text-sm uppercase tracking-wider mb-4">The Request Process</h3>
-      <p className="text-espresso leading-relaxed italic text-lg">
-                                  Please note: Reservation requests submitted via our website are not confirmed until you receive a formal reply from the Mediterra team.
-                              </p>
-      <p className="mt-4 text-taupe leading-relaxed">
-                                  Once you submit a request, our hosting team reviews availability to ensure we can provide the best possible experience for your group. We strive to respond to all inquiries within 4 hours during service times.
-                              </p>
-      </div>
-      <div className="grid md:grid-cols-2 gap-12">
+  return <main id="main-content" tabIndex={-1} className="flex-grow bg-plaster">
+    <section className="mx-auto grid max-w-screen-2xl gap-10 px-5 pb-16 pt-14 sm:px-8 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:gap-20 lg:px-12 lg:pb-24 lg:pt-20">
       <div>
-      <h3 className="text-olive font-bold text-sm uppercase tracking-wider mb-4">Cancellations &amp; Changes</h3>
-      <p className="text-taupe leading-relaxed">
-                                      We request a minimum of <span className="text-espresso font-semibold">24 hours notice</span> for any cancellations or significant changes to your party size. This allows us to offer the table to other guests on our waiting list.
-                                  </p>
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-wine">The details / Terms</p>
+        <h1 className="mt-6 max-w-[12ch] font-heading text-[clamp(3.2rem,6vw,6.8rem)] leading-[1.02] tracking-[-0.045em]">Good evenings begin with <span className="italic text-wine">clear plans.</span></h1>
+        <p className="mt-7 max-w-xl text-base leading-8 text-espresso/75 sm:text-lg">These terms explain how our website and reservation requests work, so you know what to expect before you join us.</p>
+        <p className="mt-7 text-xs font-semibold uppercase tracking-[0.18em] text-espresso/60">Last updated 16 September 2026</p>
+        <Link href="/reservations" className="mt-8 inline-flex min-h-12 items-center gap-3 rounded-full bg-wine px-7 py-3 text-sm font-semibold text-plaster transition-colors hover:bg-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine">Request a table <ArrowUpRight className="size-4" aria-hidden="true" /></Link>
       </div>
-      <div>
-      <h3 className="text-olive font-bold text-sm uppercase tracking-wider mb-4">Late Arrivals</h3>
-      <p className="text-taupe leading-relaxed">
-                                      We maintain a grace period of <span className="text-espresso font-semibold">15 minutes</span>. If you are running late, please notify us. Tables may be released if guests have not arrived within this window without prior notice.
-                                  </p>
+      <figure className="relative aspect-[5/4] overflow-hidden rounded-[1.75rem] lg:aspect-[4/5]">
+        <Image src="/images/editorial/terms-table.png" alt="A host carefully sets a candlelit table with linen and handmade ceramics" fill priority sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
+      </figure>
+    </section>
+    <div className="border-y border-terracotta/25 bg-linen/60 px-5 py-5 sm:px-8 lg:px-12">
+      <nav aria-label="Terms topics" className="mx-auto flex max-w-screen-2xl flex-wrap gap-x-7 gap-y-2 text-sm font-semibold text-wine">
+        {sections.map(section => <a key={section.id} href={`#${section.id}`} className="inline-flex min-h-11 items-center underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-wine">{section.title}</a>)}
+      </nav>
+    </div>
+    <div className="mx-auto max-w-screen-xl px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
+      <div className="mb-12 max-w-3xl rounded-2xl border border-terracotta/25 bg-linen p-6 sm:p-8">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-wine">In brief</p>
+        <p className="mt-3 font-heading text-2xl leading-snug">A request opens a conversation with our host. Your table is yours once our team confirms it.</p>
       </div>
+      {sections.map(section => <section key={section.id} id={section.id} aria-labelledby={`${section.id}-title`} className="grid scroll-mt-24 gap-5 border-b border-terracotta/25 py-10 last:border-0 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] lg:gap-20">
+        <div><p className="text-xs font-semibold uppercase tracking-[0.22em] text-olive">{section.number} / Terms</p><h2 id={`${section.id}-title`} className="mt-4 font-heading text-3xl leading-tight sm:text-4xl">{section.title}</h2></div>
+        <div className="max-w-2xl space-y-5 text-base leading-8 text-espresso/75">{section.paragraphs.map(p => <p key={p}>{p}</p>)}</div>
+      </section>)}
+    </div>
+    <section className="bg-wine px-5 py-16 text-plaster sm:px-8 lg:px-12 lg:py-20">
+      <div className="mx-auto flex max-w-screen-xl flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
+        <div><p className="text-xs font-semibold uppercase tracking-[0.22em] text-plaster/75">Before your visit</p><h2 className="mt-4 font-heading text-4xl sm:text-5xl">Ask us anything.</h2><p className="mt-4 max-w-lg leading-7 text-plaster/80">Our host team can talk through your reservation and the details that matter to you.</p></div>
+        <Link href="/contact" className="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 rounded-full bg-plaster px-7 py-3 text-sm font-semibold text-wine transition-colors hover:bg-linen focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plaster">Contact our team <ArrowUpRight className="size-4" aria-hidden="true" /></Link>
       </div>
-      <div className="bg-white/40 p-6 rounded-lg border border-white/60">
-      <h3 className="text-wine font-bold text-sm uppercase tracking-wider mb-3">Manual Confirmation</h3>
-      <p className="text-taupe text-sm leading-relaxed">
-                                  For security and personalization, confirmations are sent manually via <span className="text-espresso font-medium">WhatsApp</span> or <span className="text-espresso font-medium">Email</span>. Please ensure your contact details are accurate to avoid cancellation of unconfirmed requests.
-                              </p>
-      </div>
-      <div className="pt-4 text-center">
-      <Link className="inline-block bg-wine text-plaster px-12 py-5 rounded-full font-headline text-lg font-bold shadow-lg hover:scale-105 transition-transform" href="/reservations">
-                                  Reserve a Table
-      </Link>
-      </div>
-      </div>
-      </ScrollReveal>
-      </section>
-      {/* Website Terms Section */}
-      <ScrollReveal as="section" className="max-w-4xl mx-auto px-8 mb-24">
-      <h2 className="font-headline text-3xl font-bold text-espresso mb-12">Website Usage &amp; Legalities</h2>
-      <div className="space-y-12">
-      <div className="group">
-      <div className="h-px w-full bg-terracotta/30 mb-6 group-hover:bg-terracotta transition-colors"></div>
-      <div className="grid md:grid-cols-3 gap-8">
-      <h3 className="text-olive font-bold text-sm uppercase tracking-widest">Informational Content</h3>
-      <div className="md:col-span-2 text-taupe leading-relaxed">
-                                  Seasonal menus, ingredient availability, and pricing shown on this website are subject to change without notice based on market availability and seasonal shifts in Marrakech. While we strive for accuracy, the in-restaurant menu remains the final authority on pricing and offerings.
-                              </div>
-      </div>
-      </div>
-      <div className="group">
-      <div className="h-px w-full bg-terracotta/30 mb-6 group-hover:bg-terracotta transition-colors"></div>
-      <div className="grid md:grid-cols-3 gap-8">
-      <h3 className="text-olive font-bold text-sm uppercase tracking-widest">Content Ownership</h3>
-      <div className="md:col-span-2 text-taupe leading-relaxed">
-                                  All visual and written content, including restaurant photography, Mediterranean recipes described, and editorial text, is the property of Mediterra Marrakech. Unauthorized reproduction or commercial use of our brand assets is strictly prohibited.
-                              </div>
-      </div>
-      </div>
-      <div className="group">
-      <div className="h-px w-full bg-terracotta/30 mb-6 group-hover:bg-terracotta transition-colors"></div>
-      <div className="grid md:grid-cols-3 gap-8">
-      <h3 className="text-olive font-bold text-sm uppercase tracking-widest">Liability</h3>
-      <div className="md:col-span-2 text-taupe leading-relaxed">
-                                  Mediterra is not liable for technical issues arising from third-party booking integrations or intermittent website downtime. Users agree to use this site for lawful purposes related to dining and reservation inquiries only.
-                              </div>
-      </div>
-      </div>
-      </div>
-      </ScrollReveal>
-      {/* Related Links */}
-      <section className="max-w-screen-xl mx-auto px-8">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <Link className="bg-linen p-8 rounded-lg border border-terracotta/10 hover:border-terracotta/40 transition-all group" href="/reservations">
-      <FontAwesomeMaterialIcon name="restaurant" className="text-wine text-xl mb-4" />
-      <h4 className="font-headline text-xl font-bold mb-2">Reservations</h4>
-      <p className="text-taupe text-sm mb-4">Request a table for your next visit to Mediterra.</p>
-      <span className="text-wine text-xs font-bold uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all">
-                              Explore <FontAwesomeMaterialIcon name="arrow_forward" className="text-sm" />
-      </span>
-      </Link>
-      <Link className="bg-linen p-8 rounded-lg border border-terracotta/10 hover:border-terracotta/40 transition-all group" href="/privacy">
-      <FontAwesomeMaterialIcon name="lock" className="text-wine text-xl mb-4" />
-      <h4 className="font-headline text-xl font-bold mb-2">Privacy Policy</h4>
-      <p className="text-taupe text-sm mb-4">How we handle and protect your personal reservation data.</p>
-      <span className="text-wine text-xs font-bold uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all">
-                              Read More <FontAwesomeMaterialIcon name="arrow_forward" className="text-sm" />
-      </span>
-      </Link>
-      <Link className="bg-linen p-8 rounded-lg border border-terracotta/10 hover:border-terracotta/40 transition-all group" href="/contact">
-      <FontAwesomeMaterialIcon name="location_on" className="text-wine text-xl mb-4" />
-      <h4 className="font-headline text-xl font-bold mb-2">Contact &amp; Directions</h4>
-      <p className="text-taupe text-sm mb-4">Find us in the heart of Marrakech's historical Medina.</p>
-      <span className="text-wine text-xs font-bold uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all">
-                              Get Directions <FontAwesomeMaterialIcon name="arrow_forward" className="text-sm" />
-      </span>
-      </Link>
-      </div>
-      </section>
-      </main>
-    </>
-  );
+      <div className="mx-auto mt-10 flex max-w-screen-xl gap-6 text-sm text-plaster/80"><Link href="/privacy" className="underline underline-offset-4 hover:text-plaster">Privacy</Link><Link href="/faq" className="underline underline-offset-4 hover:text-plaster">FAQ</Link></div>
+    </section>
+  </main>;
 }
