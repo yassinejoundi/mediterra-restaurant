@@ -3,7 +3,10 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
+import { StaggerReveal } from "@/components/motion/StaggerReveal";
 import menuHero from "@/public/images/menu-hero.png";
+
+import { MenuItem } from "./MenuItem";
 
 export function Main() {
   return (
@@ -93,6 +96,55 @@ export function Main() {
           ))}
         </div>
       </nav>
+
+      <section id="antipasti" className="scroll-mt-40 px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
+        <div className="mx-auto max-w-6xl rounded-[2rem] bg-linen px-6 py-10 shadow-[0_20px_70px_rgba(42,33,29,0.06)] sm:px-10 sm:py-14 lg:px-16">
+          <ScrollReveal className="grid gap-8 border-b border-terracotta/20 pb-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+            <div>
+              <p className="font-label text-xs font-semibold uppercase tracking-[0.24em] text-olive">To begin</p>
+              <h2 className="mt-3 font-heading text-4xl italic tracking-[-0.025em] text-wine sm:text-5xl">Antipasti</h2>
+            </div>
+            <p className="max-w-xl text-pretty text-base leading-7 text-espresso/70 lg:justify-self-end">
+              Small plates for settling into the table, served alongside warm house focaccia and local olive oil.
+            </p>
+          </ScrollReveal>
+
+          <StaggerReveal className="mt-4 grid divide-y divide-terracotta/15 md:grid-cols-2 md:gap-x-14 md:divide-y-0" staggerDelay={0.05}>
+            <div className="divide-y divide-terracotta/15">
+              <MenuItem
+                name="Burrata e Pomodorini"
+                description="Puglian burrata, blistered cherry tomatoes, basil oil, and aged balsamic."
+                price="180 MAD"
+                tag="Vegetarian"
+              />
+              <MenuItem
+                name="Arancini allo Zafferano"
+                description="Crisp saffron risotto, smoked mozzarella, slow beef ragù, and herb sugo."
+                price="145 MAD"
+              />
+            </div>
+            <div className="divide-y divide-terracotta/15">
+              <MenuItem
+                name="Carpaccio di Manzo"
+                description="Beef fillet, capers, rocket, Parmigiano Reggiano, and lemon olive oil."
+                price="210 MAD"
+              />
+              <MenuItem
+                name="Calamari Fritti"
+                description="Lightly fried calamari, parsley, charred lemon, and preserved-lemon aioli."
+                price="190 MAD"
+              />
+            </div>
+          </StaggerReveal>
+
+          <div className="mt-10 flex flex-wrap items-center justify-between gap-5 border-t border-terracotta/20 pt-8">
+            <p className="max-w-lg text-sm leading-6 text-taupe">Planning a slower dinner? We will pace the table around your evening.</p>
+            <Link href="/reservations" className="font-label text-xs font-bold uppercase tracking-[0.16em] text-wine underline decoration-terracotta/50 underline-offset-4 transition-colors hover:text-espresso">
+              Reserve your table
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
