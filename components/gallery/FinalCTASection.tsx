@@ -1,24 +1,43 @@
 import Image from "next/image";
 import Link from "next/link";
+
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
-import nightSkyImage from "../../src/assets/images/remote-image-c8e12ff6d473.png";
 
 export function FinalCTASection() {
   return (
-    <>
-      <section className="relative py-40 overflow-hidden text-center bg-espresso">
-      <div className="absolute inset-0 opacity-30">
-      <Image className="object-cover" alt="Night sky above a Marrakech courtyard" data-alt="A dramatic, high-contrast photograph of the night sky above a Marrakech courtyard, seen through the silhouette of palm fronds. The atmosphere is quiet and mysterious, with deep blues and blacks punctuated by the tiny warm glow of a distant lantern. A feeling of peaceful seclusion and premium desert nights." src={nightSkyImage} fill sizes="100vw" />
+    <section aria-labelledby="gallery-cta-heading" className="relative isolate overflow-hidden bg-espresso px-5 py-32 text-plaster sm:px-8 sm:py-40 lg:px-12">
+      <Image
+        src="/gallery-night-sky.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover opacity-45"
+      />
+      <div className="absolute inset-0 bg-espresso/45" aria-hidden="true" />
+      <div className="relative mx-auto max-w-3xl text-center">
+        <ScrollReveal as="p" className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-linen">
+          A slower evening in Marrakech
+        </ScrollReveal>
+        <ScrollReveal
+          as="h2"
+          id="gallery-cta-heading"
+          className="text-balance font-heading text-[clamp(2.8rem,6vw,5.8rem)] font-normal leading-[1] tracking-[-0.04em]"
+          delay={0.08}
+        >
+          See the room. <span className="italic text-linen">Come for the table.</span>
+        </ScrollReveal>
+        <ScrollReveal as="p" className="mx-auto mt-7 max-w-xl text-pretty text-base leading-7 text-plaster/80 sm:text-lg sm:leading-8" delay={0.14}>
+          Request your table and let our host team take care of the details personally.
+        </ScrollReveal>
+        <ScrollReveal delay={0.2}>
+          <Link
+            href="/reservations"
+            className="mt-9 inline-flex min-h-12 items-center justify-center rounded-full bg-wine px-9 py-3 text-sm font-semibold text-plaster transition-colors hover:bg-terracotta focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plaster"
+          >
+            Reserve a Table
+          </Link>
+        </ScrollReveal>
       </div>
-      <div className="relative z-10 px-8 max-w-screen-xl mx-auto">
-      <ScrollReveal as="h2" className="text-4xl md:text-6xl font-serif text-ivory leading-tight mb-10 reveal-on-scroll">Your table in the garden awaits.</ScrollReveal>
-      <ScrollReveal delay={0.12}>
-      <Link className="inline-block bg-wine text-ivory px-12 py-5 rounded-full font-label text-base uppercase tracking-widest hover:bg-accent transition-all reveal-on-scroll" href="/reservations" style={{ transitionDelay: "200ms" }}>
-                      Reserve a Table
-                  </Link>
-      </ScrollReveal>
-      </div>
-      </section>
-    </>
+    </section>
   );
 }
