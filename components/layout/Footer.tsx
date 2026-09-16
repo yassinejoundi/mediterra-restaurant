@@ -1,105 +1,92 @@
 import Link from "next/link";
+import { ArrowUpRight, MapPin } from "lucide-react";
 
-const mainPages = [
+const pages = [
   { label: "Home", href: "/" },
   { label: "Menu", href: "/menu" },
-  { label: "Story", href: "/story" },
+  { label: "Our Story", href: "/story" },
   { label: "Gallery", href: "/gallery" },
-  { label: "Reservations", href: "/reservations" },
   { label: "Contact", href: "/contact" },
 ];
 
-const secondaryPages = [
-  { label: "FAQ", href: "/faq" },
-  { label: "Privacy Policy", href: "/privacy" },
-  { label: "Terms of Service", href: "/terms" },
-];
-
-const launchYear = 2026;
+const mapsUrl = "https://www.google.com/maps/dir/?api=1&destination=12+Derb+El+Ferraine+Medina+Marrakech";
+const linkClass = "inline-flex min-h-11 items-center text-sm text-plaster/80 transition-colors hover:text-plaster focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-linen";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
-  const copyrightYear = currentYear === launchYear ? `${launchYear}` : `${launchYear} - ${currentYear}`;
+  const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-auto border-t border-terracotta/20 bg-linen text-espresso">
-      <div className="mx-auto grid max-w-screen-2xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-2 lg:grid-cols-5 lg:px-12 lg:py-16">
-        <div className="space-y-4 lg:col-span-1">
-          <Link href="/" className="font-heading text-2xl italic tracking-tight text-wine transition-colors hover:text-espresso">
-            Mediterra
-          </Link>
-          <p className="max-w-xs font-body text-sm leading-6 text-taupe">
-            Premium Mediterranean dining in the heart of Marrakech.
-          </p>
-        </div>
-
-        <div className="space-y-4">
-          <h2 className="font-label text-xs font-bold uppercase tracking-[0.22em] text-espresso">Contact</h2>
-          <div className="space-y-2 font-body text-sm leading-6 text-taupe">
-            <p>
-              12 Derb El Ferraine,
-              <br />
-              Medina, Marrakech 40000
+    <footer className="mt-auto bg-espresso text-plaster">
+      <div className="mx-auto max-w-screen-2xl px-5 sm:px-8 lg:px-12">
+        <div className="grid gap-8 border-b border-plaster/20 py-16 sm:py-20 lg:grid-cols-12 lg:items-end lg:gap-12 lg:py-24">
+          <div className="lg:col-span-8">
+            <p className="font-label text-xs font-semibold uppercase tracking-[0.24em] text-linen/75">A slower evening in Marrakech</p>
+            <h2 className="mt-5 max-w-[14ch] text-balance font-heading text-[clamp(2.8rem,5.6vw,5.7rem)] leading-[1.02] tracking-[-0.04em]">
+              We&apos;ll save you <span className="italic text-linen">a place at the table.</span>
+            </h2>
+          </div>
+          <div className="lg:col-span-4 lg:pb-1">
+            <p className="max-w-sm text-pretty font-body text-base leading-7 text-plaster/75">
+              Handmade pasta, a warm welcome, and time to enjoy both. Your evening begins here.
             </p>
-            <a href="tel:+212524384217" className="block transition-colors hover:text-wine">
-              +212 524 38 42 17
-            </a>
-            <a href="mailto:ciao@mediterra.ma" className="block transition-colors hover:text-wine">
-              ciao@mediterra.ma
-            </a>
+            <Link href="/reservations" className="mt-7 inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-linen px-7 py-3 font-label text-sm font-semibold text-espresso transition-colors hover:bg-plaster focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-linen">
+              Reserve a Table <ArrowUpRight className="size-4" aria-hidden="true" />
+            </Link>
           </div>
         </div>
 
-        <div className="space-y-4">
-          <h2 className="font-label text-xs font-bold uppercase tracking-[0.22em] text-espresso">Opening Hours</h2>
-          <div className="space-y-2 font-body text-sm leading-6 text-taupe">
-            <p>Tuesday - Thursday: 18:00 - 23:30</p>
-            <p>Friday - Sunday: 13:00 - 00:00</p>
-            <p>Monday: Closed</p>
+        <div className="grid gap-x-8 gap-y-12 py-14 sm:grid-cols-2 sm:py-16 lg:grid-cols-12 lg:gap-8 lg:py-20">
+          <div className="sm:col-span-2 lg:col-span-4">
+            <Link href="/" className="inline-block font-heading text-4xl italic tracking-[-0.04em] text-plaster transition-colors hover:text-linen focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-linen">Mediterra</Link>
+            <p className="mt-5 max-w-xs text-pretty font-body text-sm leading-7 text-plaster/70">
+              Italian discipline, Marrakech generosity. A romantic Mediterranean table made for evenings that linger.
+            </p>
+          </div>
+
+          <nav aria-label="Explore" className="lg:col-span-2">
+            <h3 className="mb-5 font-label text-xs font-semibold uppercase tracking-[0.2em] text-linen/70">Explore</h3>
+            <ul className="space-y-1">
+              {pages.map((page) => (
+                <li key={page.href}><Link href={page.href} className={linkClass}>{page.label}</Link></li>
+              ))}
+            </ul>
+          </nav>
+
+          <div className="lg:col-span-3">
+            <h3 className="mb-5 font-label text-xs font-semibold uppercase tracking-[0.2em] text-linen/70">Talk to our hosts</h3>
+            <div className="flex flex-col items-start gap-1">
+              <a href="tel:+212524384217" className={linkClass}>+212 524 38 42 17</a>
+              <a href="mailto:ciao@mediterra.ma" className={linkClass}>ciao@mediterra.ma</a>
+              <a href="https://wa.me/212661842739" target="_blank" rel="noreferrer" className={linkClass}>
+                WhatsApp our team <ArrowUpRight className="ms-2 size-4" aria-hidden="true" />
+              </a>
+            </div>
+          </div>
+
+          <div className="lg:col-span-3">
+            <h3 className="mb-5 font-label text-xs font-semibold uppercase tracking-[0.2em] text-linen/70">Find us</h3>
+            <address className="text-sm not-italic leading-7 text-plaster/80">
+              12 Derb El Ferraine<br />Medina, Marrakech 40000
+            </address>
+            <a href={mapsUrl} target="_blank" rel="noreferrer" className={linkClass}>
+              <MapPin className="me-2 size-4" aria-hidden="true" /> Open directions
+            </a>
+            <div className="mt-6 space-y-1 text-sm leading-6 text-plaster/70">
+              <p>Tue–Thu · 18:00–23:30</p>
+              <p>Fri–Sun · 13:00–00:00</p>
+              <p>Monday · Closed</p>
+            </div>
           </div>
         </div>
 
-        <nav className="space-y-4" aria-label="Footer main pages">
-          <h2 className="font-label text-xs font-bold uppercase tracking-[0.22em] text-espresso">Main Pages</h2>
-          <ul className="space-y-2 font-body text-sm text-taupe">
-            {mainPages.map((page) => (
-              <li key={page.href}>
-                <Link href={page.href} className="transition-colors hover:text-wine">
-                  {page.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <nav className="space-y-4" aria-label="Footer secondary pages">
-          <h2 className="font-label text-xs font-bold uppercase tracking-[0.22em] text-espresso">Secondary Pages</h2>
-          <ul className="space-y-2 font-body text-sm text-taupe">
-            {secondaryPages.map((page) => (
-              <li key={page.href}>
-                <Link href={page.href} className="transition-colors hover:text-wine">
-                  {page.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
-
-      <div className="border-t border-terracotta/15 px-5 py-6 sm:px-8 lg:px-12">
-        <div className="mx-auto flex max-w-screen-2xl flex-col gap-3 font-body text-xs leading-5 text-taupe sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; {copyrightYear} Mediterra Marrakech. A Mediterranean Story.</p>
-          <p>
-            Built by{" "}
-            <a
-              href="https://yassinejoundi.com"
-              target="_blank"
-              rel="noreferrer"
-              className="font-semibold text-wine underline-offset-4 transition-colors hover:text-espresso hover:underline"
-            >
-              Yassine Joundi
-            </a>
-          </p>
+        <div className="flex flex-col gap-5 border-t border-plaster/20 py-6 text-xs leading-5 text-plaster/70 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+          <p>&copy; {year} Mediterra Marrakech</p>
+          <nav aria-label="Legal and help" className="flex flex-wrap gap-x-6 gap-y-2">
+            <Link href="/faq" className="hover:text-plaster focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-linen">FAQ</Link>
+            <Link href="/privacy" className="hover:text-plaster focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-linen">Privacy</Link>
+            <Link href="/terms" className="hover:text-plaster focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-linen">Terms</Link>
+          </nav>
+          <p>Built by <a href="https://yassinejoundi.com" target="_blank" rel="noreferrer" className="text-linen underline decoration-linen/35 underline-offset-4 hover:text-plaster focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-linen">Yassine Joundi</a></p>
         </div>
       </div>
     </footer>
