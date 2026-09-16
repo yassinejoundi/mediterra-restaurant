@@ -10,8 +10,8 @@ export function FoodCraftSection() {
         <ScrollReveal className="relative lg:col-span-7" direction="right">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-plaster sm:aspect-[5/4] lg:me-16">
             <Image
-              src="/gallery-pasta-craft.jpg"
-              alt="Flour-dusted hands folding fresh pasta beside olive oil and Parmesan"
+              src="/images/gallery/pasta-craft.webp"
+              alt="Chef gathering fresh handmade tagliatelle on a flour-dusted worktable"
               fill
               sizes="(min-width: 1024px) 52vw, 100vw"
               className="object-cover"
@@ -19,8 +19,8 @@ export function FoodCraftSection() {
           </div>
           <div className="relative -mt-16 ms-auto me-4 aspect-square w-[48%] overflow-hidden rounded-[1.25rem] border-[0.5rem] border-linen bg-plaster sm:-mt-28 lg:absolute lg:bottom-[-4rem] lg:end-0 lg:me-0 lg:w-[38%]">
             <Image
-              src="/gallery-salad.jpg"
-              alt="Tomatoes, cucumber, herbs, olives, and cheese in a handmade ceramic bowl"
+              src="/images/gallery/ravioli.webp"
+              alt="Handmade ravioli with sage and Parmesan in a ceramic bowl"
               fill
               sizes="(min-width: 1024px) 22vw, 45vw"
               className="object-cover"

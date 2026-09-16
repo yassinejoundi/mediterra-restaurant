@@ -9,8 +9,8 @@ export function HeroSection() {
       className="relative isolate flex min-h-[44rem] items-end overflow-hidden bg-espresso text-plaster md:min-h-[calc(100svh-5rem)]"
     >
       <Image
-        src="/gallery-hero.jpg"
-        alt="Candlelit tables and olive branches in Mediterra's warm dining room"
+        src="/images/gallery/hero.webp"
+        alt="Candlelit linen table and guests in a warm Marrakech riad courtyard"
         fill
         className="object-cover object-[58%_center] sm:object-center"
         priority

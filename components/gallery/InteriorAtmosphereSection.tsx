@@ -27,8 +27,8 @@ export function InteriorAtmosphereSection() {
           <figure className="md:col-span-7 md:row-span-2">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-linen md:aspect-[6/7]">
               <Image
-                src="/gallery-riad-courtyard.jpg"
-                alt="Warmly lit riad courtyard with olive trees and tables set for dinner"
+                src="/images/gallery/courtyard.webp"
+                alt="Guests dining beneath an olive tree in the courtyard at blue hour"
                 fill
                 sizes="(min-width: 768px) 58vw, 100vw"
                 className="object-cover transition-transform duration-700 motion-safe:hover:scale-[1.02]"
@@ -42,8 +42,8 @@ export function InteriorAtmosphereSection() {
           <figure className="md:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-linen md:aspect-[5/4]">
               <Image
-                src="/gallery-candlelit-corner.jpg"
-                alt="A quiet table beside an arch, set with linen, candlelight, and a glass of wine"
+                src="/images/gallery/corner.webp"
+                alt="A quiet table beside a plaster arch, set with linen, candlelight, and wine"
                 fill
                 sizes="(min-width: 768px) 42vw, 100vw"
                 className="object-cover transition-transform duration-700 motion-safe:hover:scale-[1.02]"
@@ -57,7 +57,7 @@ export function InteriorAtmosphereSection() {
           <figure className="md:col-span-5 md:self-end">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-linen md:aspect-[5/4]">
               <Image
-                src="/gallery-seating-nook.jpg"
+                src="/images/gallery/nook.webp"
                 alt="Sun-warmed plaster alcove with linen cushions and a low dining table"
                 fill
                 sizes="(min-width: 768px) 42vw, 100vw"
@@ -65,7 +65,7 @@ export function InteriorAtmosphereSection() {
               />
             </div>
             <figcaption className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-espresso/65">
-              Afternoon in the alcove
+              A sunlit alcove
             </figcaption>
           </figure>
         </StaggerReveal>

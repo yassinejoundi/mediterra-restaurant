@@ -24,7 +24,7 @@ export function TheTableExperienceSection() {
           <figure className="md:pt-16">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-linen">
               <Image
-                src="/gallery-wine-pour.jpg"
+                src="/images/gallery/wine-service.webp"
                 alt="A host pouring red wine beside a candlelit dinner"
                 fill
                 sizes="(min-width: 768px) 33vw, 100vw"
@@ -39,8 +39,8 @@ export function TheTableExperienceSection() {
           <figure>
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-linen">
               <Image
-                src="/gallery-dinner-table.jpg"
-                alt="Generous candlelit table set with shared Mediterranean dishes"
+                src="/images/gallery/shared-table.webp"
+                alt="Friends passing handmade pasta around a candlelit courtyard table"
                 fill
                 sizes="(min-width: 768px) 33vw, 100vw"
                 className="object-cover transition-transform duration-700 motion-safe:hover:scale-[1.02]"
@@ -54,8 +54,8 @@ export function TheTableExperienceSection() {
           <figure className="md:pt-28">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-linen">
               <Image
-                src="/gallery-bread-olives.jpg"
-                alt="Torn bread, olives, olive oil, and linen on a sun-warmed table"
+                src="/images/gallery/welcome-bread.webp"
+                alt="A host serving warm focaccia, olives, and olive oil at the table"
                 fill
                 sizes="(min-width: 768px) 33vw, 100vw"
                 className="object-cover transition-transform duration-700 motion-safe:hover:scale-[1.02]"

@@ -7,7 +7,7 @@ export function FinalCTASection() {
   return (
     <section aria-labelledby="gallery-cta-heading" className="relative isolate overflow-hidden bg-espresso px-5 py-32 text-plaster sm:px-8 sm:py-40 lg:px-12">
       <Image
-        src="/gallery-night-sky.jpg"
+        src="/images/gallery/evening.webp"
         alt=""
         fill
         sizes="100vw"
