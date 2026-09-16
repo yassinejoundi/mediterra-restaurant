@@ -219,6 +219,49 @@ export function Main() {
           </ScrollReveal>
         </div>
       </section>
+
+      <section id="pizza" className="scroll-mt-40 px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
+        <div className="mx-auto max-w-6xl">
+          <ScrollReveal className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+            <div>
+              <p className="font-label text-xs font-semibold uppercase tracking-[0.24em] text-olive">From the oven</p>
+              <h2 className="mt-3 font-heading text-4xl italic tracking-[-0.025em] text-wine sm:text-5xl">Pizza</h2>
+            </div>
+            <p className="max-w-2xl text-pretty text-base leading-7 text-espresso/70 lg:justify-self-end">
+              Long-fermented dough, a blistered crust, and toppings chosen for balance rather than abundance.
+            </p>
+          </ScrollReveal>
+
+          <StaggerReveal className="mt-12 grid gap-x-16 md:grid-cols-2" staggerDelay={0.05}>
+            <div className="divide-y divide-terracotta/20 border-t border-terracotta/20">
+              <MenuItem
+                name="Margherita Extra"
+                description="San Marzano tomato, buffalo mozzarella, basil, Parmigiano, and extra-virgin olive oil."
+                price="165 MAD"
+                tag="Vegetarian"
+              />
+              <MenuItem
+                name="Diavola"
+                description="Tomato, fior di latte, spicy Calabrian salami, chilli, and oregano."
+                price="185 MAD"
+              />
+            </div>
+            <div className="divide-y divide-terracotta/20 border-t border-terracotta/20">
+              <MenuItem
+                name="Tartufata"
+                description="Fior di latte, roasted mushrooms, truffle cream, thyme, and pecorino."
+                price="220 MAD"
+                tag="Vegetarian"
+              />
+              <MenuItem
+                name="Prosciutto e Rucola"
+                description="Tomato, fior di latte, Prosciutto di Parma, rocket, and aged Parmigiano."
+                price="215 MAD"
+              />
+            </div>
+          </StaggerReveal>
+        </div>
+      </section>
     </main>
   );
 }
