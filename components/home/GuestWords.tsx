@@ -1,52 +1,65 @@
-/* eslint-disable */
 import Link from "next/link";
+import { ArrowRight, GlassWater, Heart, UsersRound } from "lucide-react";
+
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
 import { StaggerReveal } from "@/components/motion/StaggerReveal";
-import { FontAwesomeMaterialIcon } from "../FontAwesomeMaterialIcon";
+
+const occasions = [
+  {
+    icon: Heart,
+    title: "A dinner for two",
+    copy: "Soft light, an intimate table, and service attentive enough to disappear when conversation begins.",
+  },
+  {
+    icon: UsersRound,
+    title: "Friends around a table",
+    copy: "Shared plates, generous pacing, and a room with enough life to make the evening feel easy.",
+  },
+  {
+    icon: GlassWater,
+    title: "One night in Marrakech",
+    copy: "A considered choice for travelers who want beauty online to become genuine warmth in person.",
+  },
+];
+
 export function GuestWords() {
   return (
-    <>
-      <section className="py-24 px-6 md:px-12 bg-linen/50">
-      <div className="max-w-screen-xl mx-auto text-center">
-      <ScrollReveal as="h2" className="font-headline text-3xl md:text-4xl text-espresso mb-16 italic">Words from our guests</ScrollReveal>
-      <StaggerReveal className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-      <div className="bg-plaster p-8 rounded-2xl shadow-soft text-left border border-terracotta/10">
-      <div className="flex gap-1.5 text-brass mb-4">
-      <FontAwesomeMaterialIcon name="star" className="text-base" />
-      <FontAwesomeMaterialIcon name="star" className="text-base" />
-      <FontAwesomeMaterialIcon name="star" className="text-base" />
-      <FontAwesomeMaterialIcon name="star" className="text-base" />
-      <FontAwesomeMaterialIcon name="star" className="text-base" />
+    <section className="bg-sage/55 px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-32">
+      <div className="mx-auto max-w-screen-2xl">
+        <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
+          <ScrollReveal className="lg:col-span-7">
+            <p className="mb-4 font-label text-xs font-semibold uppercase tracking-[0.22em] text-olive">Your evening, your way</p>
+            <h2 className="max-w-[13ch] text-balance font-heading text-4xl font-normal leading-[1.02] tracking-[-0.025em] text-espresso sm:text-5xl lg:text-6xl">
+              A table for moments worth <span className="italic text-wine">staying for.</span>
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal className="lg:col-span-3 lg:col-start-10" delay={0.08}>
+            <p className="text-pretty font-body text-base leading-7 text-taupe">
+              Romantic by nature, generous by instinct, and never too formal to feel like your own evening.
+            </p>
+          </ScrollReveal>
+        </div>
+
+        <StaggerReveal className="mt-14 grid gap-4 md:grid-cols-3" staggerDelay={0.1}>
+          {occasions.map(({ icon: Icon, title, copy }) => (
+            <article key={title} className="flex h-full flex-col rounded-[1.5rem] border border-olive/15 bg-plaster/80 p-7 sm:p-8">
+              <Icon className="size-6 text-wine" strokeWidth={1.5} aria-hidden="true" />
+              <h3 className="mt-10 font-heading text-2xl font-normal text-espresso">{title}</h3>
+              <p className="mt-4 text-pretty font-body text-sm leading-6 text-taupe sm:text-base sm:leading-7">{copy}</p>
+            </article>
+          ))}
+        </StaggerReveal>
+
+        <ScrollReveal className="mt-10 flex justify-end" delay={0.1}>
+          <Link
+            href="/reservations"
+            className="inline-flex min-h-12 items-center gap-3 rounded-full bg-wine px-7 py-3 font-label text-sm font-semibold text-plaster transition-colors hover:bg-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine"
+          >
+            Plan Your Evening
+            <ArrowRight className="size-4" aria-hidden="true" />
+          </Link>
+        </ScrollReveal>
       </div>
-      <p className="font-body text-espresso italic mb-6">"The most romantic dinner we had in Marrakech. The truffle tagliatelle was incredible, and the atmosphere felt like a hidden sanctuary."</p>
-      <span className="font-label text-sm text-taupe uppercase tracking-wider block">— Sarah L., London</span>
-      </div>
-      <div className="bg-plaster p-8 rounded-2xl shadow-soft text-left border border-terracotta/10 mt-0 md:mt-8">
-      <div className="flex gap-1.5 text-brass mb-4">
-      <FontAwesomeMaterialIcon name="star" className="text-base" />
-      <FontAwesomeMaterialIcon name="star" className="text-base" />
-      <FontAwesomeMaterialIcon name="star" className="text-base" />
-      <FontAwesomeMaterialIcon name="star" className="text-base" />
-      <FontAwesomeMaterialIcon name="star" className="text-base" />
-      </div>
-      <p className="font-body text-espresso italic mb-6">"Exceptional service via WhatsApp to book, and even better food. A perfect escape from the medina bustle into Italian elegance."</p>
-      <span className="font-label text-sm text-taupe uppercase tracking-wider block">— Marc D., Paris</span>
-      </div>
-      <div className="bg-plaster p-8 rounded-2xl shadow-soft text-left border border-terracotta/10 mt-0 md:mt-16">
-      <div className="flex gap-1.5 text-brass mb-4">
-      <FontAwesomeMaterialIcon name="star" className="text-base" />
-      <FontAwesomeMaterialIcon name="star" className="text-base" />
-      <FontAwesomeMaterialIcon name="star" className="text-base" />
-      <FontAwesomeMaterialIcon name="star" className="text-base" />
-      <FontAwesomeMaterialIcon name="star" className="text-base" />
-      </div>
-      <p className="font-body text-espresso italic mb-6">"You can taste the quality of the ingredients. The wine list perfectly complements the Mediterranean menu. Highly recommend."</p>
-      <span className="font-label text-sm text-taupe uppercase tracking-wider block">— Elena R., Milan</span>
-      </div>
-      </StaggerReveal>
-      <ScrollReveal delay={0.1}><Link className="bg-wine text-white px-8 py-4 rounded-full font-label font-medium text-lg hover:bg-[#722736] transition-colors shadow-float" href="/reservations">Reserve a Table</Link></ScrollReveal>
-      </div>
-      </section>
-    </>
+    </section>
   );
 }
