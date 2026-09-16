@@ -1,6 +1,4 @@
  
-import type { CSSProperties } from "react";
-
 import { HeroSection } from "./HeroSection";
 import { TrustSnapshot } from "./TrustSnapshot";
 import { MenuPreview } from "./MenuPreview";
@@ -12,7 +10,7 @@ import { FinalCTA } from "./FinalCTA";
 
 export function PageContent() {
   return (
-    <div className="font-body antialiased selection:bg-wine selection:text-white min-h-screen flex flex-col relative overflow-x-hidden pt-24" style={{ "--font-headline": "var(--font-heading)", "--font-display": "var(--font-heading)" } as CSSProperties}>
+    <main id="main-content" className="min-h-screen overflow-x-clip pt-20 selection:bg-wine selection:text-plaster">
       <HeroSection />
       <TrustSnapshot />
       <MenuPreview />
@@ -21,6 +19,6 @@ export function PageContent() {
       <GuestWords />
       <LocationContact />
       <FinalCTA />
-    </div>
+    </main>
   );
 }

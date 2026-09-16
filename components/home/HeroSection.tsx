@@ -1,26 +1,75 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowDown, MapPin } from "lucide-react";
+
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
-import heroTableImage from "../../src/assets/images/remote-image-bed4f7bee88c.jpg";
 
 export function HeroSection() {
   return (
-    <>
-      <section className="relative w-full h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 w-full h-full">
-      <Image alt="A romantic Mediterranean table in Marrakech" className="object-cover object-center scale-105" data-alt="A beautifully set wooden dining table in a sunlit, earthy-toned Marrakech courtyard, featuring handmade pasta, fresh tomatoes, olive oil, and rustic bread. The scene exudes Mediterranean warmth, romantic editorial hospitality, and coastal Italian ease, perfectly blending riad architecture with Italian culinary traditions. Soft natural lighting, deep warm plaster backgrounds." src={heroTableImage} fill priority sizes="100vw" />
-      <div className="absolute inset-0 bg-gradient-to-t from-espresso/60 via-espresso/20 to-transparent mix-blend-multiply"></div>
+    <section className="relative isolate min-h-[calc(100svh-5rem)] overflow-hidden bg-espresso text-plaster">
+      <Image
+        src="/images/mediterra-hero.png"
+        alt="Candlelit table overlooking Mediterra's warm courtyard"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-[65%_center] sm:object-center"
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(28,20,16,0.94)_0%,rgba(34,24,19,0.72)_36%,rgba(34,24,19,0.12)_72%),linear-gradient(0deg,rgba(26,18,15,0.58)_0%,transparent_45%)]" />
+
+      <div className="relative mx-auto flex min-h-[calc(100svh-5rem)] max-w-screen-2xl flex-col justify-end px-5 pb-10 pt-24 sm:px-8 sm:pb-14 lg:px-12 lg:pb-16">
+        <div className="max-w-3xl">
+          <ScrollReveal
+            as="p"
+            direction="none"
+            className="mb-5 flex items-center gap-2 font-label text-xs font-semibold uppercase tracking-[0.24em] text-linen"
+          >
+            <MapPin className="size-4 text-brass" aria-hidden="true" />
+            Marrakech, Morocco
+          </ScrollReveal>
+          <ScrollReveal
+            as="h1"
+            className="max-w-[12ch] text-balance font-heading text-[clamp(3.35rem,8.5vw,7.75rem)] font-normal leading-[0.91] tracking-[-0.045em] text-plaster"
+            delay={0.08}
+          >
+            The evening belongs <span className="italic text-linen">at the table.</span>
+          </ScrollReveal>
+          <ScrollReveal
+            as="p"
+            className="mt-7 max-w-xl text-pretty font-body text-base leading-7 text-plaster/85 sm:text-lg sm:leading-8"
+            delay={0.16}
+          >
+            Handmade Italian food, quiet candlelight, and Marrakech hospitality for dinners that feel personal, never staged.
+          </ScrollReveal>
+          <ScrollReveal className="mt-9 flex flex-col gap-3 sm:flex-row" delay={0.24}>
+            <Link
+              href="/reservations"
+              className="inline-flex min-h-12 items-center justify-center rounded-full bg-wine px-8 py-3 font-label text-sm font-semibold text-plaster transition-colors hover:bg-[#722c3a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plaster"
+            >
+              Reserve a Table
+            </Link>
+            <Link
+              href="/menu"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-plaster/50 bg-espresso/20 px-8 py-3 font-label text-sm font-semibold text-plaster backdrop-blur-sm transition-colors hover:bg-plaster hover:text-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plaster"
+            >
+              Explore the Menu
+            </Link>
+          </ScrollReveal>
+        </div>
+
+        <ScrollReveal className="mt-14 flex items-end justify-between gap-6 border-t border-plaster/25 pt-5" delay={0.3}>
+          <p className="max-w-sm text-pretty font-body text-xs leading-5 text-plaster/70 sm:text-sm">
+            Italian discipline. Marrakech generosity. A slower kind of night.
+          </p>
+          <a
+            href="#welcome"
+            className="hidden min-h-11 items-center gap-2 font-label text-xs font-semibold uppercase tracking-[0.2em] text-plaster/80 transition-colors hover:text-plaster focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plaster sm:flex"
+          >
+            Discover
+            <ArrowDown className="size-4" aria-hidden="true" />
+          </a>
+        </ScrollReveal>
       </div>
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center flex flex-col items-center mt-20">
-      <ScrollReveal as="span" className="font-label text-sm md:text-base tracking-[0.2em] text-plaster/90 uppercase mb-4" delay={0.05}>Mediterra Marrakech</ScrollReveal>
-      <ScrollReveal as="h1" className="font-headline text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-lg" delay={0.12}>A romantic Mediterranean<br/><span className="italic font-light">table in Marrakech.</span></ScrollReveal>
-      <ScrollReveal as="p" className="font-body text-lg md:text-xl text-plaster max-w-2xl mb-10 font-light drop-shadow-md" delay={0.2}>Handmade Italian discipline served with the generous spirit of a Marrakech riad. Candlelit, intimate, and beautiful with substance.</ScrollReveal>
-      <ScrollReveal className="flex flex-col sm:flex-row gap-4 items-center" delay={0.28}>
-      <Link className="bg-wine text-plaster px-8 py-4 rounded-full font-label font-medium text-lg hover:bg-[#722736] transition-all shadow-float hover:-translate-y-1 w-full sm:w-auto" href="/reservations">Reserve a Table</Link>
-      <Link className="bg-transparent border border-plaster/50 text-plaster px-8 py-4 rounded-full font-label font-medium text-lg hover:bg-plaster/10 transition-all backdrop-blur-sm w-full sm:w-auto" href="/menu">View Menu</Link>
-      </ScrollReveal>
-      </div>
-      </section>
-    </>
+    </section>
   );
 }
