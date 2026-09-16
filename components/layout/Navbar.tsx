@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
-const navItems = [
+const pages = [
   { label: "Home", href: "/" },
   { label: "Menu", href: "/menu" },
   { label: "Story", href: "/story" },
@@ -18,104 +18,145 @@ const navItems = [
 export function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
+    if (isOpen) {
+      dialog.showModal();
+      const previousOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        dialog.close();
+        document.body.style.overflow = previousOverflow;
+      };
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    const media = window.matchMedia("(min-width: 1024px)");
+    const closeOnDesktop = () => {
+      if (media.matches) setIsOpen(false);
+    };
+    media.addEventListener("change", closeOnDesktop);
+    return () => media.removeEventListener("change", closeOnDesktop);
+  }, []);
+
+  const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-terracotta/15 bg-plaster/90 shadow-[0_10px_30px_rgba(42,33,29,0.06)] backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-espresso/10 bg-plaster/95 backdrop-blur-md">
       <a
         href="#main-content"
-        className="absolute start-5 top-2 z-10 -translate-y-20 rounded-full bg-espresso px-5 py-3 text-sm font-semibold text-plaster transition-transform focus:translate-y-0 motion-reduce:transition-none"
+        className="absolute start-5 top-2 z-[60] -translate-y-20 rounded-full bg-espresso px-5 py-3 text-sm font-semibold text-plaster focus:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wine motion-reduce:transition-none"
       >
         Skip to content
       </a>
-      <div className="mx-auto flex h-20 max-w-screen-2xl items-center justify-between px-5 sm:px-8 lg:px-12">
+
+      <div className="mx-auto flex min-h-20 max-w-screen-2xl items-center justify-between gap-6 px-5 sm:px-8 lg:px-12">
         <Link
           href="/"
-          className="font-heading text-2xl italic tracking-tight text-espresso transition-colors hover:text-wine"
-          onClick={() => setIsOpen(false)}
+          className="shrink-0 font-heading text-[1.8rem] italic leading-none tracking-[-0.045em] text-espresso transition-colors hover:text-wine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine"
         >
           Mediterra
         </Link>
 
-        <nav aria-label="Primary navigation" className="hidden items-center gap-9 md:flex">
-          {navItems.map((item) => {
-            const isActive = pathname === item.href;
-
+        <nav aria-label="Primary navigation" className="hidden items-center gap-2 lg:flex">
+          {pages.map((page) => {
+            const active = pathname === page.href;
             return (
               <Link
-                key={item.href}
-                href={item.href}
+                key={page.href}
+                href={page.href}
+                aria-current={active ? "page" : undefined}
                 className={cn(
-                  "relative py-2 font-headline text-sm font-semibold uppercase tracking-[0.18em] text-taupe transition-colors after:absolute after:inset-x-0 after:-bottom-1 after:h-px after:origin-center after:scale-x-0 after:bg-wine after:transition-transform hover:text-wine hover:after:scale-x-100",
-                  isActive && "text-wine after:scale-x-100"
+                  "relative inline-flex min-h-11 items-center rounded-full px-3.5 font-label text-[0.8rem] font-semibold tracking-[0.04em] text-espresso/75 transition-colors hover:bg-linen hover:text-wine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wine",
+                  active && "bg-linen text-wine"
                 )}
-                aria-current={isActive ? "page" : undefined}
               >
-                {item.label}
+                {page.label}
               </Link>
             );
           })}
         </nav>
 
-        <div className="hidden items-center md:flex">
-          <Link
-            href="/reservations"
-            className="rounded-full bg-wine px-6 py-3 font-label text-xs font-bold uppercase tracking-[0.2em] text-plaster shadow-lg shadow-wine/15 transition-colors hover:bg-espresso motion-safe:active:scale-[0.96]"
-          >
-            Reserve a Table
-          </Link>
-        </div>
+        <Link
+          href="/reservations"
+          className="hidden min-h-11 shrink-0 items-center justify-center gap-2 rounded-full bg-wine px-6 font-label text-sm font-semibold text-plaster transition-colors hover:bg-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine lg:inline-flex"
+        >
+          Reserve a Table <ArrowUpRight className="size-4" aria-hidden="true" />
+        </Link>
 
         <button
           type="button"
-          className="inline-flex size-11 items-center justify-center rounded-full border border-terracotta/25 bg-linen text-espresso transition-colors hover:border-wine/40 hover:text-wine md:hidden"
-          aria-expanded={isOpen}
-          aria-controls="mobile-navigation"
-          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
-          onClick={() => setIsOpen((open) => !open)}
+          onClick={() => setIsOpen(true)}
+          aria-haspopup="dialog"
+          aria-label="Open navigation menu"
+          className="inline-flex min-h-11 items-center gap-2 rounded-full border border-espresso/20 px-4 font-label text-sm font-semibold text-espresso transition-colors hover:border-wine hover:text-wine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine lg:hidden"
         >
-          {isOpen ? <X className="size-5" aria-hidden="true" /> : <Menu className="size-5" aria-hidden="true" />}
+          Menu <Menu className="size-4" aria-hidden="true" />
         </button>
       </div>
 
-      <div
-        id="mobile-navigation"
-        aria-hidden={!isOpen}
-        inert={!isOpen ? true : undefined}
-        className={cn(
-          "grid overflow-hidden border-t border-terracotta/15 bg-plaster/95 transition-[grid-template-rows] duration-300 motion-reduce:transition-none md:hidden",
-          isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-        )}
+      <dialog
+        ref={dialogRef}
+        aria-label="Navigation menu"
+        onClose={closeMenu}
+        className="fixed inset-0 m-0 h-dvh max-h-none w-screen max-w-none overflow-y-auto bg-plaster p-0 text-espresso backdrop:bg-espresso/30 lg:hidden"
       >
-        <nav aria-label="Mobile navigation" className="min-h-0">
-          <div className="flex flex-col gap-1 px-5 py-5 sm:px-8">
-            {navItems.map((item) => {
-              const isActive = pathname === item.href;
+        <div className="flex min-h-dvh flex-col px-5 pb-[max(2rem,env(safe-area-inset-bottom))] sm:px-8">
+          <div className="sticky top-0 z-10 flex min-h-20 shrink-0 items-center justify-between border-b border-espresso/15 bg-plaster">
+            <Link href="/" onClick={closeMenu} className="font-heading text-[1.8rem] italic leading-none tracking-[-0.045em] text-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine">
+              Mediterra
+            </Link>
+            <button
+              type="button"
+              autoFocus
+              onClick={closeMenu}
+              aria-label="Close navigation menu"
+              className="inline-flex size-11 items-center justify-center rounded-full border border-espresso/20 text-espresso transition-colors hover:border-wine hover:text-wine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine"
+            >
+              <X className="size-5" aria-hidden="true" />
+            </button>
+          </div>
 
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={cn(
-                    "border-l-2 border-transparent px-4 py-3 font-headline text-sm font-semibold uppercase tracking-[0.18em] text-taupe transition-colors hover:border-terracotta/40 hover:bg-linen hover:text-wine",
-                    isActive && "border-wine bg-linen text-wine"
-                  )}
-                  aria-current={isActive ? "page" : undefined}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
+          <nav aria-label="Mobile navigation" className="mx-auto w-full max-w-3xl flex-1 py-9 sm:py-12">
+            <p className="mb-5 font-label text-xs font-semibold uppercase tracking-[0.22em] text-wine">Explore Mediterra</p>
+            <ul>
+              {pages.map((page, index) => {
+                const active = pathname === page.href;
+                return (
+                  <li key={page.href} className="border-b border-espresso/15">
+                    <Link
+                      href={page.href}
+                      onClick={closeMenu}
+                      aria-current={active ? "page" : undefined}
+                      className="group flex min-h-16 items-center gap-4 py-3 text-espresso transition-colors hover:text-wine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wine sm:min-h-20"
+                    >
+                      <span className="w-6 shrink-0 self-center font-label text-xs font-semibold text-terracotta">{String(index + 1).padStart(2, "0")}</span>
+                      <span className="font-heading text-[clamp(2rem,8vw,3.4rem)] leading-none tracking-[-0.035em]">{page.label}</span>
+                      <ArrowUpRight className={cn("ms-auto size-5 shrink-0 opacity-0 transition-opacity group-hover:opacity-100", active && "opacity-100")} aria-hidden="true" />
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+
+          <div className="mx-auto w-full max-w-3xl border-t border-espresso/15 pt-6">
             <Link
               href="/reservations"
-              className="mt-3 rounded-full bg-wine px-5 py-4 text-center font-label text-xs font-bold uppercase tracking-[0.2em] text-plaster shadow-lg shadow-wine/15 transition-colors hover:bg-espresso"
-              onClick={() => setIsOpen(false)}
+              onClick={closeMenu}
+              className="flex min-h-14 w-full items-center justify-between rounded-full bg-wine px-6 font-label text-sm font-semibold text-plaster transition-colors hover:bg-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine"
             >
-              Reserve a Table
+              Reserve a Table <ArrowUpRight className="size-5" aria-hidden="true" />
             </Link>
+            <p className="mt-5 text-center font-body text-xs text-espresso/65">Handmade Italian dining · Marrakech Medina</p>
           </div>
-        </nav>
-      </div>
+        </div>
+      </dialog>
     </header>
   );
 }
