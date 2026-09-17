@@ -23,7 +23,7 @@ export function InteriorAtmosphereSection() {
           </p>
         </ScrollReveal>
 
-        <StaggerReveal className="grid gap-5 md:grid-cols-12 md:gap-6">
+        <StaggerReveal className="grid gap-5 md:grid-cols-12 md:gap-6" childClassName="md:contents">
           <figure className="md:col-span-7 md:row-span-2">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-linen md:aspect-[6/7]">
               <Image
