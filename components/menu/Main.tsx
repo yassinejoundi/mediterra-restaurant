@@ -141,7 +141,7 @@ export function Main() {
 
           <div className="mt-10 flex flex-wrap items-center justify-between gap-5 border-t border-terracotta/20 pt-8">
             <p className="max-w-lg text-sm leading-6 text-espresso/70">Planning a slower dinner? We will pace the table around your evening.</p>
-            <Link href="/reservations" className="font-label text-xs font-bold uppercase tracking-[0.16em] text-wine underline decoration-terracotta/50 underline-offset-4 transition-colors hover:text-espresso">
+            <Link href="/reservations" className="font-label text-xs font-bold uppercase tracking-[0.16em] text-wine underline decoration-terracotta/50 underline-offset-4 transition-colors after:hidden hover:text-espresso">
               Reserve your table
             </Link>
           </div>
