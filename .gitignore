@@ -46,6 +46,7 @@ next-env.d.ts
 /.stitch/
 /scripts/
 /skills/
+/skills-lock.json
 /src/
 /brand-persona-interview.md
 /opencode.jsonc
