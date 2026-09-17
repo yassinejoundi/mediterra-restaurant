@@ -27,7 +27,7 @@ const sections = [
 
 export function Main() {
   return <main id="main-content" tabIndex={-1} className="flex-grow bg-plaster">
-    <section className="mx-auto grid max-w-screen-2xl gap-10 px-5 pb-16 pt-14 sm:px-8 lg:min-h-[38rem] lg:grid-cols-2 lg:items-stretch lg:gap-20 lg:px-12 lg:pb-24 lg:pt-20">
+    <section className="mx-auto grid max-w-screen-2xl gap-10 px-5 pb-16 pt-20 sm:px-8 sm:pt-24 lg:min-h-[38rem] lg:grid-cols-2 lg:items-stretch lg:gap-20 lg:px-12 lg:pb-24 lg:pt-28">
       <div>
         <p className="text-xs font-semibold uppercase tracking-[0.22em] text-wine">The details / Privacy</p>
         <h1 className="mt-6 max-w-[12ch] font-heading text-[clamp(3.2rem,6vw,6.8rem)] leading-[1.02] tracking-[-0.045em]">Your details, <span className="italic text-wine">treated with care.</span></h1>
