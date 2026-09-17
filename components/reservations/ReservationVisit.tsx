@@ -59,13 +59,13 @@ export function ReservationVisit() {
               <MessageCircle className="size-6 text-wine" aria-hidden="true" />
               <h3 className="mt-7 font-heading text-2xl">Plans for tonight?</h3>
               <p className="mt-5 text-sm leading-6 text-espresso/75">Message us directly for same-day availability or a question about your visit.</p>
-              <a href="https://wa.me/212661842739" target="_blank" rel="noreferrer" className="mt-6 inline-flex min-h-12 items-center gap-2 text-sm font-semibold text-wine underline decoration-terracotta/40 underline-offset-4 hover:text-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine">WhatsApp our team <ArrowUpRight className="size-4" aria-hidden="true" /></a>
+              <a href="https://wa.me/212661842739" target="_blank" rel="noreferrer" className="mt-6 inline-flex min-h-12 items-center gap-2 text-sm font-semibold text-wine underline decoration-terracotta/40 underline-offset-4 transition-[gap,color] duration-300 after:hidden hover:gap-4 hover:text-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine">WhatsApp our team <ArrowUpRight className="size-4" aria-hidden="true" /></a>
             </article>
             <article className="rounded-[1.5rem] border border-terracotta/20 bg-linen p-7 sm:p-8">
               <MapPin className="size-6 text-wine" aria-hidden="true" />
               <h3 className="mt-7 font-heading text-2xl">Find your way</h3>
               <p className="mt-5 text-sm leading-6 text-espresso/75">A warm Mediterranean room awaits in Marrakech. Find contact and location details before you set out.</p>
-              <Link href="/contact" className="mt-6 inline-flex min-h-12 items-center gap-2 text-sm font-semibold text-wine underline decoration-terracotta/40 underline-offset-4 hover:text-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine">Visit contact page <ArrowUpRight className="size-4" aria-hidden="true" /></Link>
+              <Link href="/contact" className="mt-6 inline-flex min-h-12 items-center gap-2 text-sm font-semibold text-wine underline decoration-terracotta/40 underline-offset-4 transition-[gap,color] duration-300 after:hidden hover:gap-4 hover:text-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine">Visit contact page <ArrowUpRight className="size-4" aria-hidden="true" /></Link>
             </article>
           </div>
           <div className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-[1.5rem] bg-wine p-7 text-plaster sm:p-9">
