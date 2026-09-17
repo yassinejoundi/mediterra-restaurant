@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { PageContent } from "@/components/menu/PageContent";
+import { Main } from "@/components/menu/Main";
 
 export const metadata: Metadata = {
   title: "Menu | Mediterra Marrakech",
@@ -9,5 +9,9 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <PageContent />;
+  return (
+    <div className="min-h-screen bg-plaster font-body text-espresso selection:bg-linen selection:text-wine">
+      <Main />
+    </div>
+  );
 }
