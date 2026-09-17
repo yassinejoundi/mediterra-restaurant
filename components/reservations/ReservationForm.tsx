@@ -143,7 +143,7 @@ export function ReservationForm() {
                 <MessageCircle className="size-5" aria-hidden="true" /> Continue to WhatsApp <ArrowUpRight className="size-4" aria-hidden="true" />
               </button>
               <p className="mt-4 text-pretty text-center text-sm leading-6 text-espresso/75">WhatsApp opens with your details. Send the message there to complete your request. Your table is confirmed only after our team replies.</p>
-              <p className="mt-3 text-center text-xs leading-5 text-espresso/65">We use your details only to arrange your visit. <Link href="/privacy" className="font-semibold underline underline-offset-2 hover:text-wine">Privacy policy</Link></p>
+              <p className="mt-3 text-center text-xs leading-5 text-espresso/65">We use your details only to arrange your visit. <Link href="/privacy" className="font-semibold underline underline-offset-2 transition-colors after:hidden hover:text-wine">Privacy policy</Link></p>
             </div>
           </form>
         </div>
