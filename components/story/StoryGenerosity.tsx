@@ -27,7 +27,7 @@ export function StoryGenerosity() {
             />
           </div>
           <p className="mt-4 font-body text-sm leading-6 text-plaster/60">
-            The welcome moment — focaccia, olive oil, candlelight.
+            The welcome moment: focaccia, olive oil, candlelight.
           </p>
         </ScrollReveal>
 
@@ -45,12 +45,12 @@ export function StoryGenerosity() {
             Warmth you feel <span className="italic text-linen">before the first bite.</span>
           </ScrollReveal>
           <ScrollReveal as="p" className="mt-8 max-w-xl text-pretty font-body text-base leading-7 text-plaster/75 sm:text-lg sm:leading-8" delay={0.12}>
-            Marrakech appears here the way it should — through texture, light, and attention. Torn focaccia and olive
+            Marrakech appears here the way it should, through texture, light, and attention. Torn focaccia and olive
             oil arrive first. Linen, warm plaster, and candlelight do the rest.
           </ScrollReveal>
           <ScrollReveal as="p" className="mt-5 max-w-xl text-pretty font-body text-base leading-7 text-plaster/75 sm:text-lg sm:leading-8" delay={0.16}>
             A discreet check-in during the evening makes sure you feel expected, never watched. Service notices details
-            without hovering — and lets the night breathe.
+            without hovering, and lets the night breathe.
           </ScrollReveal>
 
           <ScrollReveal className="mt-10" delay={0.2}>

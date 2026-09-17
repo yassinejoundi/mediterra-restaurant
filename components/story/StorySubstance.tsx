@@ -40,7 +40,7 @@ export function StorySubstance() {
         </h2>
         <p className="mx-auto mt-7 max-w-xl text-pretty font-body text-base leading-7 text-espresso/75 sm:text-lg sm:leading-8">
           We leave spectacle to others. Our memory is quieter: handmade pasta, soft candlelight, and the feeling that
-          the evening belonged to you — not to the room around you.
+          the evening belonged to you, not to the room around you.
         </p>
       </ScrollReveal>
 

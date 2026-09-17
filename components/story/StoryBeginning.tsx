@@ -23,7 +23,7 @@ export function StoryBeginning() {
             />
           </div>
           <p className="mt-4 font-body text-sm leading-6 text-espresso/60">
-            Hands, flour, patience — where every Mediterra evening starts.
+            Hands, flour, patience, where every Mediterra evening starts.
           </p>
         </ScrollReveal>
 
@@ -41,7 +41,7 @@ export function StoryBeginning() {
           </ScrollReveal>
           <ScrollReveal as="p" className="mt-8 max-w-xl text-pretty font-body text-base leading-7 text-espresso/75 sm:text-lg sm:leading-8" delay={0.12}>
             An Italian living in Marrakech, missing the honest flavors of home. A Moroccan chef who had learned Italian
-            cooking beside Italian chefs — and fallen for the restraint, patience, and precision behind simple
+            cooking beside Italian chefs, and fallen for the restraint, patience, and precision behind simple
             ingredients.
           </ScrollReveal>
           <ScrollReveal as="p" className="mt-5 max-w-xl text-pretty font-body text-base leading-7 text-espresso/75 sm:text-lg sm:leading-8" delay={0.16}>

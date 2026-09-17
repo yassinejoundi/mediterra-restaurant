@@ -8,7 +8,7 @@ const proofs = [
   {
     icon: Wheat,
     title: "Pasta made by hand, daily",
-    text: "Rolled, cut, and folded in our kitchen — never hurried, never shortcut.",
+    text: "Rolled, cut, and folded in our kitchen, never hurried, never shortcut.",
   },
   {
     icon: UtensilsCrossed,
@@ -44,7 +44,7 @@ export function StoryDiscipline() {
           </ScrollReveal>
           <ScrollReveal as="p" className="mt-8 max-w-xl text-pretty font-body text-base leading-7 text-espresso/75 sm:text-lg sm:leading-8" delay={0.12}>
             Our kitchen practices discipline as devotion: dough hydration perfected, olive oils chosen deliberately,
-            flavors built slowly. Craft here is quiet — proof of substance behind the beauty.
+            flavors built slowly. Craft here is quiet, proof of substance behind the beauty.
           </ScrollReveal>
 
           <ul className="mt-10 space-y-7">
@@ -90,7 +90,7 @@ export function StoryDiscipline() {
             />
           </div>
           <p className="mt-4 font-body text-sm leading-6 text-espresso/60">
-            Pappardelle, dusted and ready — restraint you can taste.
+            Pappardelle, dusted and ready, restraint you can taste.
           </p>
         </ScrollReveal>
       </div>
