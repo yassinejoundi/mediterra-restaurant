@@ -57,9 +57,9 @@ export function Main() {
     <section className="bg-wine px-5 py-16 text-plaster sm:px-8 lg:px-12 lg:py-20">
       <div className="mx-auto flex max-w-screen-xl flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
         <div><p className="text-xs font-semibold uppercase tracking-[0.22em] text-plaster/75">Before your visit</p><h2 className="mt-4 font-heading text-4xl sm:text-5xl">Ask us anything.</h2><p className="mt-4 max-w-lg leading-7 text-plaster/80">Our host team can talk through your reservation and the details that matter to you.</p></div>
-        <Link href="/contact" className="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 rounded-full bg-plaster px-7 py-3 text-sm font-semibold text-wine transition-[gap,background-color] duration-300 hover:gap-5 hover:bg-linen focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plaster">Contact our team <ArrowUpRight className="size-4" aria-hidden="true" /></Link>
+        <Link href="/contact" className="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 rounded-full bg-plaster px-7 py-3 text-sm font-semibold text-wine transition-colors hover:bg-linen focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plaster">Contact our team <ArrowUpRight className="size-4" aria-hidden="true" /></Link>
       </div>
-      <div className="mx-auto mt-10 flex max-w-screen-xl gap-6 text-sm text-plaster/80"><Link href="/privacy" className="underline underline-offset-4 hover:text-plaster">Privacy</Link><Link href="/faq" className="underline underline-offset-4 hover:text-plaster">FAQ</Link></div>
+      <div className="mx-auto mt-10 flex max-w-screen-xl gap-6 text-sm text-plaster/80"><Link href="/privacy" className="underline underline-offset-4 transition-colors after:hidden hover:text-plaster">Privacy</Link><Link href="/faq" className="underline underline-offset-4 transition-colors after:hidden hover:text-plaster">FAQ</Link></div>
     </section>
   </main>;
 }

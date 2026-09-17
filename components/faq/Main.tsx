@@ -40,7 +40,7 @@ export function Main() {
         <p className="text-xs font-semibold uppercase tracking-[0.22em] text-wine">Good to know / Mediterra Marrakech</p>
         <h1 className="mt-6 max-w-[12ch] font-heading text-[clamp(3.2rem,6vw,6.8rem)] leading-[1.02] tracking-[-0.045em] text-espresso">A little clarity <span className="italic text-wine">before dinner.</span></h1>
         <p className="mt-7 max-w-xl text-base leading-8 text-espresso/75 sm:text-lg">From your first message to your last course, we want the evening to feel easy. Here are the details guests ask us most often.</p>
-        <Link href="/reservations" className="mt-9 inline-flex min-h-12 items-center gap-3 rounded-full bg-wine px-7 py-3 text-sm font-semibold text-plaster transition-[gap,background-color] duration-300 hover:gap-5 hover:bg-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine">Request a table <ArrowUpRight className="size-4" aria-hidden="true" /></Link>
+        <Link href="/reservations" className="mt-9 inline-flex min-h-12 items-center gap-3 rounded-full bg-wine px-7 py-3 text-sm font-semibold text-plaster transition-colors hover:bg-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine">Request a table <ArrowUpRight className="size-4" aria-hidden="true" /></Link>
       </div>
       <figure className="relative aspect-[5/4] overflow-hidden rounded-[1.75rem] lg:aspect-[4/5]">
         <Image src="/images/editorial/faq-table.png" alt="An intimate table set with handmade pasta, linen, olive oil and candlelight" fill priority sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
@@ -72,7 +72,7 @@ export function Main() {
     <section className="bg-wine px-5 py-16 text-plaster sm:px-8 lg:px-12 lg:py-20">
       <div className="mx-auto flex max-w-screen-xl flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
         <div><p className="text-xs font-semibold uppercase tracking-[0.22em] text-plaster/75">Still wondering?</p><h2 className="mt-4 font-heading text-4xl leading-tight sm:text-5xl">We are here to help.</h2><p className="mt-4 max-w-lg leading-7 text-plaster/80">Ask us about your visit, or share the details of an evening you have in mind.</p></div>
-        <Link href="/contact" className="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 rounded-full bg-plaster px-7 py-3 text-sm font-semibold text-wine transition-[gap,background-color] duration-300 hover:gap-5 hover:bg-linen focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plaster">Contact our team <ArrowUpRight className="size-4" aria-hidden="true" /></Link>
+        <Link href="/contact" className="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 rounded-full bg-plaster px-7 py-3 text-sm font-semibold text-wine transition-colors hover:bg-linen focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plaster">Contact our team <ArrowUpRight className="size-4" aria-hidden="true" /></Link>
       </div>
     </section>
   </main>;
