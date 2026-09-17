@@ -1,5 +1,6 @@
-import { PageContent } from "@/components/reservations/PageContent";
 import type { Metadata } from "next";
+
+import { Main } from "@/components/reservations/Main";
 
 export const metadata: Metadata = {
   title: "Reservations | Mediterra Marrakech",
@@ -7,5 +8,9 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <PageContent />;
+  return (
+    <div className="bg-plaster text-espresso font-body antialiased">
+      <Main />
+    </div>
+  );
 }
