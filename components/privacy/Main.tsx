@@ -27,7 +27,7 @@ const sections = [
 
 export function Main() {
   return <main id="main-content" tabIndex={-1} className="flex-grow bg-plaster">
-    <section className="mx-auto grid max-w-screen-2xl gap-10 px-5 pb-16 pt-14 sm:px-8 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:gap-20 lg:px-12 lg:pb-24 lg:pt-20">
+    <section className="mx-auto grid max-w-screen-2xl gap-10 px-5 pb-16 pt-14 sm:px-8 lg:min-h-[38rem] lg:grid-cols-2 lg:items-stretch lg:gap-20 lg:px-12 lg:pb-24 lg:pt-20">
       <div>
         <p className="text-xs font-semibold uppercase tracking-[0.22em] text-wine">The details / Privacy</p>
         <h1 className="mt-6 max-w-[12ch] font-heading text-[clamp(3.2rem,6vw,6.8rem)] leading-[1.02] tracking-[-0.045em]">Your details, <span className="italic text-wine">treated with care.</span></h1>
@@ -35,7 +35,7 @@ export function Main() {
         <p className="mt-7 text-xs font-semibold uppercase tracking-[0.18em] text-espresso/60">Last updated 16 September 2026</p>
         <a href="mailto:ciao@mediterra.ma?subject=Privacy%20question" className="mt-8 inline-flex min-h-12 items-center gap-3 rounded-full bg-wine px-7 py-3 text-sm font-semibold text-plaster transition-colors hover:bg-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine">Ask a privacy question <ArrowUpRight className="size-4" aria-hidden="true" /></a>
       </div>
-      <figure className="relative aspect-[5/4] overflow-hidden rounded-[1.75rem] lg:aspect-[4/5]">
+      <figure className="relative aspect-[5/4] overflow-hidden rounded-[1.75rem] lg:h-full lg:aspect-auto">
         <Image src="/images/editorial/privacy-table.png" alt="A quiet candlelit table with linen and an olive branch" fill priority sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
       </figure>
     </section>
