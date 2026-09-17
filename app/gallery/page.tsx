@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 
-import { PageContent } from "@/components/gallery/PageContent";
+import { FinalCTASection } from "@/components/gallery/FinalCTASection";
+import { FoodCraftSection } from "@/components/gallery/FoodCraftSection";
+import { HeroSection } from "@/components/gallery/HeroSection";
+import { InteriorAtmosphereSection } from "@/components/gallery/InteriorAtmosphereSection";
+import { TheTableExperienceSection } from "@/components/gallery/TheTableExperienceSection";
 
 export const metadata: Metadata = {
   title: "Gallery | Mediterra Marrakech",
@@ -9,5 +13,15 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <PageContent />;
+  return (
+    <div className="bg-plaster font-body text-espresso antialiased selection:bg-wine selection:text-plaster">
+      <main id="main-content" tabIndex={-1}>
+        <HeroSection />
+        <InteriorAtmosphereSection />
+        <FoodCraftSection />
+        <TheTableExperienceSection />
+        <FinalCTASection />
+      </main>
+    </div>
+  );
 }
