@@ -39,3 +39,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated/local agent and design assets
+/.agents/
+/.opencode/
+/.stitch/
+/scripts/
+/skills/
+/src/
+/brand-persona-interview.md
+/opencode.jsonc
+/sitemap-interview.md
+/stitch-prompts.md
+/stitch-theme.md
