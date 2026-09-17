@@ -29,7 +29,7 @@ export function ReservationVisit() {
                 <div><h3 className="font-heading text-xl">Hear from our host</h3><p className="mt-1 text-sm leading-6 text-espresso/70">We confirm your table and note anything special about your evening.</p></div>
               </div>
             </div>
-            <Link href="/menu" className="mt-8 inline-flex min-h-12 items-center gap-2 text-sm font-semibold text-wine underline decoration-terracotta/40 underline-offset-4 transition-colors hover:text-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine">
+            <Link href="/menu" className="mt-8 inline-flex min-h-12 items-center gap-2 text-sm font-semibold text-wine underline decoration-terracotta/40 underline-offset-4 transition-[gap,color] duration-300 after:hidden hover:gap-4 hover:text-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine">
               Take a look at the menu <ArrowUpRight className="size-4" aria-hidden="true" />
             </Link>
           </div>
