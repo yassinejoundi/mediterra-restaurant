@@ -86,7 +86,7 @@ export function Footer() {
             <Link href="/privacy" className="hover:text-plaster focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-linen">Privacy</Link>
             <Link href="/terms" className="hover:text-plaster focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-linen">Terms</Link>
           </nav>
-          <p>Built by <a href="https://yassinejoundi.com" target="_blank" rel="noreferrer" className="text-linen underline decoration-linen/35 underline-offset-4 hover:text-plaster focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-linen">Yassine Joundi</a></p>
+          <p>Built by <a href="https://yassinejoundi.com" target="_blank" rel="noreferrer" className="text-linen underline decoration-linen/35 underline-offset-4 transition-colors after:hidden hover:text-plaster focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-linen">Yassine Joundi</a></p>
         </div>
       </div>
     </footer>
