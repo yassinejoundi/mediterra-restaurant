@@ -51,7 +51,7 @@ export function ContactDetails() {
             const Icon = method.icon;
 
             return (
-              <article key={method.title} className="flex min-h-72 flex-col rounded-[1.5rem] border border-terracotta/15 bg-linen p-7 sm:p-8">
+              <article key={method.title} className="flex h-full min-h-72 flex-col rounded-[1.5rem] border border-terracotta/15 bg-linen p-7 sm:p-8">
                 <div className="flex size-11 items-center justify-center rounded-full bg-plaster text-wine">
                   <Icon className="size-5" aria-hidden="true" />
                 </div>
@@ -61,7 +61,7 @@ export function ContactDetails() {
                   href={method.href}
                   target={method.title === "WhatsApp" ? "_blank" : undefined}
                   rel={method.title === "WhatsApp" ? "noreferrer" : undefined}
-                  className="mt-auto pt-8 text-sm font-semibold text-wine underline decoration-terracotta/40 underline-offset-4 transition-colors hover:text-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine"
+                  className="mt-auto pt-8 text-sm font-semibold text-wine underline decoration-terracotta/40 underline-offset-4 transition-colors after:hidden hover:text-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine"
                 >
                   {method.label}
                 </a>
@@ -69,7 +69,7 @@ export function ContactDetails() {
             );
           })}
 
-          <article className="flex min-h-72 flex-col rounded-[1.5rem] bg-wine p-7 text-plaster sm:p-8">
+          <article className="flex h-full min-h-72 flex-col rounded-[1.5rem] bg-wine p-7 text-plaster sm:p-8">
             <div className="flex size-11 items-center justify-center rounded-full bg-plaster/10 text-linen">
               <Clock3 className="size-5" aria-hidden="true" />
             </div>
