@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 
-import { PageContent } from "@/components/story/PageContent";
+import { StoryBeginning } from "@/components/story/StoryBeginning";
+import { StoryDiscipline } from "@/components/story/StoryDiscipline";
+import { StoryFinalCta } from "@/components/story/StoryFinalCta";
+import { StoryGenerosity } from "@/components/story/StoryGenerosity";
+import { StoryHero } from "@/components/story/StoryHero";
+import { StorySubstance } from "@/components/story/StorySubstance";
 
 export const metadata: Metadata = {
   title: "Our Story | Mediterra, Italian Restaurant in Marrakech",
@@ -9,5 +14,16 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <PageContent />;
+  return (
+    <div className="bg-plaster font-body text-espresso antialiased">
+      <main id="main-content" tabIndex={-1}>
+        <StoryHero />
+        <StoryBeginning />
+        <StoryDiscipline />
+        <StoryGenerosity />
+        <StorySubstance />
+        <StoryFinalCta />
+      </main>
+    </div>
+  );
 }
