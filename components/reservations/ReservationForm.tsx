@@ -1,10 +1,11 @@
 "use client";
 
 import { FormEvent, useEffect, useRef, useState } from "react";
-import { ArrowUpRight, CalendarDays, HeartHandshake, MessageCircle } from "lucide-react";
+import { ArrowUpRight, CalendarDays, ChevronDown, HeartHandshake, MessageCircle } from "lucide-react";
 import Link from "next/link";
 
 const fieldClass = "min-h-12 w-full rounded-xl border border-espresso/20 bg-plaster px-4 py-3 text-base text-espresso outline-none transition-colors placeholder:text-espresso/45 focus-visible:border-wine focus-visible:ring-2 focus-visible:ring-wine/25";
+const selectClass = `${fieldClass} appearance-none pr-12`;
 
 function localToday() {
   const date = new Date();
@@ -104,11 +105,14 @@ export function ReservationForm() {
             </div>
             <div>
               <label htmlFor="reservation-guests" className="mb-2 block text-sm font-semibold">Guests <span className="text-wine">*</span></label>
-              <select id="reservation-guests" name="guests" required defaultValue="" className={fieldClass}>
-                <option value="" disabled>Select party size</option>
-                {Array.from({ length: 8 }, (_, index) => <option key={index + 1} value={index + 1}>{index + 1} {index === 0 ? "guest" : "guests"}</option>)}
-                <option value="9+">9 or more guests</option>
-              </select>
+              <div className="relative">
+                <select id="reservation-guests" name="guests" required defaultValue="" className={selectClass}>
+                  <option value="" disabled className="bg-linen text-espresso/60">Select party size</option>
+                  {Array.from({ length: 8 }, (_, index) => <option key={index + 1} value={index + 1} className="bg-linen text-espresso">{index + 1} {index === 0 ? "guest" : "guests"}</option>)}
+                  <option value="9+" className="bg-linen text-espresso">9 or more guests</option>
+                </select>
+                <ChevronDown className="pointer-events-none absolute end-4 top-1/2 size-4 -translate-y-1/2 text-wine" aria-hidden="true" />
+              </div>
             </div>
             <div className="grid gap-5 sm:grid-cols-2">
               <div>
