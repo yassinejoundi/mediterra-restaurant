@@ -47,11 +47,11 @@ export function Main() {
         <figcaption className="absolute bottom-5 left-5 rounded-full bg-plaster/90 px-4 py-2 text-xs font-medium text-espresso backdrop-blur-sm">A table worth slowing down for</figcaption>
       </figure>
     </section>
-    <div className="border-y border-terracotta/25 bg-linen/60 px-5 py-5 sm:px-8 lg:px-12">
-      <nav aria-label="FAQ topics" className="mx-auto flex max-w-screen-2xl flex-wrap gap-x-8 gap-y-2 text-sm font-semibold text-wine">
-        {groups.map(group => <a key={group.id} href={`#${group.id}`} className="inline-flex min-h-11 items-center underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-wine">{group.title}</a>)}
-      </nav>
-    </div>
+    <nav aria-label="FAQ topics" className="sticky top-20 z-30 border-y border-terracotta/15 bg-linen/95 shadow-[0_8px_24px_rgba(42,33,29,0.05)] backdrop-blur-md">
+      <div className="mx-auto flex max-w-screen-2xl gap-2 overflow-x-auto px-5 py-3 sm:px-8 lg:justify-center lg:px-12">
+        {groups.map(group => <a key={group.id} href={`#${group.id}`} className="inline-flex min-h-11 shrink-0 items-center rounded-full px-4 font-label text-[0.7rem] font-bold uppercase tracking-[0.16em] text-espresso transition-colors hover:bg-plaster hover:text-wine focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wine">{group.title}</a>)}
+      </div>
+    </nav>
     <div className="mx-auto max-w-screen-xl px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
       {groups.map(group => <section key={group.id} id={group.id} aria-labelledby={`${group.id}-title`} className="grid scroll-mt-24 gap-8 border-b border-terracotta/25 py-12 first:pt-0 last:border-0 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] lg:gap-20">
         <div>

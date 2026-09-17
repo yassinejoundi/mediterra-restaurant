@@ -39,11 +39,11 @@ export function Main() {
         <Image src="/images/editorial/terms-table.png" alt="A host carefully sets a candlelit table with linen and handmade ceramics" fill priority sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
       </figure>
     </section>
-    <div className="border-y border-terracotta/25 bg-linen/60 px-5 py-5 sm:px-8 lg:px-12">
-      <nav aria-label="Terms topics" className="mx-auto flex max-w-screen-2xl flex-wrap gap-x-7 gap-y-2 text-sm font-semibold text-wine">
-        {sections.map(section => <a key={section.id} href={`#${section.id}`} className="inline-flex min-h-11 items-center underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-wine">{section.title}</a>)}
-      </nav>
-    </div>
+    <nav aria-label="Terms topics" className="sticky top-20 z-30 border-y border-terracotta/15 bg-linen/95 shadow-[0_8px_24px_rgba(42,33,29,0.05)] backdrop-blur-md">
+      <div className="mx-auto flex max-w-screen-2xl gap-2 overflow-x-auto px-5 py-3 sm:px-8 lg:justify-center lg:px-12">
+        {sections.map(section => <a key={section.id} href={`#${section.id}`} className="inline-flex min-h-11 shrink-0 items-center rounded-full px-4 font-label text-[0.7rem] font-bold uppercase tracking-[0.16em] text-espresso transition-colors hover:bg-plaster hover:text-wine focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wine">{section.title}</a>)}
+      </div>
+    </nav>
     <div className="mx-auto max-w-screen-xl px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
       <div className="mb-12 max-w-3xl rounded-2xl border border-terracotta/25 bg-linen p-6 sm:p-8">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-wine">In brief</p>
