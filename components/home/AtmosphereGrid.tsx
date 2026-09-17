@@ -19,7 +19,7 @@ export function AtmosphereGrid() {
             </p>
             <Link
               href="/gallery"
-              className="mt-8 inline-flex min-h-11 items-center gap-3 border-b border-wine/40 py-2 font-label text-sm font-semibold text-wine transition-colors hover:border-espresso hover:text-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine"
+              className="mt-8 inline-flex min-h-11 items-center gap-3 py-2 font-label text-sm font-semibold text-wine transition-[gap,color] duration-300 hover:gap-5 hover:text-espresso focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine"
             >
               See the Atmosphere
               <ArrowRight className="size-4" aria-hidden="true" />
@@ -45,7 +45,7 @@ export function AtmosphereGrid() {
           </ScrollReveal>
         </div>
 
-        <div className="mt-16 grid items-end gap-8 lg:-mt-10 lg:grid-cols-12 lg:gap-6">
+        <div className="mt-16 grid items-end gap-8 lg:grid-cols-12 lg:gap-6">
           <ScrollReveal className="lg:col-span-4 lg:col-start-2" direction="right">
             <figure>
               <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-linen">
